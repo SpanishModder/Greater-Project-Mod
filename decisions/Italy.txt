@@ -1,0 +1,384 @@
+political_decisions = {
+	cavours_diplomacy = {
+		potential = {
+			tag = SAR
+			NOT = {
+				has_country_flag = cavour_has_done_his
+				exists = ITA
+			}
+			owns = 465
+			owns = 466
+			owns = 472
+			FRA = {
+				exists = yes
+				is_greater_power = yes
+			}
+		}
+		allow = {
+			relation = {
+				who = FRA
+				value = 150
+			}
+			owns = 726
+			owns = 727
+			owns = 728
+		}
+		
+		effect = {
+			prestige = 20
+			badboy = -10
+			relation = {
+				who = FRA
+				value = 50
+			}
+			726 = {
+				add_core = SAR
+			}
+			727 = {
+				add_core = SAR
+			}
+			728 = {
+				add_core = SAR
+			}
+			465 = {
+				remove_core = ITA
+				remove_core = SAR
+				add_core = FRA
+				secede_province = FRA
+			}
+			466 = {
+				remove_core = ITA
+				remove_core = SAR
+				add_core = FRA
+				secede_province = FRA
+			}
+			472 = {
+				remove_core = ITA
+				remove_core = SAR
+				add_core = FRA
+				secede_province = FRA
+			}
+			set_country_flag = cavour_has_done_his
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 1
+				in_sphere = FRA
+				alliance_with = FRA
+			}
+		}
+	}
+	
+	award_order_of_st_francis = {
+		potential = {
+			tag = SIC
+			government = absolute_monarchy
+			NOT = {
+				has_country_flag = order_awarded
+			}
+		}
+		
+		allow = {
+			prestige = 25
+		}
+		
+		effect = {
+			years_of_research = 0.02
+			prestige = 2
+			set_country_flag = order_awarded
+		}
+	}
+	
+	statuto_albertino = {
+		potential = {
+			tag = SAR
+			government = absolute_monarchy
+			NOT = {
+				has_country_flag = get_your_statuto_albertino_here
+			}
+		}
+		
+		allow = {
+			average_militancy = 3
+		}
+		
+		effect = {
+			any_pop = {
+				militancy = -2
+			}
+			prestige = 5
+			set_country_flag = get_your_statuto_albertino_here
+		}
+	}
+	build_vittoriano = {
+		potential = {
+			tag = ITA
+			government = absolute_monarchy
+			NOT = {
+				has_country_flag = vittoriano_built
+			}
+		}
+		
+		allow = {
+			realism = 1
+		}
+		
+		effect = {
+			prestige = 5
+			any_pop = {
+				militancy = -1
+			}
+			set_country_flag = vittoriano_built
+		}
+	}
+	the_case_of_edgardo_mortara = {
+		potential = {
+			tag = PAP
+			government = absolute_monarchy
+			NOT = {
+				has_country_flag = edgardo_mortara
+			}
+			year = 1858
+			owns = 741
+		}
+		allow = {
+			idealism = 1
+		}
+		effect = {
+			prestige = 15
+			badboy = 1
+			any_greater_power = {
+				relation = {
+					value = -20
+					who = THIS
+				}
+			}
+			set_country_flag = edgardo_mortara
+		}
+	}
+	
+	the_first_vatican_council = {
+		potential = {
+			tag = PAP
+			government = theocracy
+			NOT = {
+				has_country_flag = first_vatican_council_held
+			}
+		}
+		
+		allow = {
+			empiricism = 1
+		}
+		
+		effect = {
+			prestige = 10
+			badboy = 1
+			any_country = {
+				limit = {
+					religion = catholic
+				}
+				relation = {
+					who = THIS
+					value = 10
+				}
+			}
+			set_country_flag = first_vatican_council_held
+		}
+	}
+	
+	law_of_guarantees = {
+		potential = {
+			tag = ITA
+			NOT = {
+				capital = 749
+			}
+		}
+		
+		allow = {
+			owns = 749
+		}
+		
+		effect = {
+			capital = 749
+			prestige = 5
+			all_core = {
+				remove_core = SAR
+				remove_core = PAR
+				remove_core = PAP
+				remove_core = MOD
+				remove_core = TUS
+				remove_core = LUC
+			}
+			badboy = -2
+		}
+	}
+	
+	italia_irredenta = {
+		potential = {
+			tag = ITA
+			NOT = {
+				has_country_flag = italia_ulterior
+			}
+		}
+		
+		allow = {
+			OR = {
+				invention = national_fraternity
+				is_greater_power = yes
+			}
+		}
+		
+		effect = {
+			set_country_flag = italia_ulterior
+			AUS_729 = { add_core = ITA }
+			734 = {
+				add_core = ITA
+			}
+			735 = {
+				add_core = ITA
+			}
+			AUS_736 = { add_core = ITA }
+		}
+	}
+	
+	claim_lombardia = {
+		potential = {
+			tag = SAR
+			NOT = {
+				726 = { is_core = SAR }
+				727 = { is_core = SAR }
+				728 = { is_core = SAR }
+			}
+			exists = SNM
+		}
+		
+		allow = {
+			NOT = {
+				war_with = AUS
+			}
+			state_n_government = 1
+			SNM = {
+				OR = {
+					war_with = AUS
+					war_with = KUK
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 14
+			726 = { add_core = SAR }
+			727 = { add_core = SAR }
+			728 = { add_core = SAR }
+			casus_belli = {
+				target = AUS
+				type = humiliate
+				months = 36
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_lybian_claims = {
+		picture = libya_map
+		potential = {
+			OR = {
+				tag = SAR
+				tag = ITA
+			}
+			TUR = {
+				war = no
+			}
+			EGY_1754 = { owned_by = TUR }
+			TRI_1743 = { owned_by = TUR }
+			NOT = {
+				has_country_flag = lybia_claimed
+			}
+		}
+		
+		allow = {
+			war = no
+			TUR = {
+				is_greater_power = no
+				NOT = {
+					truce_with = THIS
+				}
+			}
+			is_greater_power = yes
+		}
+		
+		effect = {
+			set_country_flag = lybia_claimed
+			TUR = {
+				country_event = 50209
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	presa_di_roma = {
+		picture = papal_map
+		potential = {
+			tag = ITA
+			exists = PAP
+			NOT = { has_country_flag = roma_is_italian }
+			PAP = {
+				owns = 749
+				owns = 750
+			}
+		}
+		
+		allow = {
+			war = no
+			is_greater_power = yes
+			PAP = {
+				OR = {
+					in_sphere = THIS
+					AND = {
+						in_sphere = FRA
+						relation = { who = THIS value = 100 }
+					}
+					year = 1872
+				}
+			}
+		}
+		
+		effect = {
+			set_country_flag = roma_is_italian
+			FRA = { country_event = 50902 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	claim_the_adriatic = {
+		picture = adriatic_map
+		potential = {
+			tag = ITA
+			NOT = { has_country_flag = adriatic_claimed }
+			has_country_flag = italia_ulterior
+		}
+		
+		allow = {
+			OR = {
+				government = empire
+				government = proletarian_dictatorship
+				government = presidential_dictatorship
+				government = fascist_dictatorship
+			}
+			empiricism = 1
+			nationalism_n_imperialism = 1
+		}
+		
+		effect = {
+			set_country_flag = adriatic_claimed
+			AUS_780 = { add_core = ITA }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

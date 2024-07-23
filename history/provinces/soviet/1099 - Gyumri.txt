@@ -1,0 +1,8 @@
+owner = TRC
+controller = TRC
+add_core = TRC
+add_core = RUS
+add_core = ARM
+trade_goods = wool
+life_rating = 35
+1890.1.1 = { owner = RUS controller = RUS colonial = 0 } 

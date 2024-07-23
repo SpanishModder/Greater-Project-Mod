@@ -1,0 +1,621 @@
+political_decisions = {
+	claim_the_rif = {
+		picture = african_treaty
+		potential = {
+			OR = {
+				tag = SPA
+				tag = IBE
+				tag = SPC
+			}
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			1686 = { owned_by = MOR }
+			1687 = { owned_by = MOR }
+			1688 = { owned_by = MOR }
+			MOR = {
+				exists = yes
+				civilized = no
+			}
+			owns = 1689
+			has_global_flag = berlin_conference
+		}
+		
+		allow = {
+			invention = mission_to_civilize
+		}
+		
+		effect = {
+			prestige = 2.5
+			relation = { who = MOR value = -200 }
+			1686 = { secede_province = THIS }
+			1687 = { secede_province = THIS }
+			1688 = { secede_province = THIS }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	claim_the_western_sahara = {
+		picture = african_colonists
+		potential = {
+			OR = {
+				tag = SPA
+				tag = IBE
+				tag = SPC
+			}
+			year = 1881
+			is_greater_power = yes
+			1695 = {
+				OR = {
+					empty = yes
+					owner = {
+						civilized = no
+					}
+				}
+			}
+			1696 = {
+				OR = {
+					empty = yes
+					owner = {
+						civilized = no
+					}
+				}
+			}
+			1693 = {
+				OR = {
+					empty = yes
+					owner = {
+						civilized = no
+					}
+				}
+			}
+			1773 = {
+				OR = {
+					empty = yes
+					owner = {
+						civilized = no
+					}
+				}
+			}
+			1774 = {
+				OR = {
+					empty = yes
+					owner = {
+						civilized = no
+					}
+				}
+			}
+			has_global_flag = berlin_conference
+		}
+		
+		allow = {
+			invention = mission_to_civilize
+		}
+		
+		effect = {
+			1696 = { secede_province = THIS }
+			1773 = { secede_province = THIS }
+			1774 = { secede_province = THIS }
+			1695 = { secede_province = THIS }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_the_moroccan_protectorate = {
+		picture = african_treaty
+		potential = {
+			tag = FRA
+			exists = MOR
+			MOR = { is_vassal = no civilized = no }
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			has_global_flag = berlin_conference
+			1695 = {
+				empty = no
+				owner = {
+					civilized = yes
+				}
+			}
+			1696 = {
+				empty = no
+				owner = {
+					civilized = yes
+				}
+			}
+			1773 = {
+				empty = no
+				owner = {
+					civilized = yes
+				}
+			}
+			1774 = {
+				empty = no
+				owner = {
+					civilized = yes
+				}
+			}
+			NOT = { year = 1900 }
+		}
+		
+		allow = {
+			invention = mission_to_civilize
+		}
+		
+		effect = {
+			prestige = 2.5
+			inherit = MOR
+			relation = { who = SPA value = 50 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_gabon_protectorate = {
+		picture = african_colonists
+		potential = {
+			tag = FRA
+			is_greater_power = yes
+			NOT = { owns = 1972 }
+			1972 = { empty = yes }
+		}
+		
+		allow = {
+			war = no
+			business_regulations = 1
+			prestige = 100
+			1972 = { empty = yes }
+		}
+		
+		effect = {
+			prestige = 3
+			1972 = {
+				secede_province = FRA
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	claim_all_mozambique_lands = {
+		picture = african_explotation
+		potential = {
+			tag = POR
+			has_global_flag = berlin_conference
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			POR_2053 = {
+				OR = {
+					empty = yes
+					owner = {
+						civilized = no
+					}
+				}
+			}
+			POR_2060 = {
+				OR = {
+					empty = yes
+					owner = {
+						civilized = no
+					}
+				}
+			}
+			POR_2049 = {
+				OR = {
+					empty = yes
+					owner = {
+						civilized = no
+					}
+				}
+			}
+		}
+		
+		allow = {
+			invention = mission_to_civilize
+		}
+		
+		effect = {
+			POR_2053 = { secede_province = POR }
+			POR_2060 = { secede_province = POR }
+			POR_2049 = { secede_province = POR }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	zanzibar_expedition = {
+		picture = african_explotation
+		potential = {
+			tag = GER
+			has_global_flag = berlin_conference
+			ZAN = {
+				exists = yes
+				civilized = no
+				OR = {
+					is_vassal = no
+					vassal_of = THIS
+				}
+			}
+		}
+		
+		allow = {
+			invention = mission_to_civilize
+			is_greater_power = yes
+			nationalism_n_imperialism = 1
+		}
+		
+		effect = {
+			prestige = 5
+			inherit = ZAN
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	claim_eritrea_sfa = {
+		picture = claim_eritrea
+		potential = {
+			tag = ITA
+			has_global_flag = berlin_conference
+			NOT = { year = 1900 }
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			1848 = {
+				OR = {
+					empty = yes
+					owner = {
+						civilized = no
+					}
+				}
+			}
+			1849 = {
+				OR = {
+					empty = yes
+					owner = {
+						civilized = no
+					}
+				}
+			}
+			1850 = {
+				OR = {
+					empty = yes
+					owner = {
+						civilized = no
+					}
+				}
+			}
+			1851 = {
+				OR = {
+					empty = yes
+					owner = {
+						civilized = no
+					}
+				}
+			}
+		}
+		
+		allow = {
+			invention = prophylaxis_against_malaria
+			invention = mission_to_civilize
+			invention = colonial_negotiations
+			nationalism_n_imperialism = 1
+		}
+		
+		effect = {
+			prestige = 7.5
+			1848 = { secede_province = THIS }
+			1849 = { secede_province = THIS }
+			1850 = { secede_province = THIS }
+			1851 = { secede_province = THIS }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	found_niger_company = {
+		picture = african_treaty
+		potential = {
+			capital_scope = { continent = europe }
+			colonial_nation = yes
+			NOT = { has_global_flag = niger_company_created }
+			any_neighbor_country = {
+				exists = yes
+				civilized = no
+				capital_scope = {
+					OR = {
+						region = FRA_1930
+						region = FRA_1923
+						region = FRA_1931
+					}
+				}
+			}
+		}
+		
+		allow = {
+			year = 1878
+			revolution_n_counterrevolution = 1
+			any_owned_province = {
+				OR = {
+					region = FRA_1930
+					region = FRA_1923
+					region = FRA_1931
+				}
+			}
+			is_greater_power = yes
+			war = no
+		}
+		
+		effect = {
+			prestige = 6.5
+			set_global_flag = niger_company_created
+			any_country = {
+				limit = {
+					exists = yes
+					civilized = no
+					capital_scope = {
+						OR = {
+							region = FRA_1930
+							region = FRA_1923
+							region = FRA_1931
+						}
+					}
+				}
+				country_event = 50310
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	buy_gold_coast_colonies = {
+		picture = african_treaty
+		potential = {
+			capital_scope = { continent = europe }
+			colonial_nation = yes
+			NOT = {
+				has_global_flag = gc_purchased
+			}
+			OR = {
+				owns = 1907
+				owns = 1908
+				owns = 1909
+			}
+			OR = {
+				NOT = { owns = 1907 }
+				NOT = { owns = 1908 }
+				NOT = { owns = 1909 }
+			}
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			money = 160000
+			any_owned_province = {
+				OR = {
+					province_id = 1907
+					province_id = 1908
+					province_id = 1909
+				}
+			}
+			is_greater_power = yes
+			war = no
+		}
+		
+		effect = {
+			set_global_flag = gc_purchased
+			any_country = {
+				limit = {
+					exists = yes
+					civilized = yes
+					OR = {
+						owns = 1907
+						owns = 1908
+						owns = 1909
+					}
+				}
+				country_event = 50311
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 1
+				tag = ENG
+			}
+			modifier = {
+				factor = 1
+				owns = 1910
+			}
+		}
+	}
+	conquest_of_the_sahara = {
+		picture = african_colonists
+		potential = {
+			OR = {
+				AND = {
+					owns = 1760
+					1758 = { empty = yes }
+				}
+				AND = {
+					owns = 1835
+					2564 = { empty = yes }
+				}
+				AND = {
+					owns = 1838
+					1839 = { empty = yes }
+				}
+				AND = {
+					owns = 1734
+					1740 = { empty = yes }
+				}
+				AND = {
+					owns = 1740
+					1739 = { empty = yes }
+				}
+				AND = {
+					owns = 1739
+					2585 = { empty = yes }
+				}
+				AND = {
+					owns = 1713
+					ALD_1714 = { empty = yes }
+				}
+				AND = {
+					owns = 1711
+					ALD_1718 = { empty = yes }
+				}
+				AND = {
+					owns = 1711
+					ALD_1718 = { empty = yes }
+				}
+				AND = {
+					owns = 1840
+					EGY_1842 = { empty = yes }
+					ENG_1843 = { empty = yes }
+				}
+				AND = {
+					owns = 1861
+					1864 = { empty = yes }
+					1866 = { empty = yes }
+					1867 = { empty = yes }
+				}
+				AND = {
+					owns = 1818
+					ENG_1825 = { empty = yes }
+				}
+				AND = {
+					owns = 1811
+					FRA_1813 = { empty = yes }
+				}
+				AND = {
+					owns = 1804
+					FRA_1803 = { empty = yes }
+				}
+				AND = {
+					owns = 1775
+					FRA_1780 = { empty = yes }
+				}
+			}
+		}
+		
+		allow = {
+			OR = {
+				has_global_flag = berlin_conference
+				AND = {
+					capital_scope = { continent = africa }
+					nationalism_n_imperialism = 1
+					NOT = { tag = EGY }
+				}
+			}
+		}
+		
+		effect = {
+			#The owner of Sirt gets the Lybian Desert (Not Tripoli)
+			random_owned = {
+				limit = {
+					owner = { owns = 1734 }
+				}
+				1738 = { secede_province = THIS }
+				1739 = { secede_province = THIS }
+				1740 = { secede_province = THIS }
+				2585 = { secede_province = THIS }
+				owner = { prestige = 1 }
+			}
+			#The owner of Mut gets Farafra
+			random_owned = {
+				limit = {
+					owner = { owns = 1760 }
+				}
+				1758 = { secede_province = THIS }
+				owner = { prestige = 1 }
+			}
+			#The owner of Obeid gets Salima & Nuhud
+			random_owned = {
+				limit = {
+					owner = { owns = 1838 }
+				}
+				2564 = { secede_province = THIS }
+				1839 = { secede_province = THIS }
+				owner = { prestige = 1 }
+			}
+			#The owner of Laghwat gets West Sahara
+			random_owned = {
+				limit = {
+					owner = { owns = 1713 }
+				}
+				ALD_1714 = { secede_province = THIS }
+				owner = { prestige = 1 }
+			}
+			#The owner of Ouargla gets Sahara
+			random_owned = {
+				limit = {
+					owner = { owns = 1711 }
+				}
+				ALD_1718 = { secede_province = THIS }
+				owner = { prestige = 1 }
+			}
+			#The owner of Kaduqli gets Fasher Region & Waw
+			random_owned = {
+				limit = {
+					owner = { owns = 1840 }
+				}
+				EGY_1842 = { secede_province = THIS }
+				ENG_1843 = { secede_province = THIS }
+				owner = { prestige = 1.25 }
+			}
+			#The owner of Aselia gets Goba Region
+			random_owned = {
+				limit = {
+					owner = { owns = 1861 }
+				}
+				1864 = { secede_province = THIS }
+				1866 = { secede_province = THIS }
+				1867 = { secede_province = THIS }
+				owner = { prestige = 1 }
+			}
+			#The owner of Assenya gets Chad Desert
+			random_owned = {
+				limit = {
+					owner = { owns = 1818 }
+				}
+				ENG_1825 = { secede_province = THIS }
+				owner = { prestige = 1 }
+			}
+			#The owner of Maradi gets Niger Desert
+			random_owned = {
+				limit = {
+					owner = { owns = 1811 }
+				}
+				FRA_1813 = { secede_province = THIS }
+				owner = { prestige = 1 }
+			}
+			#The owner of Bandiagara gets Mali Desert
+			random_owned = {
+				limit = {
+					owner = { owns = 1804 }
+				}
+				FRA_1803 = { secede_province = THIS }
+				owner = { prestige = 1 }
+			}
+			#The owner of Nouakchott gets Mauritanian Desert
+			random_owned = {
+				limit = {
+					owner = { owns = 1775 }
+				}
+				FRA_1780 = { secede_province = THIS }
+				owner = { prestige = 1 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

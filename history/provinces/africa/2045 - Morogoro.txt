@@ -1,0 +1,7 @@
+trade_goods = fruit
+life_rating = 15
+1880.1.1 = {
+	owner = GER
+	controller = GER
+	colonial = 2
+}

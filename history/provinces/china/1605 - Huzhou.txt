@@ -1,0 +1,18 @@
+owner = QNG
+controller = QNG
+add_core = CHI
+
+trade_goods = silk
+life_rating = 32
+1861.1.1 = {
+	controller = TPG
+	owner = TPG
+}
+1870.1.1 = {
+	owner = QNG
+	controller = QNG
+}
+1911.1.1 = {
+	owner = CHI
+	controller = CHI
+}

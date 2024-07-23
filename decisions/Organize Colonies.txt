@@ -1,0 +1,1424 @@
+political_decisions = {
+	# America
+	organize_canada = {
+		picture = organize_territories
+		potential = {
+			tag = ENG
+			NOT = {
+				exists = CAN
+				has_country_flag = canada_organized
+			}
+		}
+		allow = {
+			is_greater_power = yes
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -3
+			set_country_flag = canada_organized
+			50 = { secede_province = CAN }
+			51 = { secede_province = CAN }
+			52 = { secede_province = CAN }
+			53 = { secede_province = CAN }
+			54 = { secede_province = CAN }
+			55 = { secede_province = CAN }
+			56 = { secede_province = CAN }
+			57 = { secede_province = CAN }
+			46 = { secede_province = CAN }
+			58 = { secede_province = CAN }
+			64 = { secede_province = CAN }
+			65 = { secede_province = CAN }
+			66 = { secede_province = CAN }
+			67 = { secede_province = CAN }
+			CAN = { capital = 46 }
+			create_vassal = CAN
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	# Asia
+	organize_vietnam_n_laos = { 
+		picture = organize_territories
+		potential = {
+			1363 = { NOT = { is_core = LUA } }
+			DAI = { #Vietnam
+				NOT = { government = democracy }
+				exists = no
+			}
+			LUA = { #Laos
+				NOT = { government = democracy }
+				exists = no
+			}
+			CAM = { #Cambodia
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = SIA_1366
+					region = ANN_1383
+					region = ANN_1374
+					region = ANN_1371
+					region = LUA_1356
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -0.5
+			DAI = {
+				all_core = { remove_core = DAI } #Reseting Cores
+				capital = 1369
+				civilized = yes
+				government = democracy
+				primary_culture = vietnamese
+			}
+			LUA = {
+				all_core = { remove_core = LUA } #Reseting Cores
+				capital = 1357
+				civilized = yes
+				government = democracy
+				primary_culture = lao
+			}
+			CAM = {
+				all_core = { remove_core = CAM } #Reseting Cores
+				capital = 1364
+				civilized = yes
+				government = democracy
+				primary_culture = khmer
+			}
+			SIA_1366 = { add_core = CAM }
+			ANN_1383 = { add_core = DAI }
+			ANN_1374 = { add_core = DAI }
+			ANN_1371 = { add_core = DAI }
+			LUA_1356 = { add_core = LUA }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	# Africa
+	organize_algeria = {
+		picture = organize_territories
+		potential = {
+			1718 = { NOT = { is_core = ALD } }
+			any_owned_province = {
+				OR = {
+					region = ALD_1718
+					region = ALD_1714
+					region = ALD_1704
+					region = ALD_1708
+					region = FRA_1700
+				}
+			}
+			NOT = { exists = ALD }
+			civilized = yes
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1.5
+			ALD_1718 = { add_core = ALD }
+			ALD_1714 = { add_core = ALD }
+			ALD_1704 = { add_core = ALD }
+			ALD_1708 = { add_core = ALD }
+			FRA_1700 = { add_core = ALD }
+			ALD = {
+				capital = 1700
+				civilized = yes
+				government = democracy
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_libya = {
+		picture = organize_territories
+		potential = {
+			1739 = { NOT = { is_core = TRI } }
+			TRI = { #Libya
+				NOT = { government = democracy }
+				exists = no
+			}
+			TUN = { #Tunis
+				NOT = { government = democracy }
+				exists = no
+			}
+			any_owned_province = {
+				OR = {
+					region = TRI_1743
+					region = TRI_1739
+					region = EGY_1754
+				}
+			}
+			has_global_flag = berlin_conference
+			civilized = yes
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1
+			TUN = {
+				capital = 1725
+				civilized = yes
+				government = democracy
+			}
+			TRI = {
+				capital = 1731
+				civilized = yes
+				government = democracy
+			}
+			TUN_1726 = { add_core = TUN }
+			TRI_1743 = { add_core = TRI }
+			TRI_1739 = { add_core = TRI }
+			EGY_1754 = { add_core = TRI }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_egypt = { 
+		picture = organize_territories
+		potential = {
+			1835 = { is_core = EGY }
+			EGY = {
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = SIN_1
+					region = EGY_1771
+					region = EGY_1758
+					region = EGY_1754
+					region = EGY_1762
+					region = EGY_1753
+					region = EGY_1750
+					region = EGY_1746
+					region = EGY_1834
+					region = EGY_1838
+					region = EGY_1842
+					region = EGY_1827
+					region = ENG_1843
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1
+			EGY = {
+				capital = 1745
+				civilized = yes
+				government = democracy
+			}
+			BIT = {
+				capital = 1827
+				civilized = yes
+				government = democracy
+				primary_culture = misri
+			}
+			EGY_1758 = { add_core = EGY }
+			EGY_1753 = { add_core = EGY }
+			ENG_1843 = { add_core = BIT remove_core = EGY }
+			EGY_1834 = { add_core = BIT remove_core = EGY }
+			EGY_1838 = { add_core = BIT remove_core = EGY }
+			EGY_1842 = { add_core = BIT remove_core = EGY }
+			EGY_1827 = { add_core = BIT remove_core = EGY }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_mauritania = { 
+		picture = organize_territories
+		potential = {
+			1781 = { NOT = { is_core = FUT } }
+			FUT = {
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = FRA_1775
+					region = FRA_1780
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1
+			FUT = {
+				all_core = { remove_core = FUT } #Reseting Cores
+				capital = 1775
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			FRA_1775 = { add_core = FUT }
+			FRA_1780 = { add_core = FUT }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_gambia_and_senegal = { 
+		picture = organize_territories
+		potential = {
+			1790 = { NOT = { is_core = WOL } }
+			WOL = { #Senegal
+				NOT = { government = democracy }
+				exists = no
+			}
+			GBU = { #Guinea-Bissau
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = FRA_1783
+					region = FRA_1788
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1
+			WOL = {
+				all_core = { remove_core = WOL } #Reseting Cores
+				capital = 1783
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			GBU = {
+				all_core = { remove_core = GBU } #Reseting Cores
+				capital = 1877
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			FRA_1788 = { add_core = WOL }
+			FRA_1783 = { add_core = WOL }
+			1877 = { add_core = GBU remove_core = WOL }
+			1878 = { add_core = GBU remove_core = WOL }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_guinea = { 
+		picture = organize_territories
+		potential = {
+			1883 = { NOT = { is_core = FUJ } }
+			FUJ = { #Guinea
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				region = FRA_1879
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -0.5
+			FUJ = {
+				all_core = { remove_core = FUJ } #Reseting Cores
+				capital = 1879
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			FRA_1879 = { add_core = FUJ }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_sierra_leone = { 
+		picture = organize_territories
+		potential = {
+			1885 = { NOT = { is_core = BAM } }
+			BAM = { #Sierra Leone
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				region = FRA_1884
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -0.5
+			BAM = {
+				all_core = { remove_core = BAM } #Reseting Cores
+				capital = 1884
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = hausa
+				remove_accepted_culture = bedouin
+				remove_accepted_culture = fulbe
+			}
+			FRA_1884 = { add_core = BAM }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_mali = { 
+		picture = organize_territories
+		potential = {
+			1806 = { NOT = { is_core = MAS } }
+			MAS = { #Mali
+				NOT = { government = democracy }
+				exists = no
+			}
+			MOS = { #Burkina Faso
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = FRA_1801
+					region = FRA_1798
+					region = FRA_1803
+					region = FRA_1901
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1
+			MAS = {
+				all_core = { remove_core = MAS } #Reseting Cores
+				capital = 1794
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			MOS = {
+				all_core = { remove_core = MOS } #Reseting Cores
+				capital = 1901
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			FRA_1801 = { add_core = MAS }
+			FRA_1798 = { add_core = MAS }
+			FRA_1803 = { add_core = MAS }
+			FRA_1901 = { add_core = MOS }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_ghana = { 
+		picture = organize_territories
+		potential = {
+			1695 = { NOT = { is_core = KNG } }
+			ASH = { #Ghana
+				NOT = { government = democracy }
+				exists = no
+			}
+			KNG = { #Cote D'Ivoire
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = FRA_1892
+					region = FRA_1893
+					region = FRA_1907
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1
+			ASH = {
+				all_core = { remove_core = ASH } #Reseting Cores
+				capital = 1908
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			KNG = {
+				all_core = { remove_core = KNG } #Reseting Cores
+				capital = 1895
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = senufo
+				remove_accepted_culture = mande
+			}
+			FRA_1907 = { add_core = ASH }
+			FRA_1892 = { add_core = KNG }
+			FRA_1893 = { add_core = KNG }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_togo_and_dahomey = { 
+		picture = organize_territories
+		potential = {
+			1914 = { NOT = { is_core = DND } }
+			DND = { #Togo
+				NOT = { government = democracy }
+				exists = no
+			}
+			DAH = { #Benin
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = FRA_1914
+					region = FRA_1919
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -0.5
+			DND = {
+				all_core = { remove_core = DND } #Reseting Cores
+				capital = 1914
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = african_minor
+			}
+			DAH = {
+				all_core = { remove_core = DAH } #Reseting Cores
+				capital = 1919
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = yoruba
+			}
+			FRA_1914 = { add_core = DND }
+			FRA_1919 = { add_core = DAH }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_niger = { 
+		picture = organize_territories
+		potential = {
+			1814 = { NOT = { is_core = DAM } }
+			DAM = { #Niger
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = FRA_1808
+					region = FRA_1813
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -0.75
+			DAM = {
+				all_core = { remove_core = DAM } #Reseting Cores
+				capital = 1808
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = tiv
+				remove_accepted_culture = fulbe
+				remove_accepted_culture = african_minor
+			}
+			FRA_1808 = { add_core = DAM }
+			FRA_1813 = { add_core = DAM }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_nigeria = { 
+		picture = organize_territories
+		potential = {
+			1931 = { NOT = { is_core = SOK } }
+			SOK = { #Nigeria
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = FRA_1937
+					region = FRA_1939
+					region = FRA_1927
+					region = FRA_1930
+					region = FRA_1923
+					region = FRA_1931
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1
+			SOK = {
+				all_core = { remove_core = SOK } #Reseting Cores
+				capital = 1941
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = tiv
+				remove_accepted_culture = fulbe
+				remove_accepted_culture = african_minor
+			}
+			FRA_1937 = { add_core = SOK }
+			FRA_1939 = { add_core = SOK }
+			FRA_1927 = { add_core = SOK }
+			FRA_1816 = { add_core = SOK }
+			FRA_1930 = { add_core = SOK remove_core = BEN remove_core = CLB }
+			FRA_1923 = { add_core = SOK remove_core = OYO }
+			FRA_1931 = { add_core = SOK remove_core = ARO }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_chad = { 
+		picture = organize_territories
+		potential = {
+			1825 = { NOT = { is_core = OYO } }
+			OYO = { #Chad
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = ENG_1825
+					region = ENG_1818
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -0.5
+			OYO = {
+				all_core = { remove_core = OYO } #Reseting Cores
+				capital = 1818
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = fon
+			}
+			ENG_1825 = { add_core = OYO }
+			ENG_1818 = { add_core = OYO }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_central_africa = { 
+		picture = organize_territories
+		potential = {
+			1962 = { NOT = { is_core = BEN } }
+			BEN = { #Cameroon
+				NOT = { government = democracy }
+				exists = no
+			}
+			ARO = { #Central African Republic (CAR)
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = ENG_1960
+					region = ENG_1956
+					region = FRA_1965
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -0.5
+			BEN = {
+				all_core = { remove_core = BEN } #Reseting Cores
+				capital = 1959
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = fon
+			}
+			ARO = {
+				all_core = { remove_core = ARO } #Reseting Cores
+				capital = 1965
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = fon
+			}
+			ENG_1956 = { add_core = BEN }
+			ENG_1960 = { add_core = BEN }
+			FRA_1965 = { add_core = ARO }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_gabon = {
+		picture = organize_territories
+		potential = {
+			1976 = { NOT = { is_core = KAB } }
+			KAB = { #Gabon
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				region = FRA_1972
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -0.5
+			KAB = {
+				all_core = { remove_core = KAB } #Reseting Cores
+				capital = 1972
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = hausa
+				remove_accepted_culture = bedouin
+				remove_accepted_culture = fulbe
+			}
+			FRA_1972 = { add_core = KAB }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_the_congo = {
+		picture = organize_territories
+		potential = {
+			1891 = { NOT = { is_core = LOA } }
+			LOA = { #Congo
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				region = FRA_1978
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -0.5
+			LOA = {
+				all_core = { remove_core = LOA } #Reseting Cores
+				capital = 1978
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = african_minor
+			}
+			FRA_1978 = { add_core = LOA }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_bas_congo = {
+		picture = organize_territories
+		potential = {
+			1992 = { NOT = { is_core = KON } }
+			KON = { #Democratic Republic of the Congo (DRC)
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = BEL_1987
+					region = BEL_1990
+					region = BEL_1984
+					region = BEL_1977
+					region = BEL_1992
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1.5
+			KON = {
+				all_core = { remove_core = KON } #Reseting Cores
+				capital = 1982
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			BEL_1987 = { add_core = KON }
+			BEL_1990 = { add_core = KON }
+			BEL_1984 = { add_core = KON }
+			BEL_1977 = { add_core = KON }
+			BEL_1992 = { add_core = KON }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_eritrea = {
+		picture = organize_territories
+		potential = {
+			1875 = { NOT = { is_core = GON } }
+			GON = { #Eritrea
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				region = ENG_1848
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -0.5
+			GON = {
+				all_core = { remove_core = GON } #Reseting Cores
+				capital = 1848
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = oromo
+			}
+			ENG_1848 = { add_core = GON }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_somalia = {
+		picture = organize_territories
+		potential = {
+			1868 = { NOT = { is_core = WRS } }
+			WRS = { #Somalia
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				region = ENG_1868
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -0.5
+			WRS = {
+				all_core = { remove_core = WRS } #Reseting Cores
+				capital = 1868
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			ENG_1868 = { add_core = WRS }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_kenya = {
+		picture = organize_territories
+		potential = {
+			2024 = { NOT = { is_core = SHW } }
+			SHW = { #Kenya
+				NOT = { government = democracy }
+				exists = no
+			}
+			HAR = { #Uganda
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = ENG_2024
+					region = ENG_1825
+					region = ENG_2019
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1
+			SHW = {
+				all_core = { remove_core = SHW } #Reseting Cores
+				capital = 2024
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = oromo
+			}
+			HAR = {
+				all_core = { remove_core = HAR } #Reseting Cores
+				capital = 2019
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = oromo
+			}
+			ENG_2024 = { add_core = SHW }
+			ENG_2026 = { add_core = SHW }
+			ENG_2019 = { add_core = HAR }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_angola = {
+		picture = organize_territories
+		potential = {
+			2006 = { NOT = { is_core = LUN } }
+			LUN = { #Angola
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = POR_1999
+					region = POR_2003
+					region = POR_2006
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+				tag = POR
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1
+			LUN = {
+				all_core = { remove_core = LUN } #Reseting Cores
+				capital = 1999
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			POR_1999 = { add_core = LUN }
+			POR_2003 = { add_core = LUN }
+			POR_2006 = { add_core = LUN }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_zambia_and_malawi = {
+		picture = organize_territories
+		potential = {
+			2012 = { NOT = { is_core = CLB } }
+			CLB = { #Zambia
+				NOT = { government = democracy }
+				exists = no
+			}
+			MAJ = { #Malawi
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = ENG_2014
+					region = ENG_2016
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1
+			CLB = {
+				all_core = { remove_core = CLB } #Reseting Cores
+				capital = 2012
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = fon
+			}
+			MAJ = {
+				all_core = { remove_core = MAJ } #Reseting Cores
+				capital = 2067
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			ENG_2014 = { add_core = CLB }
+			ENG_2016 = { add_core = CLB }
+			2066 = { add_core = MAJ remove_core = CLB }
+			2067 = { add_core = MAJ remove_core = CLB }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_tanzania = {
+		picture = organize_territories
+		potential = {
+			2043 = { NOT = { is_core = ZAN } }
+			ZAN = { #Tanzania
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = ENG_2039
+					region = ENG_2029
+					region = ENG_2034
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1
+			ZAN = {
+				all_core = { remove_core = ZAN } #Reseting Cores
+				capital = 2045
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			ENG_2039 = { add_core = ZAN }
+			ENG_2029 = { add_core = ZAN }
+			ENG_2034 = { add_core = ZAN }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_namibia = {
+		picture = organize_territories
+		potential = {
+			2078 = { NOT = { is_core = ORA } }
+			ORA = { #Namibia
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = ENG_2083
+					region = ENG_2078
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -0.5
+			ORA = {
+				all_core = { remove_core = ORA } #Reseting Cores
+				capital = 2078
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			ENG_2083 = { add_core = ORA }
+			ENG_2078 = { add_core = ORA }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_botswana_and_zimbabwe = {
+		picture = organize_territories
+		potential = {
+			2076 = { NOT = { is_core = ZUL } }
+			ZUL = { #Botswana
+				NOT = { government = democracy }
+				exists = no
+			}
+			TRN = { #Zimbabwe
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = ENG_2074
+					region = ENG_2068
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1
+			ZUL = {
+				all_core = { remove_core = ZUL } #Reseting Cores
+				capital = 2074
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+				remove_accepted_culture = nguni
+				remove_accepted_culture = sotho
+			}
+			TRN = {
+				all_core = { remove_core = TRN } #Reseting Cores
+				capital = 2068
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			ENG_2074 = { add_core = ZUL }
+			ENG_2068 = { add_core = TRN }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_mozambique = {
+		picture = organize_territories
+		potential = {
+			2049 = { NOT = { is_core = GEL } }
+			GEL = { #Mozambique
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = POR_2049
+					region = POR_2053
+					region = POR_2060
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+				tag = POR
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1
+			GEL = {
+				all_core = { remove_core = GEL } #Reseting Cores
+				capital = 2049
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			POR_2049 = { add_core = GEL }
+			POR_2053 = { add_core = GEL }
+			POR_2060 = { add_core = GEL }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_madagascar = {
+		picture = organize_territories
+		potential = {
+			2124 = { NOT = { is_core = MAD } }
+			MAD = { #Madagascar (Merina Kingdom)
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = MAD_2117
+					region = MAD_2121
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -0.5
+			MAD = {
+				all_core = { remove_core = MAD } #Reseting Cores
+				capital = 2115
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			MAD_2117 = { add_core = MAD }
+			MAD_2121 = { add_core = MAD }
+			2124 = { add_core = MAD }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	organize_morocco = {
+		picture = organize_territories
+		potential = {
+			1774 = { NOT = { is_core = MOR } }
+			MOR = { #Morocco
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = MOR_1683
+					region = MOR_1693
+					region = MOR_1686
+					region = MOR_1688
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -0.5
+			MOR = {
+				all_core = { remove_core = MOR }
+				capital = 1685
+				civilized = yes
+				government = democracy
+				primary_culture = THIS
+			}
+			MOR_1683 = { add_core = MOR }
+			MOR_1693 = { add_core = MOR }
+			MOR_1686 = { add_core = MOR }
+			MOR_1688 = { add_core = MOR }
+			MOR_1696 = { add_core = MOR }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

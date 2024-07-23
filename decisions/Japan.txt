@@ -1,0 +1,372 @@
+political_decisions = {
+	japanese_unification_decision = {
+		picture = the_meiji_restoration3
+		potential = {
+			primary_culture = japanese
+			war = no
+			any_owned_province = {
+				is_core = SHJ
+			}
+			NOT = {
+				has_global_flag = meiji_restoration_done
+				tag = SEN
+				tag = YON
+				tag = SHJ
+			}
+			NOT = {
+				exists = JAP
+			}
+		}
+	
+		allow = {
+			exists = SHJ
+			exists = SEN
+			exists = YON
+			has_country_flag = meiji_emperor
+		}
+	
+		effect = {
+			SHJ = {
+				release_vassal = THIS
+			}
+            leave_alliance = SHJ
+			any_country = {
+				limit = {
+					primary_culture = japanese
+					NOT = { tag = IMJ }
+                    OR = {
+                        substate_of = SHJ
+                        vassal_of = SHJ
+                    }
+				}
+				country_event = 50001
+			}
+			IMJ = {
+				country_event = 50002
+			}
+			SHJ = {
+				country_event = { id = 50003 days = 1 }
+			}
+			set_global_flag = meiji_restoration_done
+			set_country_flag = supports_emperor
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	annex_korea = {
+		picture = korean_flag
+		potential = {
+			tag = JAP
+			prestige = 30
+			civilized = yes
+			exists = KOR
+		}
+	
+		allow = {
+			year = 1870
+			KOR = { 
+				in_sphere = THIS
+				vassal_of = THIS
+				civilized = yes
+			}
+		}
+	
+		effect = {
+			inherit = KOR
+			prestige = 10
+			badboy = 5
+			relation = { who = RUS value = -30 }
+			any_country = {
+				limit = {
+					neighbour = THIS
+				}
+				relation = { who = THIS value = -20 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	hokkaido_question = {
+		picture = hokkaido_map
+		potential = {
+			OR = {
+				tag = JAP
+				tag = SHJ
+			}
+			owns = 1642
+			NOT = { accepted_culture = ainu }
+		}
+	
+		allow = {
+			civilized = yes
+			state_n_government = 1
+		}
+	
+		effect = {
+			add_accepted_culture = ainu
+			prestige = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	unify_japan_as_shogun = {
+		picture = japan_map
+		potential = {
+			tag = SHJ
+			NOT = { has_country_flag = japan_shogun_unified }
+			exists = IMJ
+			exists = SAT
+			war = no
+		}
+	
+		allow = {
+			civilized = yes
+			OR = {
+				owns = 1657
+				year = 1865
+			}
+			all_core = {
+				OR = {
+					owned_by = THIS
+					owner = {
+						OR = {
+							vassal_of = THIS
+							substate_of = THIS
+						}
+					}
+				}
+			}
+		}
+	
+		effect = {
+			set_country_flag = japan_shogun_unified
+			any_country = {
+				limit = {
+					OR = {
+						substate_of = THIS
+						vassal_of = THIS
+					}
+					NOT = { tag = IMJ }
+					NOT = { tag = SAT }
+				}
+				country_event = 50001
+			}
+			prestige = 35
+			release_vassal = IMJ
+			release_vassal = SAT
+			IMJ = {
+				create_alliance = SAT
+				create_vassal = SAT
+			}
+			war = {
+				target = IMJ
+				attacker_goal = { casus_belli = annex_core_country }
+				defender_goal = { casus_belli = annex_core_country }
+				call_ally = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shogun_power = {
+		picture = japan_shogun
+		potential = {
+			tag = SHJ
+			NOT = {
+				has_global_flag = meiji_restoration_done
+				has_country_flag = shogun_power_shj
+			}
+		}
+	
+		allow = {
+			year = 1845
+			war = no
+			militancy = 1
+			consciousness = 1
+		}
+	
+		effect = {
+			set_country_flag = shogun_power_shj
+			prestige = 12.5
+			relation = { who = IMJ value = -75 }
+			any_pop = {
+				militancy = -0.75
+				consciousness = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	meiji_constitution = {
+		picture = meiji_constitution_ceremony
+		potential = {
+			OR = {
+				tag = JAP
+				tag = SHJ
+			}
+			has_global_flag = boshin_war_was_happened
+			NOT = { has_country_flag = meiji_constitution_released }
+		}
+	
+		allow = {
+			state_n_government = 1
+			idealism = 1
+			accepted_culture = ainu
+		}
+		
+		effect = {
+			set_country_flag = meiji_constitution_released
+			government = empire
+			random_owned = {
+				limit = {
+					owner = { tag = SHJ }
+				}
+				owner = { change_tag = JAP }
+			}
+			all_core = { remove_core = SHJ } #WHY Hokkaido is uncolonised when taking the decision
+			prestige = 20.5
+			any_country = {
+				limit = {
+					OR = {
+						government = democracy
+						government = hms_government
+					}
+				}
+				relation = { who = THIS value = 25 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	abolish_han_system = {
+		picture = han_system
+		potential = {
+			tag = JAP
+			has_global_flag = boshin_war_was_happened
+			NOT = { has_country_flag = han_system_abolished }
+		}
+	
+		allow = {
+			ideological_thought = 1
+			OR = {
+				truce_with = QNG
+				is_secondary_power = yes
+				is_greater_power = yes
+				year = 1875
+			}
+		}
+		
+		effect = {
+			prestige = 10
+			research_points = 4500
+			set_country_flag = han_system_abolished
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	accept_cristianity = {
+		picture = christianity_allowed
+		potential = {
+			tag = JAP
+			has_global_flag = boshin_war_was_happened
+			NOT = { has_country_flag = cristianity_accepted }
+		}
+	
+		allow = {
+			medicine = 1
+			collectivist_theory = 1
+		}
+		
+		effect = {
+			prestige = 5
+			any_greater_power = {
+				capital_scope = { continent = europe }
+				relation = { who = THIS value = 45 }
+			}
+			set_country_flag = cristianity_accepted
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	change_capital_tokio = {
+		picture = tokio_city
+		potential = {
+			primary_culture = japanese
+			has_global_flag = meiji_restoration_done
+			owns = 1649
+			NOT = { capital = 1649 }
+		}
+	
+		allow = {
+			prestige = 10
+		}
+		
+		effect = {
+			prestige = 6
+			capital = 1649
+			1649 = { change_province_name = "Tokyo" }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	conquer_hokkaido_island = {
+		picture = hokkaido_map
+		potential = {
+			OR = {
+				tag = JAP
+				tag = SHJ
+			}
+			civilized = yes
+			exists = yes
+			NOT = {
+				OR = {
+					owns = 1643
+					owns = 1644
+					owns = 1089
+					owns = 1087
+				}
+			}
+		}
+	
+		allow = {
+			war = no
+			owns = 1642
+		}
+		
+		effect = {
+			prestige = 5
+			1643 = {
+				secede_province = THIS
+				add_core = THIS
+			}
+			1644 = {
+				secede_province = THIS
+				add_core = THIS
+				naval_base = 2
+			}
+			1089 = {
+				secede_province = THIS
+				add_core = THIS
+			}
+			1087 = {
+				secede_province = THIS
+				add_core = THIS
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

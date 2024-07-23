@@ -1,0 +1,35 @@
+army = {
+	name = "I. Shogunate Army"
+	location = 1649
+	regiment = {
+		name= "Shogunate Infantry"
+		type = infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Shogunate Infantry"
+		type = infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Shogunate Infantry"
+		type = infantry
+		home = 1651
+	}
+	regiment = {
+		name= "Shogunate Infantry"
+		type = infantry
+		home = 1651
+	}
+	regiment = {
+		name= "Shogunate Infantry"
+		type = infantry
+		home = 1649
+	}
+	regiment = {
+		name= "Shogunate Infantry"
+		type = infantry
+		home = 1652
+	}
+}
+

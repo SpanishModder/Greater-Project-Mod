@@ -1,0 +1,257 @@
+political_decisions = {
+	fatherland_volunteers = {
+		potential = {
+			tag = BRZ
+			government = hms_government
+			NOT = {
+				has_country_flag = pedro_said_it_best
+			}
+		}
+		allow = {
+			army_decision_making = 1
+			war = yes
+		}
+		effect = {
+			war_exhaustion = -1
+			prestige = 10
+			set_country_flag = pedro_said_it_best
+		}
+	}
+	law_1420_of_general_common_education = {
+		potential = {
+			tag = ARG
+			NOT = {
+				has_country_flag = 1420_passed
+			}
+		}
+		allow = {
+			social_science = 1
+			ruling_party_ideology = conservative
+		}
+		effect = {
+			years_of_research = 0.2
+			set_country_flag = 1420_passed
+		}
+	}
+	occupy_corrientes = {
+		picture = corrientes
+		potential = {
+			tag = PRG
+			NOT = {
+				owns = 2554
+			}
+			2554 = {
+				owned_by = COR
+			}
+		}
+		
+		allow = {
+			war = no
+			ARG = { exists = no }
+			ideological_thought = 1
+		}
+		
+		effect = {
+			prestige = 2
+			2554 = { secede_province = PRG }
+			relation = { who = ARC value = -50 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_fate_of_uruguay = {
+		picture = uruguay_map
+		potential = {
+			tag = BRZ
+			exists = URU
+		}
+		
+		allow = {
+			is_greater_power = yes
+			URU = {
+				war = no
+				mobilized = no
+				in_sphere = THIS
+			}
+			state_n_government = 1
+		}
+		
+		effect = {
+			prestige = 10
+			inherit = URU
+			relation = { who = ARG value = -40 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	conquest_chaco_region = {
+		picture = chaco_map
+		potential = {
+			OR = {
+				owns = 2318 # Bolivia
+				owns = 2339 # Paraguay
+				owns = 2365 # Argentina
+				
+			}
+			year = 1860
+			exists = yes
+			OR = {
+				# Bolivia
+				AND = {
+					owns = 2318
+					2338 = {
+						OR = {
+							empty = yes
+							is_core = PRG
+						}
+					}
+					2337 = {
+						OR = {
+							empty = yes
+							is_core = PRG
+						}
+					}
+				}
+				# Paraguay
+				AND = {
+					owns = 2339
+					2338 = {
+						OR = {
+							empty = yes
+							is_core = BOL
+							is_core = PBC
+						}
+					}
+					2337 = {
+						OR = {
+							empty = yes
+							is_core = BOL
+							is_core = PBC
+						}
+					}
+				}
+				# Argentina
+				AND = {
+					owns = 2365
+					2366 = { empty = yes }
+					2367 = { empty = yes }
+				}
+			}
+		}
+		
+		allow = {
+			revolution_n_counterrevolution = 1
+		}
+		
+		effect = {
+			set_country_flag = chaco_conquered
+			prestige = 3.5
+			random_owned = { #Paraguay - If PBC or BOL does NOT conquer the chaco before PRG
+				limit = { 
+					owner = {
+						owns = 2339
+						2337 = { empty = yes }
+						2338 = { empty = yes }
+					}
+				}
+				2337 = {
+					add_core = THIS
+					secede_province = THIS
+				}
+				2338 = {
+					add_core = THIS
+					secede_province = THIS
+				}
+			}
+			random_owned = { #Paraguay - If PBC or BOL conquer the chaco before PRG
+				limit = { 
+					owner = {
+						owns = 2339
+						2337 = { empty = no }
+						2338 = { empty = no }
+					}
+				}
+				2337 = { add_core = THIS }
+				2338 = { add_core = THIS }
+			}
+			random_owned = { #Bolivia or Peru-Bolivia - If PRG does NOT conquer the chaco before PBC
+				limit = { 
+					owner = {
+						owns = 2318
+						2337 = { empty = yes }
+						2338 = { empty = yes }
+					}
+				}
+				2337 = {
+					add_core = THIS
+					secede_province = THIS
+				}
+				2338 = {
+					add_core = THIS
+					secede_province = THIS
+				}
+			}
+			random_owned = { #Bolivia or Peru-Bolivia - If PRG conquer the chaco before PBC
+				limit = {
+					owner = {
+						owns = 2318
+						2337 = { empty = no }
+						2338 = { empty = no }
+					}
+				}
+				2337 = { add_core = THIS }
+				2338 = { add_core = THIS }
+			}
+			random_owned = { #Argentina (ARG) or Argentine Conf. (ARC)
+				limit = { 
+					owner = {
+						owns = 2365
+						2366 = { empty = yes }
+						2367 = { empty = yes }
+					}
+				}
+				2366 = {
+					add_core = THIS
+					secede_province = THIS
+				}
+				2367 = {
+					add_core = THIS
+					secede_province = THIS
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	treaty_of_rio_de_janeiro = {
+		picture = treaty_of_janeiro
+		potential = {
+			tag = BRZ
+			2401 = {
+				NOT = {
+					OR = {
+						is_core = THIS
+						owned_by = THIS
+					}
+				}	
+			}
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			2401 = { owner = { relation = { who = THIS value = 75 } } }
+		}
+		
+		effect = {
+			prestige = 2
+			2401 = { add_core = THIS }
+			2401 = { owner = { country_event = 51005 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,165 @@
+#Cyprus Region (152000)
+#under the rule of Ottoman Empire in 1836  
+#Nicosia (64000/16000 POPS)
+855 = {
+	aristocrats = {
+		culture = turkish
+		religion = sunni
+		size = 618
+	}
+
+	bureaucrats = {
+		culture = turkish
+		religion = sunni
+		size = 112
+	}
+
+	officers = {
+		culture = turkish
+		religion = sunni
+		size = 112
+	}
+
+	clergymen = {
+		culture = turkish
+		religion = sunni
+		size = 168
+	}
+
+	artisans = {
+		culture = turkish
+		religion = sunni
+		size = 1125
+	}
+
+	soldiers = {
+		culture = turkish
+		religion = sunni
+		size = 393
+	}
+
+	farmers = {
+		culture = turkish
+		religion = sunni
+		size = 6468
+	}
+
+	clergymen = {
+		culture = greek
+		religion = orthodox
+		size = 225
+	}
+
+	artisans = {
+		culture = greek
+		religion = orthodox
+		size = 1687
+	}
+
+	farmers = {
+		culture = greek
+		religion = orthodox
+		size = 25087
+	}
+}
+#Limassol (44000/11000 POPS)
+856 = {
+	aristocrats = {
+		culture = turkish
+		religion = sunni
+		size = 450
+	}
+
+	clergymen = {
+		culture = turkish
+		religion = sunni
+		size = 112
+	}
+
+	artisans = {
+		culture = turkish
+		religion = sunni
+		size = 675
+	}
+
+	soldiers = {
+		culture = turkish
+		religion = sunni
+		size = 225
+	}
+
+	farmers = {
+		culture = turkish
+		religion = sunni
+		size = 3037
+	}
+
+	clergymen = {
+		culture = greek
+		religion = orthodox
+		size = 168
+	}
+
+	artisans = {
+		culture = greek
+		religion = orthodox
+		size = 900
+	}
+
+	farmers = {
+		culture = greek
+		religion = orthodox
+		size = 19180
+	}
+}
+#Famagusta (44000/11000 POPS)
+857 = {
+	aristocrats = {
+		culture = turkish
+		religion = sunni
+		size = 450
+	}
+
+	clergymen = {
+		culture = turkish
+		religion = sunni
+		size = 112
+	}
+
+	artisans = {
+		culture = turkish
+		religion = sunni
+		size = 337
+	}
+
+	soldiers = {
+		culture = turkish
+		religion = sunni
+		size = 225
+	}
+
+	farmers = {
+		culture = turkish
+		religion = sunni
+		size = 5625
+	}
+
+	clergymen = {
+		culture = greek
+		religion = orthodox
+		size = 168
+	}
+
+	artisans = {
+		culture = greek
+		religion = orthodox
+		size = 900
+	}
+
+	farmers = {
+		culture = greek
+		religion = orthodox
+		size = 16930
+	}
+
+}

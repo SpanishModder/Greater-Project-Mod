@@ -1,0 +1,10 @@
+owner = DNG
+controller = DNG
+add_core = DNG
+trade_goods = dye
+life_rating = 30
+1890.1.1 = {
+	owner = NET
+	controller = NET
+	colonial = 2
+}

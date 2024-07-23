@@ -1,0 +1,16 @@
+# Triggered modifiers are here.
+# these are checked for each countries once/month and then applied.
+#
+# Effects are fully scriptable here.
+
+vassal_nation = {
+	trigger = {
+		exists = yes
+		OR = {
+			is_vassal = yes
+			is_substate = yes
+		}
+	}
+	prestige = -0.125
+	icon = 2
+}

@@ -1,0 +1,15 @@
+owner = HAR
+controller = HAR
+add_core = HAR
+add_core = GON
+add_core = SHW
+add_core = ETH
+trade_goods = coffee
+life_rating = 30
+1875.1.1 = { 
+    owner = ETH
+    controller = ETH
+    remove_core = HAR
+    remove_core = SHW
+    remove_core = GON
+}

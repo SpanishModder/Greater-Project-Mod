@@ -1,0 +1,223 @@
+#############################
+#        Nobel Prize        #
+#############################
+# List of Prizes #
+# - Physics
+# - Chemistry
+# - Medicine
+# - Literature
+# - Peace
+# - Economics / Not added at the moment
+
+# Establishment of the Nobel Prizes - For Sweden
+country_event = {
+
+	id = 23450
+	news = yes
+	news_desc_long = "EVTDESC23450_NEWS_LONG"
+	news_desc_medium = "EVTDESC23450_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC23450_NEWS_SHORT"
+
+	trigger = {
+		tag = SWE 
+		year = 1898
+		NOT = {
+			year = 1905
+			has_global_flag = NobelPhysics
+		}
+		war = no 
+	}
+ 
+	mean_time_to_happen = {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1899
+		}
+		modifier = {
+			factor = 0.95
+			year = 1900
+		}
+	}
+
+	title = "EVTNAME23450"
+	desc = "EVTDESC23450"
+	picture = "Nobel_Physics"
+
+	option = {
+		name = "EVTOPTA23401"
+		prestige = 50
+		set_global_flag = NobelPrizes
+	}
+}
+
+# Nobel Physics Prize Event
+country_event = {
+
+	id = 23451
+	title = "EVTNAME23451"
+	desc = "EVTDESC23451"
+	picture = "Nobel_Physics"
+
+	trigger = {
+		has_global_flag = NobelPrizes
+		year = 1901
+		OR = {
+			NOT = {
+				any_greater_power = {
+					has_country_modifier = nobel_prize_physics
+				}
+			}
+			NOT = { has_country_modifier = nobel_prize_physics }
+		}
+		is_greater_power = yes
+	}
+ 
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "EVTOPTA23451"
+		prestige = 4
+		add_country_modifier = {
+			name = nobel_prize_physics
+			duration = 730 #Not each year to avoid event spamming
+		}
+	}
+}
+
+# Nobel Chemistry Prize Event
+country_event = {
+
+	id = 23491
+	title = "EVTNAME23491"
+	desc = "EVTDESC23491"
+	picture = "Nobel_Chemistry"
+
+	trigger = {
+		has_global_flag = NobelPrizes
+		year = 1901
+		OR = {
+			NOT = {
+				any_greater_power = {
+					has_country_modifier = nobel_prize_chemistry
+				}
+			}
+			NOT = { has_country_modifier = nobel_prize_chemistry }
+		}
+		is_greater_power = yes
+	}
+ 
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "EVTOPTA23491"
+		prestige = 4
+		add_country_modifier = {
+			name = nobel_prize_chemistry
+			duration = 730
+		}
+	}
+}
+
+# Nobel Medicine Prize Event
+country_event = {
+
+	id = 23531
+	title = "EVTNAME23531"
+	desc = "EVTDESC23531"
+	picture = "Nobel_Medicine"
+
+	trigger = {
+		has_global_flag = NobelPrizes
+		year = 1901
+		OR = {
+			NOT = {
+				any_greater_power = {
+					has_country_modifier = nobel_prize_medicine
+				}
+			}
+			NOT = { has_country_modifier = nobel_prize_medicine }
+		}
+		is_greater_power = yes
+	}
+ 
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "EVTOPTA23491"
+		prestige = 4
+		add_country_modifier = {
+			name = nobel_prize_medicine
+			duration = 730
+		}
+	}
+}
+
+# Nobel Literature Prize Event
+country_event = {
+
+	id = 23571
+	title = "EVTNAME23571"
+	desc = "EVTDESC23571"
+	picture = "Nobel_Literature"
+
+	trigger = {
+		has_global_flag = NobelPrizes
+		year = 1901
+		OR = {
+			NOT = {
+				any_greater_power = {
+					has_country_modifier = nobel_prize_literature
+				}
+			}
+			NOT = { has_country_modifier = nobel_prize_literature }
+		}
+		is_greater_power = yes
+	}
+ 
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "EVTOPTA23571"
+		prestige = 4
+		add_country_modifier = {
+			name = nobel_prize_literature
+			duration = 730
+		}
+	}
+}
+
+# Nobel Peace Prize Event
+country_event = {
+
+	id = 23611
+	title = "EVTNAME23611"
+	desc = "EVTDESC23611"
+	picture = "Nobel_Peace"
+
+	trigger = {
+		has_global_flag = NobelPrizes
+		year = 1901
+		OR = {
+			NOT = {
+				any_greater_power = {
+					has_country_modifier = nobel_prize_peace
+				}
+			}
+			NOT = { has_country_modifier = nobel_prize_peace }
+		}
+		is_greater_power = yes
+	}
+ 
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "EVTOPTA23611"
+		prestige = 4
+		add_country_modifier = {
+			name = nobel_prize_peace
+			duration = 730
+		}
+	}
+}

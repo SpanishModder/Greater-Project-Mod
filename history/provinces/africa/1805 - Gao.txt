@@ -1,0 +1,6 @@
+owner = MAS
+controller = MAS
+add_core = MAS
+trade_goods = wool
+life_rating = 5
+1880.1.1 = { owner = FRA controller = FRA colonial = 2 } 

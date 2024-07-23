@@ -1,0 +1,61 @@
+
+#Events 50800 - 50899#
+
+country_event = {
+	id = 50800
+	title = "EVTNAME50800" 
+	desc = "EVTDESC50800"
+	fire_only_once = yes
+	picture = "Treaty"
+	major = yes
+	
+	trigger = {
+		tag = PEU
+		exists = PBC
+		OR = {
+			AND = {
+				war_with = PBC
+				2304 = { controlled_by = THIS }
+				SPE = {
+					war_exhaustion = 20
+				}
+			}
+			PBC = {
+				truce_with = THIS
+				has_recently_lost_war = yes
+			}
+		}
+	}
+	
+	option = {
+        name = "EVTOPTB50800"
+		prestige = 5
+		PBC = {
+			release_vassal = SPE
+		}
+		inherit = SPE
+		end_war = PBC
+		war_exhaustion = -10
+		PBC = { country_event = 50801 }
+    }
+}
+
+country_event = {
+	id = 50801
+	title = "EVTNAME50801" 
+	desc = "EVTDESC50800"
+	fire_only_once = yes
+	picture = "Chaotic Confederation"
+	
+	is_triggered_only = yes
+	
+	option = {
+        name = "EVTOPTB50801"
+		change_tag = BOL
+		PBC = { 
+			all_core = {
+				remove_core = PBC
+			}
+		}
+    }
+}

@@ -1,0 +1,679 @@
+political_decisions = {
+	establish_the_sovnarkom = {
+		potential = {
+			tag = RUS
+			NOT = {
+				has_country_flag = big_brother_is_watching
+			}
+			government = proletarian_dictatorship
+		}
+		allow = {
+			mass_politics = 1
+		}
+		
+		effect = {
+			any_pop = {
+				militancy = -1
+				consciousness = -1
+				ideology = {
+					value = socialist
+					factor = 0.05
+				}
+			}
+			prestige = 5
+			set_country_flag = big_brother_is_watching
+		}
+	}
+	manifesto_on_unshakable_autocracy = {
+		potential = {
+			tag = RUS
+			government = absolute_monarchy
+			NOT = {
+				has_country_flag = the_manifesto
+			}
+			nationalism_n_imperialism = 1
+		}
+		
+		allow = {
+			revolution_n_counterrevolution = 1
+		}
+		
+		effect = {
+			prestige = 5
+			badboy = 3
+			any_pop = {
+				consciousness = -0.5
+				militancy = -0.5
+			}
+			set_country_flag = the_manifesto
+		}
+	}
+	promulgate_the_ems_ukaz = {
+		potential = {
+			tag = RUS
+			NOT = {
+				has_country_flag = ems_ukaz_dispatched
+			}
+			government = absolute_monarchy
+			owns = 958
+			exists = GER
+			GER = {
+				owns = 570
+			}
+		}
+		
+		allow = {
+			biologism = 1
+			phenomenalism = 1
+		}
+		
+		effect = {
+			any_pop = {
+				limit = {
+					has_pop_culture = ukrainian
+				}
+				militancy = 3
+				consciousness = -2
+			}
+			set_country_flag = ems_ukaz_dispatched
+		}
+	}
+	protect_eastern_christians = {
+		potential = {
+			tag = RUS
+			is_greater_power = yes
+			government = absolute_monarchy
+			NOT = {
+				has_country_flag = eastern_christians_protected
+				has_global_flag = berlin_conference
+			}
+			TUR = { exists = yes }
+			year = 1853
+		}
+		
+		allow = {
+			NOT = {
+				relation = {
+					who = TUR
+					value = 50
+				}
+			}
+			TUR = {
+				OR = {
+					average_militancy = 3
+					average_consciousness = 2
+					is_greater_power = no
+				}
+			}
+		}
+		
+		effect = {
+			set_country_flag = eastern_christians_protected
+			add_country_modifier = {
+				name = protector_of_eastern_christendom
+				duration = -1
+			}
+			random_country = {
+				limit = {
+					is_greater_power = yes
+					NOT = {
+						tag = TUR
+						tag = AUS
+						tag = SPA
+					}
+					capital_scope = { continent = europe }
+				}
+				country_event = 19030
+			}
+		}
+	}
+	russian_vladivostok = {
+		potential = {
+			tag = RUS
+			owns = 1085
+			owns = 1084
+			owns = 2617
+			owns = 1083
+			owns = 1082
+			NOT = {
+				has_global_flag = russian_vladivostok
+			}
+		}
+		
+		allow = {
+			prestige = 10
+		}
+		
+		effect = {
+			1085 = {
+				change_province_name = "Blagoveshchensk"
+			}
+			1084 = {
+				change_province_name = "Nikolayevsk-na-amure"
+			}
+			1083 = {
+				change_province_name = "Khabarovsk"
+			}
+			2617 = {
+				change_province_name = "Pashkovo"
+			}
+			1082 = {
+				change_province_name = "Vladivostok"
+				state_scope = {
+					change_region_name = "Primorye"
+				}
+			}
+			prestige = 5
+			set_global_flag = russian_vladivostok
+		}
+	}
+	move_capital_to_moscow = {
+		potential = {
+			tag = RUS
+			NOT = { owns = 339 }
+			FIN = { exists = no }
+			capital = 994
+		}
+		
+		allow = {
+			owns = 1008
+		}
+		
+		effect = {
+			capital = 1008
+			prestige = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RSF_communist_moscow = {
+		picture = move_capital_to_moscow
+		potential = {
+			tag = RSF
+			NOT = { capital = 1008 }
+		}
+		allow = {
+			OR = {
+				owns = 1008
+				controls = 1008
+			}
+		}
+		
+		effect = {
+			prestige = 5
+			1008 = { secede_province = THIS }
+			capital = 1008
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RSF_civil_war_is_over = {
+		picture = russian_civil_war
+		potential = {
+			tag = RSF
+			RUS = { exists = no }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			prestige = 10
+			change_tag = RUS
+			RUS = { government = proletarian_dictatorship }
+			any_pop = {
+				militancy = -4
+				consciousness = -2
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	improve_worker_conditions_decision = {
+		picture = factory_workers
+		potential = {
+			tag = RUS
+			year = 1845
+			NOT = {
+				has_country_flag = worker_conditions_improved
+			}
+		}
+		
+		allow = {
+			OR = {
+				war_exhaustion = 40
+				exists = POL
+				exists = UKR
+				exists = BYE
+				exists = LIT
+				inorganic_chemistry = 1
+			}
+		}
+		
+		effect = {
+			set_country_flag = worker_conditions_improved
+			social_reform = trinket_safety
+			social_reform = fourteen_hours
+			prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	annex_finland = {
+		picture = finland_flag
+		potential = {
+			tag = RUS
+			FIN = {
+				exists = yes
+				substate_of = THIS
+			}
+			NOT = {
+				has_country_flag = finland_annexed
+			}
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			is_greater_power = yes
+			FIN = { war = no }
+			war = no
+		}
+		
+		effect = {
+			set_country_flag = finland_annexed
+			FIN = {
+				all_core = {
+					add_core = RUS
+				}
+			}
+			FIN = { country_event = 11101 }
+			prestige = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	annex_transcaucasia = {
+		picture = transcaucasia_flag
+		potential = {
+			tag = RUS
+			TRC = {
+				exists = yes
+				substate_of = THIS
+			}
+			NOT = {
+				has_country_flag = transcaucasia_annexed
+			}
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			is_greater_power = yes
+			TRC = { war = no }
+			war = no
+			year = 1872
+		}
+		
+		effect = {
+			TRC = {
+				all_core = {
+					add_core = RUS
+				}
+			}
+			TRC = { country_event = 11101 }
+			prestige = 7.5
+			set_country_flag = transcaucasia_annexed
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	claim_kazakh_territories = {
+		picture = kazakh_territories
+		potential = {
+			tag = RUS
+			year = 1840
+			NOT = {
+				has_country_flag = kazakh_claimed
+			}
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			is_greater_power = yes
+			NOT = { exists = FIN }
+			year = 1880
+		}
+		
+		effect = {
+			badboy = 6
+			set_country_flag = kazakh_claimed
+			RUS_1182 = {
+				add_core = RUS
+				add_core = KKH
+			}
+			RUS_1184 = {
+				add_core = RUS
+				add_core = KKH
+			}
+			RUS_1185 = {
+				add_core = RUS
+				add_core = KKH
+			}
+			KHI_1191 = {
+				add_core = RUS
+				add_core = KKH
+			}
+			RUS_1196 = {
+				add_core = RUS
+				add_core = KKH
+			}
+			KOK_1190 = {
+				add_core = RUS
+				add_core = KKH
+			}
+			BUK_1207 = {
+				add_core = RUS
+				add_core = KKH
+			}
+			prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 18
+			}
+		}
+	}
+	sign_peking_treaty = {
+		picture = peking_convention
+		potential = {
+			tag = RUS
+			year = 1855
+			CHI_1082 = {
+				owned_by = MCK
+			}
+			NOT = { has_country_flag = peking_treaty_signed }
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			biologism = 1
+			is_greater_power = yes
+			OR = {
+				AND = {
+					exists = QNG
+					1612 = {
+						owner = {
+							civilized = no
+						}
+					}
+				}
+				AND = {
+					exists = CHI
+					1612 = {
+						owner = {
+							civilized = yes
+						}
+					}
+					year = 1890
+				}
+			}
+		}
+		
+		effect = {
+			set_country_flag = peking_treaty_signed
+			prestige = 5
+			1612 = {
+				owner = { country_event = 51603 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	sign_peking_treaty_by_force = {
+		picture = peking_treaty
+		potential = {
+			tag = RUS
+			war_with = QNG
+			is_greater_power = yes
+			controls = 1083
+			NOT = { has_country_flag = peking_treaty_signed }
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+		}
+		
+		effect = {
+			prestige = 15
+			set_country_flag = peking_treaty_signed
+			CHI_1082 = { secede_province = THIS }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_peasant_reform = {
+		picture = abolish_serfdom
+		potential = {
+			tag = RUS
+			OR = {
+				government = absolute_monarchy
+				government = absolute_monarchy_2
+				government = empire
+			}
+			NOT = { has_country_flag = peasant_reform_approved }
+		}
+		
+		allow = {
+			realism = 1
+			empiricism = 1
+			OR = {
+				government = hms_government
+				average_militancy = 4
+				AND = {
+					average_consciousness = 3
+					has_recently_lost_war = yes
+				}
+				AND = {
+					consciousness = 1
+					year = 1870
+				}
+			}
+		}
+		
+		effect = {
+			set_country_flag = peasant_reform_approved
+			badboy = -3
+			add_country_modifier = { name = peasant_reform duration = 1080 }
+			any_pop = {
+				limit = {
+					OR = {
+						type = farmers
+						type = labourers
+						type = artisans
+					}
+				}
+				militancy = -2.5
+				consciousness = -1
+			}
+			any_owned = {
+				limit = {
+					has_pop_type = artisans
+					has_pop_type = labourers
+				}
+				any_pop = { limit = { type = artisans } pop_type = labourers }
+			}
+			any_owned = {
+				limit = {
+					has_pop_type = artisans
+					has_pop_type = farmers
+				}
+				any_pop = { limit = { type = artisans } pop_type = farmers }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_potato_decrees = {
+		picture = potato_decrease
+		potential = {
+			tag = RUS
+			NOT = { has_country_flag = potatoes_decrease }
+			NOT = { year = 1868 }
+		}
+		
+		allow = {
+			war = no
+			owns = 1037
+			owns = 1038
+			owns = 1035
+			owns = 1030
+			owns = 1028
+			owns = 958
+			owns = 718
+			owns = 1040
+			NOT = { ruling_party_ideology = liberal }
+			year = 1840
+		}
+		
+		effect = {
+			set_country_flag = potatoes_decrease
+			1037 = {
+				add_province_modifier = { name = potatoes_introduction duration = 3700 }
+			}
+			1035 = {
+				add_province_modifier = { name = potatoes_introduction duration = 3700 }
+			}
+			1038 = {
+				add_province_modifier = { name = potatoes_introduction duration = 3700 }
+			}
+			1030 = {
+				add_province_modifier = { name = potatoes_introduction duration = 3700 }
+			}
+			1028 = {
+				add_province_modifier = { name = potatoes_introduction duration = 3700 }
+			}
+			958 = {
+				add_province_modifier = { name = potatoes_introduction duration = 3700 }
+			}
+			718 = {
+				add_province_modifier = { name = potatoes_introduction duration = 3700 }
+			}
+			1040 = {
+				add_province_modifier = { name = potatoes_introduction duration = 3700 }
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 1
+				year = 1845
+			}
+		}
+	}
+	sign_st_petersburg_treaty = {
+		picture = hokkaido_map
+		potential = {
+			tag = RUS
+			NOT = {
+				OR = {
+					owns = 1086
+					owns = 1088
+				}
+			}
+			OR = {
+				exists = JAP
+				AND = {
+					exists = SHJ
+					SHJ = { civilized = yes }
+				}
+			}
+		}
+		
+		allow = {
+			war = no
+			prestige = 40
+			OR = {
+				exists = JAP
+				AND = {
+					exists = SHJ
+					SHJ = { civilized = yes }
+				}
+			}
+			OR = {
+				relation = { who = JAP value = 0 }
+				year = 1862
+			}
+		}
+		
+		effect = {
+			prestige = 5
+			random_country = {
+				limit = {
+					exists = yes
+					OR = {
+						tag = SHJ
+						tag = JAP
+					}
+				}
+				relation = { who = THIS value = -30 }
+			}
+			1086 = {
+				secede_province = THIS
+				add_core = THIS
+			}
+			1088 = {
+				secede_province = THIS
+				add_core = THIS
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_nicholas_reforms = {
+		picture = manifesto_on_unshakable_autocracy
+		potential = {
+			tag = RUS
+			year = 1865
+			OR = {
+				government = absolute_monarchy
+				government = absolute_monarchy_2
+				government = prussian_constitutionalism
+			}
+			NOT = {
+				government = empire
+				has_country_flag = nich_ref
+			}
+		}
+		
+		allow = {
+			analytic_philosophy = 1
+			OR = {
+				is_greater_power = yes
+				year = 1898
+			}
+			has_country_flag = nicholas_ii_reign
+		}
+		
+		effect = {
+			set_country_flag = nich_ref
+			prestige = 5
+			political_reform = none_voting
+			government = absolute_monarchy_2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

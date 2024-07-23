@@ -1,0 +1,242 @@
+#Khwarazm Region (40000)   Uzbekistan.txt and Kazakhstan.txt for balance of region 
+#under the rule of Khiva in 1836  
+#Dashhowuz (40000/10000 POPS)   part of Turkmenistan  
+1195 = {
+	aristocrats = {
+		culture = turkmen
+		religion = sunni
+		size = 262
+	}
+
+	clergymen = {
+		culture = turkmen
+		religion = sunni
+		size = 112
+	}
+
+	artisans = {
+		culture = turkmen
+		religion = sunni
+		size = 675
+	}
+
+	soldiers = {
+		culture = turkmen
+		religion = sunni
+		size = 150
+	}
+
+	farmers = {
+		culture = turkmen
+		religion = sunni
+		size = 13800
+	}
+}
+#Turkmenia Region (368000) 
+#under the rule of Khiva in 1836  
+#Ashkabad (148000/32000 POPS)   
+1204 = {
+	aristocrats = {
+		culture = turkmen
+		religion = sunni
+		size = 750
+	}
+
+	clergymen = {
+		culture = turkmen
+		religion = sunni
+		size = 412
+	}
+
+	artisans = {
+		culture = turkmen
+		religion = sunni
+		size = 1875
+	}
+
+	soldiers = {
+		culture = turkmen
+		religion = sunni
+		size = 450
+	}
+
+	farmers = {
+		culture = turkmen
+		religion = sunni
+		size = 38512
+	}
+
+	clergymen = {
+		culture = persian
+		religion = shiite
+		size = 37
+	}
+
+	artisans = {
+		culture = persian
+		religion = shiite
+		size = 300
+	}
+
+	soldiers = {
+		culture = persian
+		religion = shiite
+		size = 37
+	}
+
+	farmers = {
+		culture = persian
+		religion = shiite
+		size = 5625
+	}
+}
+#Kizil Arvut (88000/22000 POPS)   
+1205 = {
+	aristocrats = {
+		culture = turkmen
+		religion = sunni
+		size = 562
+	}
+
+	clergymen = {
+		culture = turkmen
+		religion = sunni
+		size = 262
+	}
+
+	artisans = {
+		culture = turkmen
+		religion = sunni
+		size = 1275
+	}
+
+	soldiers = {
+		culture = turkmen
+		religion = sunni
+		size = 300
+	}
+
+	farmers = {
+		culture = turkmen
+		religion = sunni
+		size = 26100
+	}
+
+	clergymen = {
+		culture = persian
+		religion = shiite
+		size = 37
+	}
+
+	artisans = {
+		culture = persian
+		religion = shiite
+		size = 225
+	}
+
+	soldiers = {
+		culture = persian
+		religion = shiite
+		size = 37
+	}
+
+	farmers = {
+		culture = persian
+		religion = shiite
+		size = 4200
+	}
+}
+#under the rule of Bukhara in 1836  
+#Merv (132000/33000 POPS)   
+1206 = {
+	aristocrats = {
+		culture = tajik
+		religion = sunni
+		size = 37
+	}
+
+	clergymen = {
+		culture = tajik
+		religion = sunni
+		size = 37
+	}
+
+	artisans = {
+		culture = tajik
+		religion = sunni
+		size = 150
+	}
+
+	soldiers = {
+		culture = tajik
+		religion = sunni
+		size = 37
+	}
+
+	farmers = {
+		culture = tajik
+		religion = sunni
+		size = 2737
+	}
+
+	aristocrats = {
+		culture = turkmen
+		religion = sunni
+		size = 600
+	}
+
+	clergymen = {
+		culture = turkmen
+		religion = sunni
+		size = 337
+	}
+
+	artisans = {
+		culture = turkmen
+		religion = sunni
+		size = 1650
+	}
+
+	soldiers = {
+		culture = turkmen
+		religion = sunni
+		size = 375
+	}
+
+	farmers = {
+		culture = turkmen
+		religion = sunni
+		size = 31537
+	}
+
+	aristocrats = {
+		culture = persian
+		religion = shiite
+		size = 75
+	}
+
+	clergymen = {
+		culture = persian
+		religion = shiite
+		size = 75
+	}
+
+	artisans = {
+		culture = persian
+		religion = shiite
+		size = 600
+	}
+
+	soldiers = {
+		culture = persian
+		religion = shiite
+		size = 112
+	}
+
+	farmers = {
+		culture = persian
+		religion = shiite
+		size = 11137
+	}
+
+}
