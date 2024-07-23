@@ -277,19 +277,7 @@
 	artisans = {
 		culture = turkish
 		religion = sunni
-		size = 15000
-	}
-
-	artisans = {
-		culture = turkish
-		religion = sunni
-		size = 15000
-	}
-
-	artisans = {
-		culture = turkish
-		religion = sunni
-		size = 15000
+		size = 45000
 	}
 
 	artisans = {
@@ -319,7 +307,7 @@
 	soldiers = {
 		culture = turkish
 		religion = sunni
-		size = 4500
+		size = 40500
 	}
 
 	farmers = {

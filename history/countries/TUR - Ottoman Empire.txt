@@ -145,7 +145,7 @@ ruling_party = TUR_conservative
 	
 	literacy = 0.21
 	prestige = 160
-	oob = "/1861/TUR_oob.txt" #oob = "/1914/
+	oob = "/1914/TUR_oob.txt"
 	# Technologies
 	post_napoleonic_thought = 1
 	strategic_mobility = 1

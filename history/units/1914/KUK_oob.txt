@@ -222,52 +222,52 @@ army = {
 	}
 	regiment = {
 		name= "1.1. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.2. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.3. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.4. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.5. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.6. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.7. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.8. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.1. Hussar-Division"
-		home = 625
+		home = 612
 		type = hussar
 	}
 	regiment = {
 		name= "1.2. Hussar-Division"
-		home = 625
+		home = 612
 		type = hussar
 	}
 }
@@ -277,102 +277,102 @@ army = {
 	location = 2538
 	regiment = {
 		name= "1.1. Infanterie-Division"
-		home = 625
+		home = 612
 		type = infantry
 	}
 	regiment = {
 		name= "1.2. Infanterie-Division"
-		home = 625
+		home = 612
 		type = infantry
 	}
 	regiment = {
 		name= "1.3. Infanterie-Division"
-		home = 625
+		home = 612
 		type = infantry
 	}
 	regiment = {
 		name= "1.4. Infanterie-Division"
-		home = 625
+		home = 612
 		type = infantry
 	}
 	regiment = {
 		name= "1.5. Infanterie-Division"
-		home = 625
+		home = 612
 		type = infantry
 	}
 	regiment = {
 		name= "1.6. Infanterie-Division"
-		home = 625
+		home = 612
 		type = infantry
 	}
 	regiment = {
 		name= "1.7. Infanterie-Division"
-		home = 625
+		home = 612
 		type = infantry
 	}
 	regiment = {
 		name= "1.8. Infanterie-Division"
-		home = 625
+		home = 612
 		type = infantry
 	}
 	regiment = {
 		name= "1.1. Engineer-Division"
-		home = 625
+		home = 612
 		type = engineer
 	}
 	regiment = {
 		name= "1.2. Engineer-Division"
-		home = 625
+		home = 612
 		type = engineer
 	}
 	regiment = {
 		name= "1.1. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.2. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.3. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.4. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.5. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.6. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.7. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.8. Artillery-Division"
-		home = 625
+		home = 612
 		type = artillery
 	}
 	regiment = {
 		name= "1.1. Hussar-Division"
-		home = 625
+		home = 612
 		type = hussar
 	}
 	regiment = {
 		name= "1.2. Hussar-Division"
-		home = 625
+		home = 612
 		type = hussar
 	}
 }
@@ -382,102 +382,102 @@ army = {
 	location = 619
 	regiment = {
 		name= "1.1. Infanterie-Division"
-		home = 633
+		home = 613
 		type = infantry
 	}
 	regiment = {
 		name= "1.2. Infanterie-Division"
-		home = 633
+		home = 613
 		type = infantry
 	}
 	regiment = {
 		name= "1.3. Infanterie-Division"
-		home = 633
+		home = 613
 		type = infantry
 	}
 	regiment = {
 		name= "1.4. Infanterie-Division"
-		home = 633
+		home = 613
 		type = infantry
 	}
 	regiment = {
 		name= "1.5. Infanterie-Division"
-		home = 633
+		home = 613
 		type = infantry
 	}
 	regiment = {
 		name= "1.6. Infanterie-Division"
-		home = 633
+		home = 613
 		type = infantry
 	}
 	regiment = {
 		name= "1.7. Infanterie-Division"
-		home = 633
+		home = 613
 		type = infantry
 	}
 	regiment = {
 		name= "1.8. Infanterie-Division"
-		home = 633
+		home = 613
 		type = infantry
 	}
 	regiment = {
 		name= "1.1. Engineer-Division"
-		home = 633
+		home = 613
 		type = engineer
 	}
 	regiment = {
 		name= "1.2. Engineer-Division"
-		home = 633
+		home = 613
 		type = engineer
 	}
 	regiment = {
 		name= "1.1. Artillery-Division"
-		home = 633
+		home = 613
 		type = artillery
 	}
 	regiment = {
 		name= "1.2. Artillery-Division"
-		home = 633
+		home = 613
 		type = artillery
 	}
 	regiment = {
 		name= "1.3. Artillery-Division"
-		home = 633
+		home = 613
 		type = artillery
 	}
 	regiment = {
 		name= "1.4. Artillery-Division"
-		home = 633
+		home = 613
 		type = artillery
 	}
 	regiment = {
 		name= "1.5. Artillery-Division"
-		home = 633
+		home = 613
 		type = artillery
 	}
 	regiment = {
 		name= "1.6. Artillery-Division"
-		home = 633
+		home = 613
 		type = artillery
 	}
 	regiment = {
 		name= "1.7. Artillery-Division"
-		home = 633
+		home = 613
 		type = artillery
 	}
 	regiment = {
 		name= "1.8. Artillery-Division"
-		home = 633
+		home = 613
 		type = artillery
 	}
 	regiment = {
 		name= "1.1. Hussar-Division"
-		home = 633
+		home = 613
 		type = hussar
 	}
 	regiment = {
 		name= "1.2. Hussar-Division"
-		home = 633
+		home = 613
 		type = hussar
 	}
 }

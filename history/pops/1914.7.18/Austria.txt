@@ -29,13 +29,13 @@
 	artisans = {
 		culture = south_german
 		religion = catholic
-		size = 6187
+		size = 6100
 	}
 
 	soldiers = {
 		culture = south_german
 		religion = catholic
-		size = 2475
+		size = 75000
 	}
 
 	farmers = {
@@ -67,7 +67,7 @@
 	soldiers = {
 		culture = south_german
 		religion = catholic
-		size = 2475
+		size = 60475
 	}
 
 	farmers = {
@@ -341,7 +341,7 @@
 	soldiers = {
 		culture = south_german
 		religion = catholic
-		size = 6187
+		size = 80000
 	}
 
 	farmers = {

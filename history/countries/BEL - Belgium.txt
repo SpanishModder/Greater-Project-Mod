@@ -181,7 +181,7 @@ ruling_party = BEL_liberal
 	
 	literacy = 0.63
 	prestige = 46
-	#oob = "/1914/ALB_oob.txt"
+	oob = "/1914/BEL_oob.txt"
 	# Technologies (Generic)
 	post_napoleonic_thought = 1
 	strategic_mobility = 1
