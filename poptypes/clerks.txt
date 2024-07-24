@@ -8,7 +8,6 @@ rebel =
 	irregular = 0.5
 }
 
-
 factory = yes
 workplace_input = -0.1
 workplace_output = 0.1
@@ -49,7 +48,6 @@ life_needs = {
 	fruit =  1
 	grain =  2.5
 }
-
 
 country_migration_target =
 {
@@ -148,7 +146,7 @@ migration_target =
 		unemployment = 0.1
 		state_scope = {
 			has_factories = no
-			}
+		}
 	}
 	modifier = {
 		factor = 1.2
@@ -168,12 +166,12 @@ migration_target =
 	}	
 	modifier = {
 		factor = 0
-			AND = {
-				state_scope = {
-					has_factories = no
-				}
-				can_build_factory = no
+		AND = {
+			state_scope = {
+				has_factories = no
 			}
+			can_build_factory = no
+		}
 		OR = { 
 			unemployment_by_type = { type = farmers value = 0.1  }
 			unemployment_by_type = { type = labourers value = 0.1  }
@@ -486,8 +484,7 @@ promote_to =
 			}
 		}
 	}
-	officers =
-	{
+	officers = {
 		factor = 0.01
 		modifier = {
 			factor = -1
@@ -517,8 +514,7 @@ promote_to =
 			}
 		}
 	}
-	clergymen =
-	{
+	clergymen = {
 		factor = 0.01
 		group = {
 			modifier = {
