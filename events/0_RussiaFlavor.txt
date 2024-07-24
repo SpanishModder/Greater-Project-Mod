@@ -474,92 +474,25 @@ country_event = {
 	}
 }
 
-#country_event = {
-#	id = 50101
-#	title = "EVTNAME50101" #Russian proposal for the sign of the St. Petersburg Treaty
-#	desc = "EVTDESC50100" # - NOT USED
-#	fire_only_once = yes
-#	picture = "kurils"
-#	
-#	trigger = {
-#		tag = RUS
-#		war = no
-#		prestige = 40
-#		year = 1852
-#		has_global_flag = russian_anexation_of_kuril_islands
-#		OR = {
-#			exists = JAP
-#			AND = {
-#				exists = SHJ
-#				SHJ = { civilized = yes }
-#			}
-#		}
-#		OR = {
-#			relation = { who = JAP value = 0 }
-#			relation = { who = SHJ value = 0 }
-#		}
-#	}
-#	
-#	mean_time_to_happen = {
-#		months = 1
-#		modifier = {
-#			factor = 0.95
-#			year = 1846
-#		}
-#		modifier = {
-#			factor = 0.99
-#			year = 1847
-#		}
-#		modifier = {
-#			factor = 1
-#			year = 1849
-#		}
-#		modifier = {
-#			factor = 10
-#			year = 1855
-#		}
-#	}
-#	
-#	option = {
-#		name = "EVTOPTA50101"
-#		set_global_flag = st_petersburg_treaty
-#		prestige = 10
-#		relation = { who = JAP value = -30 }
-#		random_country = {
-#			limit = {
-#				OR = {
-#					tag = SHJ
-#					tag = JAP
-#				}
-#				exists = yes
-#			}
-#			country_event = 50007
-#		}
-#		1086 = { add_core = THIS }
-#		1088 = { add_core = THIS }
-#		1089 = { add_core = JAP }
-#		1087 = { add_core = JAP }
-#		ai_chance = {
-#			factor = 100
-#			modifier = {
-#				NOT = { relation = { who = JAP value = -175 } }
-#				factor = 25
-#			}
-#		}
-#	}
-#	option = {
-#		name = "EVTOPTB50101"
-#		prestige = -5
-#		ai_chance = {
-#			factor = 0
-#			modifier = {
-#				NOT = { relation = { who = JAP value = -150 } }
-#				factor = 25
-#			}
-#		}
-#	}
-#}
-#
+country_event = {
+	id = 50101
+	title = "EVTNAME50101" # Our demands in the East
+	desc = "EVTDESC50101"
+	picture = "Treaty"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50101"
+		prestige = 5
+		1082 = { secede_province = THIS }
+		1083 = { secede_province = THIS }
+		1084 = { secede_province = THIS }
+		1085 = { secede_province = THIS }
+		2617 = { secede_province = THIS }
+	}
+}
+
 #country_event = {
 #	id = 50102
 #	title = "EVTNAME50102" #The Crimean War Russian Event - NOW USING 19030 event chain

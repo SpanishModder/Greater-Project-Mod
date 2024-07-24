@@ -592,7 +592,7 @@ country_event = {
 		name = "EVTOPTA50208" #We need peaceful balkans
 		prestige = 10.5
 		relation = { who = TUR value = -80 }
-		TUR = { country_event = { 50210 days = 10 } } # Peaceful Balkans event
+		TUR = { country_event = { id = 50210 days = 10 } } # Peaceful Balkans event
 		ai_chance = {
 			factor = 15
 		}
@@ -611,7 +611,7 @@ country_event = {
 		name = "EVTOPTC50208"
 		prestige = 4.5
 		relation = { who = TUR value = 20 }
-		TUR = { country_event = { 50215 days = 10 } } # Istanbul treaty event (Liberation of Romania & Bosnia)
+		TUR = { country_event = { id = 50215 days = 10 } } # Istanbul treaty event (Liberation of Romania & Bosnia)
 		ai_chance = {
 			factor = 0
 		}

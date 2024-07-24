@@ -67,7 +67,7 @@ country_event = {
 
 country_event = {
 	id = 50518
-	title = "EVTNAME50518" # Territory lost - for translation
+	title = "EVTNAME50518" # Territory lost
 	desc = "EVTDESC50518"
 	picture = "Uprising"
 	is_triggered_only = yes
@@ -854,21 +854,14 @@ country_event = {
 					tag = KTW
 					tag = GOW
 				}
-				NOT = { vassal_of = THIS }
+				is_vassal = no
 			}
 			add_casus_belli = {
 				target = THIS
 				type = make_puppet
 				months = 36
 			}
-			relation = { who = THIS value = -200 }
-			war = {
-				target = NET
-				attacker_goal = { casus_belli = humiliate }
-				defender_goal = { casus_belli = make_puppet }
-				defender_goal = { casus_belli = status_quo }
-				call_ally = no
-			}
+			country_event = 50519
 		}
 		ai_chance = {
 			factor = 100
@@ -877,6 +870,29 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB50513"
+	}
+}
+
+country_event = {
+	id = 50519
+	title = "EVTNAME50519" #Info of declaration for indonesian natives
+	desc = "EVTDESC50519"
+	picture = "Colonial Acquisition"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50519"
+		relation = { who = FROM value = -200 }
+		FROM = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = make_puppet }
+				attacker_goal = { casus_belli = status_quo }
+				defender_goal = { casus_belli = humiliate }
+				call_ally = no
+			}
+		}
 	}
 }
 

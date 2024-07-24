@@ -481,7 +481,6 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA19030" #Crimean War starts
-		
 		prestige = 10
 		set_global_flag = crimean_war # For interventions
 		TUR = {

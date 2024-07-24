@@ -231,23 +231,13 @@ country_event = {
 	option = {
         name = "EVTOPTA51603"
 		prestige = -10
-		1082 = { secede_province = THIS }
-		1083 = { secede_province = THIS }
-		1084 = { secede_province = THIS }
-		1085 = { secede_province = THIS }
-		2617 = { secede_province = THIS }
-		# EVENT
-		1082 = { secede_province = RUS }
-		1083 = { secede_province = RUS }
-		1084 = { secede_province = RUS }
-		1085 = { secede_province = RUS }
-		2617 = { secede_province = RUS }
+		RUS = { country_event = 50101 } #Our demands in the East
 		ai_chance = { factor = 100 }
     }
 	option = {
         name = "EVTOPTB51603"
 		prestige = 15
-		RUS = { country_event = 50110 }
+		RUS = { country_event = 50110 } #Chinese rejected peking treaty
     }
 }
 

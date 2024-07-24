@@ -16,6 +16,8 @@ country_event = {
 			has_global_flag = LouisNapoleonExtradite
 		}
 	}
+	
+	fire_only_once = yes
  
 	mean_time_to_happen = {
 		months = 5
@@ -145,14 +147,13 @@ country_event = {
 
 	trigger = {
 		tag = FRA
-		year = 1840
+		year = 1842
 		war = no
 		government = hms_government
 		ruling_party_ideology = liberal
 		NOT = {
-			year = 1843
-			}
-		
+			year = 1846
+		}
 	}
 	
 	fire_only_once = yes
@@ -161,14 +162,14 @@ country_event = {
 		months = 5
 
 		modifier = {
-			factor = 0.75 #increase likelihood to happen
-			year = 1841
+			factor = 0.75
+			year = 1843
 		}
 
 
 		modifier = {
-			factor = 0.95 #increase likelihood to happen
-			year = 1842
+			factor = 0.95
+			year = 1844
 		}
 	}
 
@@ -178,9 +179,14 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA37203" 
+		set_country_flag = rep_revolution
+		any_pop = {
+			limit = { pop_majority_ideology = liberal }
+			militancy = 7
+			consciousness = 8
+		}
 		prestige = -5
 	}
-
 }
 
 country_event = {
@@ -197,8 +203,7 @@ country_event = {
 		war = no
 		NOT = {
 			year = 1843
-			}
-	
+		}
 	}
 	
 	fire_only_once = yes
@@ -239,7 +244,7 @@ country_event = {
 		war = no
 		NOT = {
 			year = 1846
-			}
+		}
 	}
 	
 	fire_only_once = yes
@@ -280,7 +285,7 @@ country_event = {
 		war = no
 		NOT = {
 			year = 1849
-			}
+		}
 	}
 	
 	fire_only_once = yes
@@ -350,9 +355,9 @@ country_event = {
 		name = "EVTOPTA37207"
 		any_pop = { 
 			scaled_militancy = {
-                               factor = 2
-			       ideology = reactionary
-				}
+				factor = 2
+				ideology = reactionary
+			}
 		}
 	}
 
@@ -370,7 +375,6 @@ country_event = {
 		NOT = {
 			year = 1851
 		}
-	
 	}
 	
 	fire_only_once = yes
@@ -420,7 +424,7 @@ country_event = {
 		war = no
 		NOT = {
 			year = 1849
-			}
+		}
 	}
 	
 	fire_only_once = yes
@@ -461,7 +465,7 @@ country_event = {
 		war = no
 		NOT = {
 			year = 1854
-			}
+		}
 	}
 	
 	fire_only_once = yes
@@ -500,8 +504,7 @@ country_event = {
 		war = no
 		NOT = {
 			year = 1855
-			}
-		
+		}
 	}
 	
 	fire_only_once = yes
@@ -779,12 +782,12 @@ country_event = {
 		set_country_flag = DreyfusGuilty
 		any_pop = { 
 			scaled_consciousness = {
-                               factor = 3
-			       ideology = liberal
+				factor = 3
+				ideology = liberal
 			}
 			scaled_consciousness = {
-                               factor = 3
-			       ideology = socialist
+				factor = 3
+				ideology = socialist
 			}
 			scaled_militancy = {
 				factor = 1
@@ -814,7 +817,7 @@ country_event = {
 			year = 1903
 			war_with = GER
 			has_country_flag = JAccuse
-			}
+		}
 	}
 	
 	fire_only_once = yes
@@ -891,8 +894,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA37220" 
 		prestige = 5
-			}
-
+	}
 }
 
 country_event = {
@@ -933,7 +935,6 @@ country_event = {
 		name = "EVTOPTA37221" 
 		prestige = 5
 	}
-
 }
 
 country_event = {
@@ -946,8 +947,7 @@ country_event = {
 		invention = wright_n_langleys_aeroplanes
 		NOT = {
 			year = 1915
-			}
-	
+		}
 	}
 	
 	fire_only_once = yes
@@ -1030,7 +1030,7 @@ country_event = {
 		year = 1909
 		NOT = {
 			year = 1912
-			}
+		}
 	}
 	
 	fire_only_once = yes
@@ -1112,6 +1112,7 @@ country_event = {
 		}
 }
 
+###		 GPM	   ###
 #Events 50900 - 50999#
 
 country_event = {
@@ -1252,7 +1253,81 @@ country_event = {
     }
 }
 
-country_event = {
+### French Government change events ###
+
+country_event = { 
+	id = 50905
+	title = "EVTNAME50905" # The Second Republic Proclamation
+	desc = "EVTDESC50905"
+	picture = "napoleon3"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		year = 1846
+		government = hms_government
+		has_country_flag = rep_revolution
+		OR = {
+			average_militancy = 2.5
+			ruling_party_ideology = liberal
+			year = 1848
+		}
+		NOT = {
+			year = 1850
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1847
+		}
+
+
+		modifier = {
+			factor = 0.97 #increase likelihood to happen
+			year = 1848
+		}
+	}
+	
+	option = {
+        name = "EVTOPTA50905"
+		prestige = -6
+		government = democracy
+		political_reform = state_equal_weight
+		political_reform = non_secret_ballots
+		political_reform = universal_weighted_voting
+		any_pop = {
+			limit = {
+				pop_majority_ideology = liberal
+			}
+			militancy = -8
+			consciousness = -8
+		}
+		ai_chance = {
+			factor = 90
+		}
+    }
+	option = {
+        name = "EVTOPTB50905"
+		prestige = 5
+		any_pop = {
+			limit = {
+				pop_majority_ideology = liberal
+			}
+			militancy = 9
+			consciousness = 9
+		}
+		ai_chance = {
+			factor = 10
+		}
+    }
+}
+
+country_event = { 
 	id = 50904
 	title = "EVTNAME50904" # Napoleon's coup
 	desc = "EVTDESC50904"
@@ -1262,7 +1337,10 @@ country_event = {
 	trigger = {
 		tag = FRA
 		year = 1837
-		NOT = { year = 1840 has_country_flag = not_napoleon }
+		NOT = {
+			year = 1840
+			has_country_flag = not_napoleon
+		}
 		OR = {
 			war = yes
 			any_owned_province = {
