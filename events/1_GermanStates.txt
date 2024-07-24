@@ -803,9 +803,13 @@ country_event = {
 			}
 		}
 		any_greater_power = {
-			NOT = {
-				tag = ENG
-				tag = SPA
+			limit = {
+				NOT = {
+					OR = {
+						tag = ENG
+						tag = SPA
+					}
+				}
 			}
 			relation = { who = THIS value = -75 }
 		}

@@ -155,13 +155,15 @@ political_decisions = {
 				MAD = {
 					in_sphere = FRA
 					civilized = no
-			}
 				}
+			}
 			NOT = {
 				has_country_flag = merina_monarchy_is_over
 			}
-			exists = MAD
-			MAD = {AI = yes}
+			MAD = {
+				exists = yes
+				ai = yes
+			}
 			tag = FRA
 		}
 		
@@ -177,8 +179,8 @@ political_decisions = {
 		}
 		
 		effect = {
-			inherit = MAD
 			set_country_flag = merina_monarchy_is_over
+			inherit = MAD
 		}
 	}
 	

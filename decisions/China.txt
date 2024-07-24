@@ -129,15 +129,19 @@ political_decisions = {
 				limit = {
 					owner = { is_our_vassal = KOR }
 				}
-				leave_alliance = KOR
-				release_vassal = KOR
+				owner = {
+					leave_alliance = KOR
+					release_vassal = KOR
+				}
 			}
 			random_owned = {
 				limit = {
 					owner = { is_our_vassal = TIB }
 				}
-				leave_alliance = TIB
-				release_vassal = TIB
+				owner = {
+					leave_alliance = TIB
+					release_vassal = TIB
+				}
 			}
 			1469 = { add_core = MGL }
 			CHI_2608 = { add_core = MGL }

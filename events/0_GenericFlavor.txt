@@ -704,7 +704,7 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	immediate = { FROM = { release = THIS } }
+	immediate = { FROM = { release_vassal = THIS } }
 	
 	option = {
 		name = "EVTOPTA50509"

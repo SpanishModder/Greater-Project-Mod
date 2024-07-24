@@ -453,3 +453,26 @@ country_event = {
 		remove_country_modifier = female_suffrage
 	}
 }
+
+# Debug Events #
+
+# Overlord Liberation
+country_event = {
+	id = 60181
+	title = "EVTNAME60181"
+	desc = "EVTDESC60181"
+	picture = "Russian Kars" # Less KB aviable image
+	
+	trigger = {
+		overlord = { exists = no }
+		OR = {
+			is_vassal = yes
+			is_substate = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA60150"
+		overlord = { release_vassal = THIS }
+	}
+}

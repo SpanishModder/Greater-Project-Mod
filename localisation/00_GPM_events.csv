@@ -485,3 +485,6 @@ EVTDESC50519;We've recently notice that $FROMCOUNTRY$ started a military campaig
 EVTOPTA50519;Blast!;x;
 EVTNAME50518;Territorial Lost;x;
 EVTDESC50518;We have recently lost a war, so now we have to agree with the demands that they demanded for us;x;
+EVTOPTA50518;There's nothing we can do;x;
+EVTNAME60181;Died Overlord;x;
+EVTDESC60181;Our overlord have been recently conquered by another nation, so we can now be free;x;

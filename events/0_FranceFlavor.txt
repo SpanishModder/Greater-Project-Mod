@@ -1308,7 +1308,7 @@ country_event = {
 			consciousness = -8
 		}
 		ai_chance = {
-			factor = 90
+			factor = 100
 		}
     }
 	option = {
@@ -1321,38 +1321,34 @@ country_event = {
 			militancy = 9
 			consciousness = 9
 		}
-		ai_chance = {
-			factor = 10
-		}
     }
 }
 
 country_event = { 
 	id = 50904
-	title = "EVTNAME50904" # Napoleon's coup
+	title = "EVTNAME50904" # Napoleon's coup - Second Empire Proclamation
 	desc = "EVTDESC50904"
-	fire_only_once = yes
 	picture = "Napoleon Coup"
+	
+	fire_only_once = yes
 	
 	trigger = {
 		tag = FRA
-		year = 1837
+		year = 1851
 		NOT = {
-			year = 1840
-			has_country_flag = not_napoleon
+			year = 1855
 		}
 		OR = {
-			war = yes
-			any_owned_province = {
-				controlled_by = REB
-			}
+			ruling_party_ideology = conservative
+			average_militancy = 3
 		}
 	}
 	
 	option = {
         name = "EVTOPTA50904"
-		government = empire
 		prestige = 10
+		government = empire
+		political_reform = none_voting
 		any_greater_power = {
 			relation = {
 				who = THIS
@@ -1365,13 +1361,16 @@ country_event = {
     }
 	option = {
         name = "EVTOPTB50904"
-		prestige = 7.5
-		set_country_flag = not_napoleon
-		any_greater_power = {
-			relation = {
-				who = THIS
-				value = 50
+		prestige = 5
+		any_pop = {
+			limit = {
+				OR = {
+					pop_majority_ideology = conservative
+					pop_majority_ideology = reactionary
+				}
 			}
+			militancy = 8
+			consciousness = 8
 		}
 		ai_chance = {
 			factor = 100

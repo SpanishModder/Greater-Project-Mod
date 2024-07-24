@@ -51,7 +51,7 @@ political_decisions = {
 
 		allow = {
 			civilized = yes
-			owns = 1767
+			is_greater_power = yes
 		}
 
 		effect = {
@@ -163,6 +163,31 @@ political_decisions = {
 				80 = { country_event = { id = 19357 days = 60 } } #Titanic sinks!
 				20 = { country_event = { id = 19358 days = 60 } } #Titanic arrives!
 			}
+		}
+	}
+	
+	indochina_expansion = {
+		picture = colonize_algeria
+		potential = {
+			civilized = yes
+			is_greater_power = yes
+			capital_scope = { continent = europe }
+			colonial_nation = yes
+			year = 1880
+			NOT = {
+				has_country_flag = indochina_imperialism
+			}
+		}
+
+		allow = {
+			revolution_n_counterrevolution = 1
+			machine_guns = 1
+		}
+
+		effect = {
+			prestige = 5
+			badboy = 2
+			set_country_flag = indochina_imperialism
 		}
 	}
 }

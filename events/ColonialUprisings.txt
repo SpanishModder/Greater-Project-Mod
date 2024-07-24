@@ -980,10 +980,10 @@ province_event = {
 		name = "EVTOPTB14650"
 		owner = {
 			prestige = 5
-		}
-		add_country_modifier = {
-			name = recent_safari2
-			duration = 365
+			add_country_modifier = {
+				name = recent_safari2
+				duration = 365
+			}
 		}
 		state_scope = {
 			any_pop = {
@@ -1038,10 +1038,10 @@ province_event = {
 		name = "EVTOPTA14660"
 		owner = {
 			prestige = 3
-		}
-		add_country_modifier = {
-			name = recent_safari
-			duration = 365
+			add_country_modifier = {
+				name = recent_safari
+				duration = 365
+			}
 		}
 	}
 	
@@ -1059,9 +1059,11 @@ province_event = {
 				value = 30
 			}
 		}
-		add_country_modifier = {
-			name = recent_safari
-			duration = 365
+		owner = {
+			add_country_modifier = {
+				name = recent_safari
+				duration = 365
+			}
 		}
 	}
 }

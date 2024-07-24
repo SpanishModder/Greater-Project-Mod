@@ -3,11 +3,11 @@ country_event = {
 	id = 90100 
 
 	trigger = {
-			AI = no
+			ai = no
 			OR = {
 				press_rights = state_press
 				press_rights = censored_press
-				}
+			}
 			consciousness = 5
 			literacy = 0.40
 			free_press = 10
@@ -16,12 +16,12 @@ country_event = {
 			}
 			NOT = {
 				OR = {
-				has_country_flag = free_press_noway
-				has_country_flag = free_press_promised
+					has_country_flag = free_press_noway
+					has_country_flag = free_press_promised
 				}
 			}
 	}
- 
+
 	mean_time_to_happen = {
 		months = 12
 
@@ -34,7 +34,6 @@ country_event = {
 	title = "EVTNAME90100"
 	desc = "EVTDESC90100"
 	picture = "Demonstration"
-	
 
 	option = {
 		name = "EVTOPTA90100" 
@@ -53,9 +52,9 @@ country_event = {
 	option = {
 		name = "EVTOPTB90100"
 		scaled_militancy = {
-				issue = free_press
-				factor = 2
-			}
+			issue = free_press
+			factor = 2
+		}
 		set_country_flag = free_press_noway
 	}
 }
@@ -65,16 +64,16 @@ country_event = {
 	id = 90101 
 
 	trigger = {
-			OR = {
-				press_rights = state_press
-				press_rights = censored_press
-				}
-			consciousness = 5
-			literacy = 0.40
-			has_country_flag = free_press_promised
-			NOT = { has_country_modifier = free_press_promised	}
+		OR = {
+			press_rights = state_press
+			press_rights = censored_press
+		}
+		consciousness = 5
+		literacy = 0.40
+		has_country_flag = free_press_promised
+		NOT = { has_country_modifier = free_press_promised	}
 	}
- 
+
 	mean_time_to_happen = {
 		months = 12
 
@@ -88,13 +87,12 @@ country_event = {
 	desc = "EVTDESC90101"
 	picture = "Demonstration"
 	
-
 	option = {
 		name = "EVTOPTA90101" 
 		scaled_militancy = {
-				issue = free_press
-				factor = 4
-			}
+			issue = free_press
+			factor = 4
+		}
 	}
 }
 
@@ -103,20 +101,20 @@ country_event = {
 	id = 90102 
 
 	trigger = {
-			AI = no
-			public_meetings = no_meeting
-			consciousness = 5
-			literacy = 0.40
-			yes_meeting = 10
-			any_neighbor_country = {
-				public_meetings = yes_meeting
-			}
-			NOT = {
-				OR = {
+		ai = no
+		public_meetings = no_meeting
+		consciousness = 5
+		literacy = 0.40
+		yes_meeting = 10
+		any_neighbor_country = {
+			public_meetings = yes_meeting
+		}
+		NOT = {
+			OR = {
 				has_country_flag = yes_meeting_noway
 				has_country_flag = yes_meeting_promised
-				}
 			}
+		}
 	}
  
 	mean_time_to_happen = {
@@ -131,7 +129,6 @@ country_event = {
 	title = "EVTNAME90102"
 	desc = "EVTDESC90102"
 	picture = "Demonstration"
-	
 
 	option = {
 		name = "EVTOPTA90100" 
@@ -150,9 +147,9 @@ country_event = {
 	option = {
 		name = "EVTOPTB90100"
 		scaled_militancy = {
-				issue = yes_meeting
-				factor = 2
-			}
+			issue = yes_meeting
+			factor = 2
+		}
 		set_country_flag = yes_meeting_noway
 	}
 }
@@ -162,13 +159,13 @@ country_event = {
 	id = 90103
 
 	trigger = {
-			public_meetings = no_meeting
-			consciousness = 5
-			literacy = 0.40
-			has_country_flag = yes_meeting_promised
-			NOT = { has_country_modifier = yes_meeting_promised	}
+		public_meetings = no_meeting
+		consciousness = 5
+		literacy = 0.40
+		has_country_flag = yes_meeting_promised
+		NOT = { has_country_modifier = yes_meeting_promised	}
 	}
- 
+
 	mean_time_to_happen = {
 		months = 12
 
@@ -181,14 +178,13 @@ country_event = {
 	title = "EVTNAME90101"
 	desc = "EVTDESC90103"
 	picture = "Demonstration"
-	
 
 	option = {
 		name = "EVTOPTA90103" 
 		scaled_militancy = {
-				issue = yes_meeting
-				factor = 4
-			}
+			issue = yes_meeting
+			factor = 4
+		}
 	}
 }
 
@@ -197,30 +193,30 @@ country_event = {
 	id = 90104
 
 	trigger = {
-			AI = no
-			trade_unions = no_trade_unions
-			consciousness = 5
-			literacy = 0.40
+		ai = no
+		trade_unions = no_trade_unions
+		consciousness = 5
+		literacy = 0.40
+		OR = {
+			state_controlled = 10
+			non_socialist = 10
+			all_trade_unions = 10
+		}
+		any_neighbor_country = {
 			OR = {
-				state_controlled = 10
-				non_socialist = 10
-				all_trade_unions = 10
+				trade_unions = state_controlled
+				trade_unions = non_socialist
+				trade_unions = all_trade_unions
 			}
-			any_neighbor_country = {
-				OR = {
-					trade_unions = state_controlled
-					trade_unions = non_socialist
-					trade_unions = all_trade_unions
-				}
+		}
+		NOT = {
+			OR = {
+			has_country_flag = trade_unions_noway
+			has_country_flag = trade_unions_promised
 			}
-			NOT = {
-				OR = {
-				has_country_flag = trade_unions_noway
-				has_country_flag = trade_unions_promised
-				}
-			}
+		}
 	}
- 
+
 	mean_time_to_happen = {
 		months = 12
 
@@ -233,7 +229,6 @@ country_event = {
 	title = "EVTNAME90104"
 	desc = "EVTDESC90104"
 	picture = "Demonstration"
-	
 
 	option = {
 		name = "EVTOPTA90100" 
@@ -264,9 +259,9 @@ country_event = {
 	option = {
 		name = "EVTOPTB90100"
 		scaled_militancy = {
-				issue = all_trade_unions
-				factor = 2
-			}
+			issue = all_trade_unions
+			factor = 2
+		}
 		set_country_flag = trade_unions_noway
 	}
 }
@@ -276,13 +271,13 @@ country_event = {
 	id = 90105
 
 	trigger = {
-			trade_unions = no_trade_unions
-			consciousness = 5
-			literacy = 0.40
-			has_country_flag = trade_unions_promised
-			NOT = { has_country_modifier = trade_unions_promised}
+		trade_unions = no_trade_unions
+		consciousness = 5
+		literacy = 0.40
+		has_country_flag = trade_unions_promised
+		NOT = { has_country_modifier = trade_unions_promised}
 	}
- 
+
 	mean_time_to_happen = {
 		months = 12
 
@@ -295,13 +290,12 @@ country_event = {
 	title = "EVTNAME90101"
 	desc = "EVTDESC90105"
 	picture = "Demonstration"
-	
 
 	option = {
 		name = "EVTOPTA90105" 
 		scaled_militancy = {
-				issue = all_trade_unions
-				factor = 4
-			}
+			issue = all_trade_unions
+			factor = 4
+		}
 	}
 }
