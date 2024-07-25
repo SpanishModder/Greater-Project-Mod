@@ -328,19 +328,19 @@ political_decisions = {
 		}
 		
 		allow = {
+			state_n_government = 1
 			NOT = {
 				war_with = ALD
 			}
-			state_n_government = 1
 		}
 		
 		effect = {
+			set_country_flag = expedition_to_algeria_success
 			prestige = 5
 			diplomatic_influence = {
 				who = ALD
 				value = 150
 			}
-			set_country_flag = expedition_to_algeria_success
 		}
 		ai_will_do = {
 			factor = 1
@@ -353,12 +353,13 @@ political_decisions = {
 			is_greater_power = yes
 			has_country_flag = expedition_to_algeria_success
 			exists = ALD
+			NOT = {
+				has_country_flag = alg_colonized
+				war_with = ALD
+			}
 		}
 		
 		allow = {
-			NOT = {
-				war_with = ALD
-			}
 			nationalism_n_imperialism = 1
 			ALD = {
 				in_sphere = FRA
@@ -368,8 +369,9 @@ political_decisions = {
 		}
 		
 		effect = {
-			prestige = 10
-			inherit = ALD
+			set_country_flag = alg_colonized
+			prestige = 5
+			ALD = { country_event = 50906 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -379,7 +381,7 @@ political_decisions = {
 	unite_italy = {
 		picture = create_italy
 		potential = {
-			tag = FRA # Check everything if this is changed in the future
+			tag = FRA # Check the entire decision if this is changed in the future
 			is_greater_power = yes
 			NOT = { exists = ITA }
 		}

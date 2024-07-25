@@ -206,6 +206,7 @@ country_event = {
 		any_owned_province = { continent = africa }
 		capital_scope = { continent = europe }
 		NOT = {
+			year = 1905
 			tag = TUR
 			tag = RUS
 			EGY = { vassal_of = TUR }
@@ -224,7 +225,6 @@ country_event = {
 			ai = yes
 			civilized = no
 		}
-		NOT = { year = 1905 }
 	}
 	
 	mean_time_to_happen = {

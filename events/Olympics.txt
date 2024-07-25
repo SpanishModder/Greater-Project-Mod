@@ -338,6 +338,15 @@ country_event = {
 		name = "EVTOPTA23405" # Our team won medals!
 		prestige = 5
 		set_country_flag = olympiad_winner
+		any_country = {
+			clr_country_flag = olympiad_winner
+			clr_country_flag = host_olympiad
+			clr_country_flag = attend_olympiad
+			clr_country_flag = no_attend_olympiad
+			clr_country_flag = no_host_olympiad
+		}
+		clr_global_flag = Hold_Olympiad
+		clr_global_flag = Host_Olympiad
 	}
 }
 

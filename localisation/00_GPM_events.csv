@@ -488,3 +488,8 @@ EVTDESC50518;We have recently lost a war, so now we have to agree with the deman
 EVTOPTA50518;There's nothing we can do;x;
 EVTNAME60181;Died Overlord;x;
 EVTDESC60181;Our overlord have been recently conquered by another nation, so we can now be free;x;
+EVTNAME50906;The French Demands;x;
+EVTDESC50906;The constant advances of France into our territory have given us much to think about regarding European objectives in our country. Our monarchical council this morning received a letter from the French government in which they inform us of unprecedented demands that force us to cede some territory. They force us to cede our last port on the Mediterranean Sea and as an optional demand they offer us unconditional protection if we become their protectorate...;x;
+EVTOPTA50906;The French Protection is a good option;x;
+EVTOPTB50906;We don't need that port;x;
+EVTOPTC50903;Then is war!;x;
