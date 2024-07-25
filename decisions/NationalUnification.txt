@@ -979,4 +979,135 @@ political_decisions = {
 			factor = 1
 		}
 	}
+	form_holy_roman_empire = {
+		potential = {
+			is_greater_power = yes
+			OR = {
+				primary_culture = north_german
+				primary_culture = south_german
+			}
+			NOT = {
+				exists = GCF
+				exists = GER
+				tag = KUK
+			}
+		}	
+		allow = {
+			war = no
+			GER = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							OR = {
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+			}
+			AUS = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = { in_sphere = THIS }
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 10
+			change_tag = GCF
+			any_country = {
+				limit = {
+					OR = {
+						primary_culture = north_german
+						primary_culture = south_german
+					}
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS'
+					}
+				}
+				annex_to = THIS
+			}
+			random_owned = {
+				limit = { owns = 643 }
+				owner = {	
+					release = HUN
+					diplomatic_influence = { who = HUN value = 400 }
+					624 = { remove_core = HUN secede_province = THIS }
+				}
+			}
+			random_owned = {
+				limit = { owns = 636 }
+				owner = {	
+					release = SLV
+					diplomatic_influence = { who = SLV value = 400 }
+				}
+			}
+			random_owned = {
+				limit = { owns = 705 }
+				owner = {	
+					release = GLZ
+					diplomatic_influence = { who = GLZ value = 400 }
+				}
+			}
+			random_owned = {
+				limit = { owns = 705 }
+				owner = {	
+					any_owned = {
+						limit = { is_core = ROM }
+						secede_province = ROM
+					}
+					diplomatic_influence = { who = ROM value = 100 }
+				}
+			}
+			random_owned = {
+				limit = { owns = 791 }
+				owner = {	
+					any_owned = {
+						limit = { is_core = SER }
+						secede_province = SER
+					}
+					diplomatic_influence = { who = SER value = 100 }
+				}
+			}
+			random_owned = {
+				limit = { owns = 771 }
+				owner = {	
+					any_owned = {
+						limit = { is_core = CRO }
+						secede_province = CRO
+					}
+					diplomatic_influence = { who = CRO value = 400 }
+				}
+			}
+			random_owned = {
+				limit = { owns = 783 }
+				owner = {	
+					any_owned = {
+						limit = { is_core = BOS }
+						secede_province = BOS
+					}
+					diplomatic_influence = { who = BOS value = 400 }
+				}
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = GER
+						is_core = AUS
+					}
+				}
+				remove_core = GER
+				add_core = GCF
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
