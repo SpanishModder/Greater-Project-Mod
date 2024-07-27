@@ -63,7 +63,6 @@ political_decisions = {
 				}
 				militancy = 2
 			}
-						
 			add_accepted_culture = hungarian
 			change_tag = KUK
 			set_country_flag = dual_monarchy_done
@@ -210,7 +209,7 @@ political_decisions = {
 	}
 	
 	create_budapest = {
-		picture = budapest_city
+		picture = amsterdam_city
 		potential = {
 			OR = {
 				tag = AUS
@@ -240,6 +239,52 @@ political_decisions = {
 				}
 				militancy = -1
 				consciousness = -1
+			}
+		}
+	}
+	
+	integrate_hungary = {
+		picture = political_congress
+		potential = {
+			tag = AUS
+			any_owned_province = { is_core = HUN }
+			NOT = {
+				has_country_flag = hungary_organized
+			}
+			OR = {
+				year = 1860
+				has_global_flag = hungarian_revolt_success
+			}
+		}
+		allow = {
+			functionalism = 1
+			phenomenalism = 1
+			NOT = {
+				average_militancy = 1.5
+				average_consciousness = 2
+			}
+			is_greater_power = yes
+		}
+		effect = {
+			set_country_flag = hungary_organized
+			prestige = 5
+			badboy = 1
+			AUS_771 = { remove_core = HUN }
+			AUS_777 = { remove_core = HUN }
+			AUS_633 = { remove_core = HUN }
+			AUS_647 = { remove_core = HUN }
+			AUS_654 = { remove_core = HUN }
+			AUS_657 = { remove_core = HUN }
+			HUN = {
+				government = absolute_monarchy
+				capital = 641
+			}
+			any_pop = {
+				limit = {
+					culture = hungarian
+				}
+				militancy = 2
+				consciousness = 3
 			}
 		}
 	}

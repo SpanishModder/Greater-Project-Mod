@@ -488,6 +488,7 @@ country_event = {
 		}
 		HUN = {
 			leadership = 30
+			capital = 641
 		}
 		war = {
 			target = HUN
@@ -516,8 +517,8 @@ country_event = {
 		}
 		HUN = {
 			leadership = 30
+			capital = 641
 		}
-		
 		change_tag_no_core_switch = HUN
 		AUS = {
 			war = {
