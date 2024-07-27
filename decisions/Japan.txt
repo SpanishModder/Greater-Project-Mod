@@ -290,7 +290,7 @@ political_decisions = {
 		effect = {
 			prestige = 5
 			any_greater_power = {
-				capital_scope = { continent = europe }
+				limit = { capital_scope = { continent = europe } }
 				relation = { who = THIS value = 45 }
 			}
 			set_country_flag = cristianity_accepted

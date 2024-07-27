@@ -1034,7 +1034,7 @@ political_decisions = {
 				annex_to = THIS
 			}
 			random_owned = {
-				limit = { owns = 643 }
+				limit = { owner = { owns = 643 } }
 				owner = {	
 					release = HUN
 					diplomatic_influence = { who = HUN value = 400 }
@@ -1042,21 +1042,21 @@ political_decisions = {
 				}
 			}
 			random_owned = {
-				limit = { owns = 636 }
+				limit = { owner = { owns = 636 } }
 				owner = {	
 					release = SLV
 					diplomatic_influence = { who = SLV value = 400 }
 				}
 			}
 			random_owned = {
-				limit = { owns = 705 }
+				limit = { owner = { owns = 705 } }
 				owner = {	
 					release = GLZ
 					diplomatic_influence = { who = GLZ value = 400 }
 				}
 			}
 			random_owned = {
-				limit = { owns = 705 }
+				limit = { owner = { owns = 705 } }
 				owner = {	
 					any_owned = {
 						limit = { is_core = ROM }
@@ -1066,7 +1066,7 @@ political_decisions = {
 				}
 			}
 			random_owned = {
-				limit = { owns = 791 }
+				limit = { owner = { owns = 791 } }
 				owner = {	
 					any_owned = {
 						limit = { is_core = SER }
@@ -1076,7 +1076,7 @@ political_decisions = {
 				}
 			}
 			random_owned = {
-				limit = { owns = 771 }
+				limit = { owner = { owns = 771 } }
 				owner = {	
 					any_owned = {
 						limit = { is_core = CRO }
@@ -1086,7 +1086,7 @@ political_decisions = {
 				}
 			}
 			random_owned = {
-				limit = { owns = 783 }
+				limit = { owner = { owns = 783 } }
 				owner = {	
 					any_owned = {
 						limit = { is_core = BOS }

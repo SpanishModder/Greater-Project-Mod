@@ -493,3 +493,7 @@ EVTDESC50906;The constant advances of France into our territory have given us mu
 EVTOPTA50906;The French Protection is a good option;x;
 EVTOPTB50906;We don't need that port;x;
 EVTOPTC50903;Then is war!;x;
+EVTNAME50318;The $FROMCOUNTRY_ADJ$ Comercial Interests;x;
+EVTDESC50318;The $FROMCOUNTRY_ADJ$ navy has arrived this morning on our country, holding an special congress in $CAPITAL$... They want to establish a "Protectorate" over us, creating peacefull lands with the $FROMCOUNTRY_ADJ$ protection, should we agree?;x;
+EVTOPTA50318;Agree with the congress;x;
+EVTOPTB50318;Egypt is an independent nation!;x;

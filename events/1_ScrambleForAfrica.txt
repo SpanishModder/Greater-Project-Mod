@@ -210,6 +210,7 @@ country_event = {
 			tag = TUR
 			tag = RUS
 			EGY = { vassal_of = TUR }
+			EGY = { vassal_of = RUS }
 		}
 		invention = prophylaxis_against_malaria
 		invention = mission_to_civilize
@@ -222,7 +223,6 @@ country_event = {
 		}
 		EGY = {
 			exists = yes
-			ai = yes
 			civilized = no
 		}
 	}
@@ -242,7 +242,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA50305"
 		prestige = 11.5
-		inherit = EGY
+		EGY = { country_event = 50318 }
 		ai_chance = {
 			factor = 95
 		}
@@ -253,6 +253,40 @@ country_event = {
 		prestige = -8
 		ai_chance = {
 			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = 50318
+	title = "EVTNAME50318" # $FROMCOUNTRY$ Demands our anexation!
+	desc = "EVTDESC50318"
+	picture = "greatpowers"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50318"
+		neutrality = yes
+		annex_to = FROM
+		ai_chance = {
+			factor = 25
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50318"
+		prestige = 8
+		FROM = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = african_protectorate_casus_belli_annex }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = no
+			}
+		}
+		ai_chance = {
+			factor = 75
 		}
 	}
 }
@@ -285,7 +319,6 @@ country_event = {
 		}
 		ETH	= {
 			exists = yes
-			ai = yes
 			civilized = no
 		}
 		NOT = { year = 1905 }
@@ -306,7 +339,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA50307"
 		prestige = 11.5
-		inherit = ETH
+		EGY = { country_event = 50318 }
 		ai_chance = {
 			factor = 95
 		}
