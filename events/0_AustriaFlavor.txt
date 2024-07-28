@@ -438,7 +438,10 @@ country_event = {
 	
 	trigger = {
 		tag = AUS
-		NOT = { has_global_flag = hungarian_revolt_success }
+		NOT = {
+			has_global_flag = hungarian_revolt_success
+			exists = HUN
+		}
 		OR = {
 			AND = {
 				average_militancy = 4.5
@@ -446,7 +449,7 @@ country_event = {
 			}
 			AND = {
 				year = 1846
-				average_militancy = 3.25
+				average_militancy = 3.5
 			}
 		}
 	}
