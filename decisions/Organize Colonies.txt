@@ -108,6 +108,73 @@ political_decisions = {
 			factor = 1
 		}
 	}
+	# Oceania
+	organize_indonesia = { 
+		picture = organize_territories
+		potential = {
+			1453 = { NOT = { is_core = JAV } }
+			JAV = { #Indonesia
+				NOT = { government = democracy }
+				exists = no
+			}
+			has_global_flag = berlin_conference
+			any_owned_province = {
+				OR = {
+					region = NET_1398
+					region = ATJ_1405
+					region = NET_1423
+					region = NET_1413
+					region = BAL_1438
+					region = NET_1449
+					region = NET_1451
+				}
+			}
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			collectivist_theory = 1
+			phenomenalism = 1
+		}
+		effect = {
+			badboy = -1.5
+			JAV = {
+				all_core = { remove_core = JAV } #Reseting Cores
+				capital = 1416
+				civilized = yes
+				government = democracy
+			}
+			NET_1398 = { add_core = JAV }
+			ATJ_1405 = { add_core = JAV }
+			NET_1423 = { add_core = JAV }
+			NET_1413 = { add_core = JAV }
+			BAL_1438 = { add_core = JAV }
+			NET_1449 = { add_core = JAV }
+			NET_1451 = { add_core = JAV }
+			1397 = { add_core = JAV }
+			1446 = { remove_core = JAV }
+			#Removing cores of the rest native countries
+			JAV = {
+				all_core = {
+					remove_core = ATJ
+					remove_core = SAK
+					remove_core = JMB
+					remove_core = PME
+					remove_core = KTW
+					remove_core = BNJ
+					remove_core = BAL
+					remove_core = GOW
+					remove_core = DNG
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	# Africa
 	organize_algeria = {
 		picture = organize_territories

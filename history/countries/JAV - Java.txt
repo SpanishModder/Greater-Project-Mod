@@ -1,10 +1,16 @@
 capital = 1413
 primary_culture = javan
 religion = sunni
-government = absolute_monarchy
+government = absolute_monarchy_2
 plurality = 0.0
 nationalvalue = nv_order
 literacy = 0.03
+
+govt_flag = { government = prussian_constitutionalism flag = democracy }
+govt_flag = { government = absolute_monarchy flag = democracy }
+govt_flag = { government = hms_government flag = democracy }
+govt_flag = { government = dominion flag = democracy }
+govt_flag = { government = empire flag = democracy }
 
 ruling_party = JAV_conservative
 upper_house = {
