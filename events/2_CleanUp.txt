@@ -192,10 +192,13 @@ country_event = {
 		OR = {
 			government = absolute_monarchy
 			government = absolute_monarchy_2
-			government = empire
+			#government = empire
 		}
 		NOT = {
 			vote_franschise = none_voting
+			tag = TRN
+			tag = ZUL
+			tag = ORA
 		}
 		civilized = yes	
 	}

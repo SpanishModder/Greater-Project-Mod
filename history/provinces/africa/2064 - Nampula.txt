@@ -1,7 +1,4 @@
+owner = POR
+controller = POR
 trade_goods = grain
 life_rating = 35
-
-1870.1.1 = {
-	owner = POR
-	controller = POR
-}

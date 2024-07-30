@@ -405,7 +405,10 @@ political_decisions = {
 					province_id = 1909
 				}
 			}
-			is_greater_power = yes
+			OR = {
+				is_greater_power = yes
+				owns = 1910
+			}
 			war = no
 		}
 		
@@ -426,10 +429,10 @@ political_decisions = {
 		}
 		ai_will_do = {
 			factor = 0
-			modifier = {
-				factor = 1
-				tag = ENG
-			}
+			#modifier = {
+			#	factor = 1
+			#	tag = ENG
+			#}
 			modifier = {
 				factor = 1
 				owns = 1910

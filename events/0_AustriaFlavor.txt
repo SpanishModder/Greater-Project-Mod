@@ -699,6 +699,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA50405"
 		703 = { add_core = AUS }
+		KRA = { neutrality = yes }
 		war = {
 			target = KRA
 			attacker_goal = { casus_belli = annex_core_country }

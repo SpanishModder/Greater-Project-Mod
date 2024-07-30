@@ -7,6 +7,7 @@
 		religion = catholic
 		size = 300
 		militancy = 9
+		rebel_type = nationalist_rebels
 	}
 
 	bureaucrats = {
@@ -14,6 +15,7 @@
 		religion = catholic
 		size = 50
 		militancy = 9
+		rebel_type = nationalist_rebels
 	}
 
 	officers = {
@@ -21,6 +23,7 @@
 		religion = catholic
 		size = 25
 		militancy = 9
+		rebel_type = nationalist_rebels
 	}
 
 	clergymen = {
@@ -49,6 +52,7 @@
 		religion = catholic
 		size = 11725
 		militancy = 9
+		rebel_type = nationalist_rebels
 	}
 }
 #Liberia (20000/5000 POPS)

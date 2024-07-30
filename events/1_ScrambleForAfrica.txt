@@ -35,6 +35,10 @@ country_event = {
 			factor = 0.8
 			capital = 549
 		}
+		modifier = {
+			factor = 0.6
+			rank = 1
+		}
 	}
 	
 	option = {

@@ -1,3 +1,6 @@
+# Home province should have enough population to ensure rebels' size or rebels just won't be created at the game start.
+# Don't forget to add rebel_type = in the history/pops as well as some militancy to create more rebels at the game start.
+
 army = {
 	name = "1st Carlist Army"
 	location = 493
@@ -88,7 +91,6 @@ army = {
 	}
 }
 
-
 army = {
 	name = "4th Carlist Army"
 	location = 499
@@ -102,5 +104,71 @@ army = {
 		name= "17.Regiment"
 		type = irregular
 		home = 499
+	}
+}
+
+army = {
+	name = "1st Nicaraguan Rebels"
+	location = 2200
+	regiment = {
+		name= "1.Regiment"
+		type = infantry
+		home = 2200
+	}
+
+	regiment = {
+		name= "2.Regiment"
+		type = infantry
+		home = 2200
+	}
+}
+
+army = {
+	name = "1st Colorado Rebels"
+	location = 2201
+	regiment = {
+		name= "1.Regiment"
+		type = infantry
+		home = 2201
+	}
+
+	regiment = {
+		name= "2.Regiment"
+		type = irregular
+		home = 2201
+	}
+	
+	regiment = {
+		name= "3.Regiment"
+		type = irregular
+		home = 2201
+	}
+}
+
+army = {
+	name = "1st Honduran Rebels"
+	location = 2195
+	regiment = {
+		name= "1.Regiment"
+		type = infantry
+		home = 2195
+	}
+	
+	regiment = {
+		name= "4.Regiment"
+		type = infantry
+		home = 2195
+	}
+
+	regiment = {
+		name= "2.Regiment"
+		type = irregular
+		home = 2195
+	}
+	
+	regiment = {
+		name= "3.Regiment"
+		type = irregular
+		home = 2195
 	}
 }

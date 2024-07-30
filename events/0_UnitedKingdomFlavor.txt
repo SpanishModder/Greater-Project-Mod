@@ -1923,13 +1923,9 @@ country_event = {
 					primary_culture = boer
 					tag = ZUL
 				}
+				neighbour = THIS
 			}
-			war = {
-				target = THIS
-				attacker_goal = { casus_belli = humiliate }
-				defender_goal = { casus_belli = conquest }
-				call_ally = no
-			}
+			country_event = { id = 51304 days = 1 }
 		}
 		ai_chance = {
 			factor = 95
@@ -1942,18 +1938,8 @@ country_event = {
 	
 	option = {
         name = "EVTOPTB51303"
-		badboy = 1
-		relation = { who = NET value = -25 }
-		random_country = {
-			limit = {
-				OR = {
-					primary_culture = boer
-					tag = ZUL
-				}
-				neighbour = THIS
-			}
-			country_event = { id = 51304 days = 1 }
-		}
+		badboy = -1
+		relation = { who = NET value = 25 }
 		ai_chance = {
 			factor = 5
 		}

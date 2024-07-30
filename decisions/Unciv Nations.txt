@@ -60,7 +60,6 @@ political_decisions = {
 		picture = chinese_unification
 		potential = {
 			tag = QNG
-			government = empire
 			is_greater_power = no
 			civilized = no
 			year = 1860

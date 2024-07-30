@@ -116,6 +116,7 @@
 		religion = catholic
 		size = 175
 		militancy = 9
+		rebel_type = nationalist_rebels
 	}
 
 	farmers = {
@@ -123,6 +124,7 @@
 		religion = catholic
 		size = 15375
 		militancy = 9
+		rebel_type = nationalist_rebels
 	}
 }
 #Puerto Lempira (12000/3000 POPS)

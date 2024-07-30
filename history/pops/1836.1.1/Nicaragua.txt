@@ -132,6 +132,7 @@
 		religion = catholic
 		size = 15
 		militancy = 9
+		rebel_type = nationalist_rebels
 	}
 
 	clergymen = {
@@ -139,6 +140,7 @@
 		religion = catholic
 		size = 25
 		militancy = 9
+		rebel_type = nationalist_rebels
 	}
 
 	artisans = {
@@ -186,8 +188,9 @@
 	farmers = {
 		culture = afro_caribbean
 		religion = catholic
-		size = 1800
+		size = 5000
 		militancy = 9
+		rebel_type = nationalist_rebels
 	}
 
 }
