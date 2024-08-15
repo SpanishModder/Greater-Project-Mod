@@ -1,7 +1,0 @@
-trade_goods = timber
-life_rating = 15
-1880.1.1 = {
-	owner = CNG
-	controller = CNG
-	colonial = 2
-}

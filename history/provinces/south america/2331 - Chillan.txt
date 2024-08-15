@@ -1,4 +1,0 @@
-add_core = CHL
-trade_goods = iron
-life_rating = 5
-1870.1.1 = { owner = CHL controller = CHL } 

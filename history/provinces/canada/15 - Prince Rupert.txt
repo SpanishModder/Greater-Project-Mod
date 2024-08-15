@@ -1,8 +1,0 @@
-owner = ENG
-controller = ENG
-add_core = CAN
-add_core = COL
-trade_goods = timber
-life_rating = 35
-1890.1.1 = { colonial = 0 } 
-1900.1.1 = { owner = CAN controller = CAN } 

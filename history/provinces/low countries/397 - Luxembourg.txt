@@ -1,7 +1,0 @@
-owner = BEL
-controller = BEL
-add_core = NET
-trade_goods = iron
-life_rating = 35
-1861.1.1 = { railroad = 3 }
-1839.1.1 = { add_core = LUX owner = LUX controller = LUX remove_core = NET }

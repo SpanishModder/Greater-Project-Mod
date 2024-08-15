@@ -1,4 +1,0 @@
-trade_goods = coal
-life_rating = 5
-1870.1.1 = { colonial = 0 } 
-1911.1.1 = { owner = JAP controller = JAP } 

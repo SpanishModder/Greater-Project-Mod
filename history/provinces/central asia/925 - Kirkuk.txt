@@ -1,9 +1,0 @@
-owner = SOR
-controller = SOR
-add_core = SOR
-add_core = TUR
-add_core = IRQ
-trade_goods = grain
-life_rating = 35
-1870.1.1 = { owner = TUR controller = TUR remove_core = SOR } 
-1890.1.1 = { colonial = 0 } 

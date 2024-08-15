@@ -1,9 +1,0 @@
-owner = WUR
-controller = WUR
-add_core = WUR
-add_core = GER
-trade_goods = fruit
-life_rating = 40
-1861.1.1 = { railroad = 3 } 
-1871.11.28 = { owner = GER controller = GER remove_core = WUR } 
-1900.1.1 = { state_building = { level = 2 building = ammunition_factory upgrade = yes } state_building = { level = 1 building = small_arms_factory upgrade = yes } } 
