@@ -1,0 +1,365 @@
+# Pan-Nationalist
+country_event = {
+	title = "EVTNAME11100"
+	desc = "EVTDESC11100"
+	picture = "Celebration"
+
+	id = 11100
+
+	is_triggered_only = yes
+
+	option = {				# Accept inheritance
+		name = "EVTOPTA11100"
+		change_tag = culture
+		any_country = {
+			limit = {
+				NOT = {
+					tag = THIS
+				}
+				is_culture_group = THIS
+				is_greater_power = no
+				OR = {
+					in_sphere = THIS
+					AND = {
+						part_of_sphere = no
+						NOT = {
+							OR = {
+								tag = AUS
+								tag = KUK
+								}
+							}
+						}
+					tag = WAL
+					tag = MOL
+					tag = MON
+					tag = BOS
+					tag = SER
+					tag = SLO
+					AND = {
+						OR = {
+							tag = AUS
+							tag = KUK
+						}
+						exists = HUN
+						part_of_sphere = no
+					}
+				}
+				num_of_cities = 1
+			}
+			country_event = { id=11101 days=0 }
+		}
+		political_reform = wealth_voting
+		political_reform = population_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		political_reform = non_socialist
+		political_reform = secret_ballots
+		government = hms_government
+		add_accepted_culture = union
+		prestige = -15
+		badboy = 10
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 200
+				OR = {
+					tag = MOL
+					tag = WAL
+				}
+			}
+			modifier = {
+				factor = 5
+				government = hms_government
+			}
+			modifier = {
+				factor = 10
+				government = democracy
+			}
+			modifier = {
+				factor = 2
+				ruling_party_ideology = liberal
+			}
+			modifier = {
+				factor = 3
+				upper_house = {
+					ideology = liberal
+					value = 0.5
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB11100"
+		prestige = 2
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 1.5
+				government = absolute_monarchy
+			}
+		}
+		any_pop = {
+			militancy = 1
+		}
+	}
+}
+
+# Event to Inherit
+country_event = {
+	id = 11101
+	title = "EVTNAME11101"
+	desc = "EVTDESC11101"
+	picture = "Celebration"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA11101"
+		FROM = {
+			inherit = THIS
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+
+	option = {
+		name = "EVTOPTB11101"
+		prestige = 1
+		relation = {
+			who = FROM
+			value = -100
+		}
+		any_pop = {
+			militancy = 3
+			consciousness = 2
+		}
+	}
+}
+
+#Italian Red Shirt Unification
+country_event = {
+	title = "EVTNAME11103"
+	desc = "EVTDESC11103"
+	picture = "Celebration"
+
+	id = 11103
+
+	is_triggered_only = yes
+
+	option = {				# Accept inheritance
+		name = "EVTOPTA11103"
+		change_tag = ITA
+		add_accepted_culture = north_italian
+		add_accepted_culture = south_italian
+		any_country = {
+			limit = {
+				NOT = {
+					tag = THIS
+				}
+				is_culture_group = THIS
+				is_greater_power = no
+				num_of_cities = 1
+			}
+			country_event = { id=11101 days=0 }
+		}
+		prestige = 10
+		ai_chance = {
+			factor = 95
+		}
+	}
+
+	option = {
+		name = "EVTOPTB11103"
+		prestige = 5
+		set_country_flag = does_not_want_to_be_unified
+		ai_chance = {
+			factor = 5
+		}
+		any_pop = {
+			militancy = 2
+		}
+	}
+}
+
+#Events 51900 - 51999#
+
+# Pacific Unification Inheritance (For Italy) - Small States
+country_event = {
+	id = 51900
+	title = "EVTNAME51900"
+	desc = "EVTDESC51900"
+	picture = "Celebration"
+
+	trigger = {
+		is_culture_group = italian
+		war = no
+		any_neighbor_country = {
+			is_culture_group = italian
+			is_sphere_leader_of = THIS
+			is_greater_power = yes
+			nationalism_n_imperialism = 1
+			is_cultural_union = no
+			war = no
+		}
+	}
+
+	option = {
+		name = "EVTOPTA51900"
+		random_country = {
+			limit = {
+				is_culture_group = italian
+				is_sphere_leader_of = THIS
+				is_greater_power = yes
+				nationalism_n_imperialism = 1
+			}
+			country_event = 51901
+		}
+		ai_chance = {
+			factor = 95
+		}
+	}
+
+	option = {
+		name = "EVTOPTB51900"
+		prestige = 1
+		random_country = {
+			limit = {
+				is_culture_group = italian
+				is_sphere_leader_of = THIS
+				is_greater_power = yes
+				nationalism_n_imperialism = 1
+			}
+			relation = { who = THIS value = -100 }
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			country_event = 51902
+		}
+		any_pop = {
+			militancy = 3
+			consciousness = 2
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+# Pacific Unification Inheritance (For Italy) - Great Power - Petitions for anexation!
+country_event = {
+	id = 51901
+	title = "EVTNAME51901"
+	desc = "EVTDESC51901"
+	picture = "Celebration"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA51901"
+		inherit = FROM
+		prestige = 2.5
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				tag = SIC
+				is_secondary_power = yes
+			}
+			modifier = {
+				factor = 25
+				tag = PAP
+				is_secondary_power = yes
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB51901"
+		prestige = -5
+		any_pop = {
+			militancy = 3
+			consciousness = 5
+		}
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 100
+				tag = SIC
+				is_secondary_power = yes
+			}
+			modifier = {
+				factor = 75
+				tag = PAP
+				is_secondary_power = yes
+			}
+		}
+	}
+}
+
+# Pacific Unification Inheritance (For Italy) - Great Power - Rebellion in $FROM$!
+country_event = {
+	id = 51902
+	title = "EVTNAME51902"
+	desc = "EVTDESC51902"
+	picture = "Celebration"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA51902"
+		casus_belli = {
+			target = FROM
+			type = add_to_sphere
+			months = 36
+		}
+	}
+}
+
+# Arabian Event to Inherit - From "Arabia event"
+country_event = {
+	id = 111011928
+	title = "EVTNAME111011928"
+	desc = "EVTDESC111011928"
+	picture = "Celebration"
+	#news = yes
+	#news_desc_long = "EVTDESC111011928_NEWS_LONG"
+	#news_desc_medium = "EVTDESC111011928_NEWS_MEDIUM"
+	#news_desc_short = "EVTDESC111011928_NEWS_SHORT"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA111011928"
+		FROM = {
+			inherit = THIS
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+
+	option = {
+		name = "EVTOPTB111011928"
+		prestige = 1
+		relation = {
+			who = FROM
+			value = -100
+		}
+		any_pop = {
+			militancy = 3
+			consciousness = 2
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 10
+				NOT = {
+					relation = { who = FROM value = 100 }
+				}
+			}
+		}
+	}
+}

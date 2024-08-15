@@ -1,0 +1,12 @@
+owner = BAV
+controller = BAV
+add_core = BAV
+add_core = GER
+trade_goods = cattle
+life_rating = 40
+
+1871.11.28 = {
+	owner = GER
+	controller = GER
+	remove_core = BAV
+}

@@ -1,0 +1,17 @@
+owner = GON
+controller = GON
+add_core = GON
+add_core = HAR
+add_core = SHW
+add_core = ETH
+trade_goods = fruit
+life_rating = 30
+1870.1.1 = { 
+    owner = ETH
+    controller = ETH
+    remove_core = HAR
+    remove_core = SHW
+    remove_core = GON
+}
+
+1880.1.1 = { owner = ITA controller = ITA colonial = 2 } 

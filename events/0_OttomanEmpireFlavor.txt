@@ -1,0 +1,916 @@
+#Vanilla Ottoman Events#
+
+country_event = {
+
+	id = 31100
+
+	trigger = {
+		tag = TUR
+		year = 1872
+		owns = 865 #Canakkale, where Troy is located
+		NOT = {
+			year = 1875
+		}	
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen = {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1873
+		}
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1874
+		}
+	}
+
+	title = "EVTNAME31100"
+	desc = "EVTDESC31100"
+	picture = "troy"
+
+	option = {
+		name = "EVTOPTA31100" 
+		prestige = 15
+	}
+}
+
+country_event = {
+	id = 31101 #setup by GER33005
+	trigger = {
+		tag = TUR 
+		war = no
+		year = 1903
+		owns = 926 #Baghdad
+		is_vassal = no
+		has_global_flag = BerlinBaghdadRail
+		OR = {
+			government = absolute_monarchy
+			government = hms_government
+		}
+		NOT = {
+			year = 1910
+			has_country_flag = BerlinBaghdadRail
+		}
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen = {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1904
+		}
+
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1908
+		}
+	}
+
+	title = "EVTNAME33005"
+	desc = "EVTDESC33005"
+	picture = "bagdadrailway"
+
+	option = {
+		name = "EVTOPTA31101" 
+		prestige = 10
+		set_country_flag = BerlinBaghdadRail
+		relation = { who = GER value = 100 }
+		relation = { who = ENG value = -75 }
+		relation = { who = RUS value = -75 }
+	}
+}
+
+country_event = {
+		
+	id = 31102 # Flight to Ankara
+	
+	trigger = {
+		tag = TUR
+		NOT = { is_greater_power = yes }
+		capital = 860
+		NOT = { owns = 817 }
+		NOT = { owns = 816 }
+		NOT = { owns = 830 }
+		owns = 876
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	title = "EVTNAME31102" #Flight from Istanbul
+	desc = "EVTDESC31102" #Our position in Istanbul is no longer secure. We should move our government to a safer place.
+	picture = "administration"
+		
+	option = {
+		name = "EVTOPTA31102" #We have been ultimately driven from Europe...
+		prestige = -10
+		capital = 876
+	}
+}
+
+#########GPM##########
+#Events 50200 - 50299#
+
+country_event = {
+	id = 50200
+	title = "EVTNAME50200" #The Oriental Crisis
+	desc = "EVTDESC50200"
+	fire_only_once = yes
+	picture = "Egypt Independence"
+	
+	trigger = {
+		tag = EGY
+		vassal_of = TUR
+		year = 1837
+		NOT = {
+			has_country_flag = egyptian_independence_sucess
+			war_with = TUR
+			year = 1845
+		}
+	}
+	
+	mean_time_to_happen = {
+        months = 6
+        modifier = {
+            factor = 0.5
+            TUR = { is_greater_power = no }
+        }
+        modifier = {
+            factor = 0.5
+            year = 1839
+        }
+        modifier = {
+            factor = 1
+			year = 1840
+        }
+        modifier = {
+            factor = 10
+			year = 1841
+        }
+    }
+	
+	option = {
+		name = "EVTOPTA50200"
+		any_country = {
+			limit = {
+				war_with = TUR
+				war_with = EGY
+			}
+			end_war = EGY
+		}
+		TUR = {
+			country_event = 50201
+		}
+		set_country_flag = egyptian_independence_sucess
+		TUR = {
+			release_vassal = EGY
+		}
+	}
+}
+
+country_event = {
+	id = 50201
+	title = "EVTNAME50201" #Ottoman Empire's response
+	desc = "EVTDESC50201"
+	major = yes
+	picture = "Egypt Independence"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50201"
+		set_global_flag = the_oriental_crisis
+		prestige = -15
+		leave_alliance = EGY
+		casus_belli = {
+			target = EGY
+			type = make_puppet
+			months = 12
+		}
+		war = {
+			target = EGY
+			attacker_goal = { casus_belli = make_puppet }
+		}
+		ai_chance = {
+			factor = 95
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50201"
+		prestige = 5
+		set_country_flag = holy_land_abandoned
+		EGY = {
+			country_event = 50202
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = 50202
+	title = "EVTNAME50202" #OE Accepts
+	desc = "EVTDESC50202"
+	fire_only_once = yes
+	major = yes
+	picture = "Treaty"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50202"
+		prestige = 10
+		any_owned = {
+			limit = {
+				is_core = TUR
+				is_core = EGY
+			}
+			secede_province = TUR
+			remove_core = EGY
+		}
+		TUR = { inherit = HDJ }
+		ai_chance = {
+			factor = 49
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50202"
+		prestige = 15
+		TUR = {
+			country_event = 50203
+		}
+		ai_chance = {
+			factor = 51
+		}
+	}
+}
+
+country_event = {
+	id = 50203
+	title = "EVTNAME50203" #Egypt Refuses
+	desc = "EVTDESC50203"
+	fire_only_once = yes
+	major = yes
+	picture = "Treaty"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50203"
+		prestige = 15
+		casus_belli = {
+			target = EGY
+			type = conquest
+			months = 12
+		}
+		set_country_flag = annexing_egypt
+		war = {
+			target = EGY
+			attacker_goal = { casus_belli = conquest }
+		}
+	}
+}
+
+country_event = {
+	id = 50204
+	title = "EVTNAME50204" #Egypt Surrenders
+	desc = "EVTDESC50204"
+	fire_only_once = yes
+	major = yes
+	picture = "Treaty"
+	
+	trigger = {
+		tag = TUR
+		war_with = EGY
+		NOT = {
+			has_country_flag = annexing_egypt
+		}
+		OR = {
+			EGY = { war_exhaustion = 35 }
+			AND = {
+				controls = 919
+				controls = 903
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA50204"
+		prestige = 15
+		EGY = {
+			country_event = 50205
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50204"
+		set_country_flag = ottomans_demand_entire_egypt
+	}
+}
+
+country_event = {
+	id = 50205
+	title = "EVTNAME50205" #Treaty of Damasco
+	desc = "EVTDESC50204"
+	fire_only_once = yes
+	picture = "Treaty"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50205"
+		prestige = -15
+		clr_global_flag = the_oriental_crisis
+		any_owned = {
+			limit = {
+				is_core = TUR
+			}
+			secede_province = TUR
+			remove_core = EGY
+		}
+		TUR = {
+			inherit = HDJ
+		}
+		end_war = TUR
+		TUR = {
+			prestige = 30
+			create_vassal = EGY
+		}
+	}
+}
+
+country_event = {
+	id = 50211
+	title = "EVTNAME50211" #Treaty of Damasco but with entire egypt
+	desc = "EVTDESC50211"
+	fire_only_once = yes
+	major = yes
+	picture = "Treaty"
+	
+	trigger = {
+		tag = TUR
+		has_country_flag = ottomans_demand_entire_egypt
+		EGY = { war_exhaustion = 50 }
+	}
+	
+	option = {
+		name = "EVTOPTA50211"
+		badboy = 8
+		prestige = 40
+		clr_global_flag = the_oriental_crisis
+		clr_country_flag = ottomans_demand_entire_egypt
+		clr_country_flag = annexing_egypt
+		end_war = EGY
+		inherit = EGY
+		inherit = HDJ
+	}
+	
+	option = {
+		name = "EVTOPTB50211"
+		EGY = { prestige = -15 }
+		clr_global_flag = the_oriental_crisis
+		clr_country_flag = ottomans_demand_entire_egypt
+		clr_country_flag = annexing_egypt
+		EGY = {
+			any_owned_province = {
+				limit = {
+					is_core = THIS
+				}
+				secede_province = THIS
+				remove_core = EGY
+			}
+		}
+		inherit = HDJ
+		end_war = EGY
+		create_vassal = EGY
+	}
+}
+
+country_event = {
+	id = 50212
+	title = "EVTNAME50212" #Egyptian or Tunis Liberation
+	desc = "EVTDESC50212"
+	#fire_only_once = yes
+	picture = "Treaty"
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = EGY
+				TUR = { is_our_vassal = EGY }
+			}
+			AND = {
+				tag = TUN
+				TUR = { is_our_vassal = TUN }
+			}
+		}
+		year = 1875
+		TUR = {
+			NOT = {
+				truce_with = THIS
+				has_country_flag = tan_bureaucracy
+				has_country_flag = tan_army
+				has_country_flag = tanzimat_reforms_enacted
+			}
+			OR = {
+				AND = {
+					has_recently_lost_war = yes
+					is_greater_power = no
+				}
+				AND = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+				has_global_flag = sick_man_dismantling
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA50212"
+		prestige = 10
+		TUR = {
+			country_event = 50213
+			release_vassal = THIS
+			relation = {
+				who = THIS
+				value = -150
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			leave_alliance = THIS
+		}
+	}
+}
+
+country_event = {
+	id = 50213
+	title = "EVTNAME50213" #Egyptian or Tunis Liberation info for The Ottoman Empire
+	desc = "EVTDESC50213"
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50213"
+		prestige = -5
+		casus_belli = {
+			target = EGY
+			type = make_puppet
+			months = 12
+		}
+	}
+	option = {
+		name = "EVTOPTB50213"
+		prestige = -10
+	}
+}
+
+### Ottoman Dismantlement Events - Congress of Berlin ###
+
+country_event = {
+	id = 50206
+	title = "EVTNAME50206" #The Sick Man of Europe - Ottoman dismantlement starts
+	desc = "SICKMANDESC"
+	picture = "The Sick Man of Europe"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		year = 1885
+		exists = GRE
+		NOT = {
+			has_country_flag = tan_education # Education reform
+			has_country_flag = tanzimat_reforms_enacted # Tanzimat generic reform
+		}
+		has_global_flag = berlin_conference
+		any_owned_province = { continent = europe }
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "EVTOPTA50206" #Our empire is falling down
+		set_global_flag = sick_man_dismantlement
+		prestige_factor = -0.5
+		any_pop = {
+			limit = {
+				is_primary_culture = no
+			}
+			militancy = 3
+			consciousness = 5
+		}
+	}
+}
+
+country_event = {
+	id = 50207
+	title = "EVTNAME50207" #Searching for dismantler
+	desc = "SICKMANDESC"
+	picture = "The Sick Man of Europe"
+	
+	trigger = {
+		year = 1887
+		has_global_flag = sick_man_dismantlement
+		is_greater_power = yes
+		NOT = {
+			tag = TUR
+			has_country_flag = not_otm_dismantler
+			has_global_flag = sick_man_dismantling
+			year = 1910
+		}
+		any_greater_power = {
+			NOT = { has_country_flag = otm_dismantler }
+		}
+		capital_scope = { continent = europe }
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "EVTOPTA50207" #We are interested in holding the congress
+		prestige = 20
+		set_global_flag = sick_man_dismantling
+		set_country_flag = otm_dismantler
+		relation = { who = TUR value = -80 }
+		ai_chance = {
+			factor = 80
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50207"
+		prestige = -5
+		set_country_flag = not_otm_dismantler
+		relation = { who = TUR value = 20 }
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+country_event = {
+	id = 50208
+	title = "EVTNAME50208" # Congress to dismantle the Ottoman Empire
+	desc = "SICKMANDESC"
+	fire_only_once = yes
+	picture = "The Sick Man of Europe"
+	
+	trigger = {
+		year = 1888
+		has_global_flag = sick_man_dismantling
+		has_country_flag = otm_dismantler
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "EVTOPTA50208" #We need peaceful balkans
+		prestige = 10.5
+		relation = { who = TUR value = -80 }
+		TUR = { country_event = { id = 50210 days = 10 } } # Peaceful Balkans event
+		ai_chance = {
+			factor = 15
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50208"
+		prestige = 7.5
+		relation = { who = TUR value = -40 }
+		TUR = { country_event = { id = 50214 days = 10 } } # Keep the Empire strong event
+		ai_chance = {
+			factor = 85
+		}
+	}
+	option = {
+		name = "EVTOPTC50208"
+		prestige = 4.5
+		relation = { who = TUR value = 20 }
+		TUR = { country_event = { id = 50215 days = 10 } } # Istanbul treaty event (Liberation of Romania & Bosnia)
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = 50210
+	title = "EVTNAME50210" # Ottoman Dismantlement - Peaceful Balkans
+	desc = "SICKMANDESC"
+	#picture = "The Sick Man of Europe"
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50210"
+		prestige_factor = -0.1
+		# Removing cores of The Ottoman Empire in the Balkans
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = BOS
+					is_core = MON
+					is_core = SER
+					is_core = ALB
+					is_core = BUL
+					is_core = ROM
+					is_core = GRE
+				}
+			}
+			remove_core = THIS
+		}
+		
+		random_owned = {
+			limit = { is_our_vassal = WAL }
+			owner = {
+				prestige = -5
+				release_vassal = WAL
+			}
+		}
+		random_owned = {
+			limit = { is_our_vassal = MOL }
+			owner = {
+				prestige = -5
+				release_vassal = MOL
+			}
+		}
+		random_owned = {
+			limit = { exists = ROM }
+			owner = {
+				prestige = -10
+				any_owned = {
+					limit = { is_core = ROM }
+					secede_province = ROM
+				}
+			}
+		}
+		any_owned = {
+			limit = { is_core = BOS }
+			secede_province = BOS
+		}
+		any_owned = {
+			limit = { is_core = SER }
+			secede_province = SER
+		}
+		any_owned = {
+			limit = { is_core = ALB }
+			secede_province = ALB
+		}
+		any_owned = {
+			limit = { is_core = BUL }
+			secede_province = BUL
+		}
+		any_owned = {
+			limit = { is_core = GRE }
+			secede_province = GRE
+		}
+		any_owned = {
+			limit = { is_core = MON }
+			secede_province = MON
+		}
+		random_owned = {
+			limit = { NOT = { exists = ROM } }
+			owner = {
+				any_owned = {
+					limit = { is_core = ROM }
+					secede_province = MOL
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "EVTOPTB50210"
+		FROM = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = dismantle_empire_normal }
+				defender_goal = { casus_belli = humiliate }
+				call_ally = yes
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = 50214
+	title = "EVTNAME50214" # Ottoman Dismantlement - Keep the Empire strong
+	desc = "SICKMANDESC"
+	#picture = "The Sick Man of Europe"
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50214"
+		prestige_factor = -0.05
+		# Removing cores of The Ottoman Empire in some parts of the balkans
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = BOS
+					is_core = MON
+					is_core = ROM
+					region = TUR_832
+					region = TUR_810
+					province_id = 818
+				}
+			}
+			remove_core = THIS
+		}
+		
+		random_owned = {
+			limit = { exists = ROM }
+			owner = {
+				prestige = -5
+				any_owned = {
+					limit = { is_core = ROM }
+					secede_province = ROM
+				}
+			}
+		}
+		any_owned = {
+			limit = { is_core = BOS }
+			secede_province = BOS
+		}
+		any_owned = {
+			limit = {
+				is_core = MON
+				NOT = { province_id = 2577 }
+			}
+			secede_province = MON
+		}
+		TUR_832 = { secede_province = GRE }
+		BUL = {
+			all_core = {
+				limit = {
+					OR = {
+						region = TUR_810
+						province_id = 818
+					}
+					owned_by = THIS
+				}
+				secede_province = BUL
+			}
+			capital = 810
+		}
+		BOS = { capital = 783 }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "EVTOPTB50210"
+		FROM = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = dismantle_empire_normal }
+				defender_goal = { casus_belli = humiliate }
+				call_ally = yes
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = 50215
+	title = "EVTNAME50215" # Ottoman Dismantlement - Istanbul Treaty
+	desc = "SICKMANDESC"
+	#picture = "The Sick Man of Europe"
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50215"
+		prestige_factor = -0.05
+		# Removing cores of The Ottoman Empire in some parts of the balkans
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = BOS
+					is_core = MON
+					is_core = ROM
+				}
+			}
+			remove_core = THIS
+		}
+		random_owned = {
+			limit = { exists = ROM }
+			owner = {
+				any_owned = {
+					limit = { is_core = ROM }
+					secede_province = ROM
+				}
+			}
+		}
+		any_owned = {
+			limit = { is_core = BOS }
+			secede_province = BOS
+		}
+		any_owned = {
+			limit = { is_core = MON }
+			secede_province = MON
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "EVTOPTB50210"
+		FROM = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = dismantle_empire_normal }
+				defender_goal = { casus_belli = humiliate }
+				call_ally = yes
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Ottoman Generic Events #
+
+country_event = {
+	id = 50209
+	title = "EVTNAME50209" #Italy demands Lybia
+	desc = "EVTDESC50209"
+	picture = "Italo-Turkish War"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50209"
+		prestige = -10
+		TRI_1743 = { secede_province = FROM }
+		EGY_1754 = { secede_province = FROM }
+		TRI_1739 = { secede_province = FROM }
+		FROM = { country_event = 51200 }
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "EVTOPTB50209"
+		prestige = 5
+		ITA = {
+			casus_belli = {
+				target = TUR
+				type = acquire_state
+				months = 12
+			}
+			casus_belli = {
+				target = TUR
+				type = acquire_state
+				months = 16
+			}
+		}
+		FROM = {
+			war = {
+				target = TUR
+				attacker_goal = { casus_belli = acquire_state state_province_id = 1735 }
+				attacker_goal = { casus_belli = acquire_state state_province_id = 1731 }
+				defender_goal = { casus_belli = status_quo }
+			}
+		}
+		ai_chance = {
+			factor = 60
+		}
+	}
+}

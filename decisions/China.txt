@@ -1,0 +1,153 @@
+political_decisions = {
+	hold_guanxi_congress = {
+		picture = guanxi_congress
+		potential = {
+			tag = QNG
+			civilized = no
+			exists = GXI
+			GXI = {
+				OR = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+			}
+			NOT = { has_country_flag = guanxi_congress_holded }
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					has_country_modifier = industrialization_progress
+					truce_with = ENG
+				}
+				AND = {
+					war_with = ENG
+					militancy = 1
+					consciousness = 2
+				}
+				year = 1842
+			}
+		}
+		
+		effect = {
+			set_country_flag = guanxi_congress_holded
+			prestige = 5
+			GXI = { relation = { who = THIS value = 50 } }
+			GXI = { prestige = 2 }
+			any_pop = {
+				militancy = 1
+				consciousness = 2
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	chinese_unification = {
+		#picture = chinese_unification
+		potential = {
+			OR = {
+				tag = CHI
+				tag = QNG
+				tag = GXI
+				tag = MCK
+				tag = XBI
+				tag = YNN
+				tag = MGL
+				tag = XIN
+			}
+			NOT = { has_global_flag = the_dragon_wakes }
+			exists = yes
+		}
+		
+		allow = {
+			owns = 1612
+			OR = {
+				AND = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							province_id = 1469
+						}
+					}
+					NOT = { tag = QNG }
+				}
+				AND = {
+					tag = QNG
+					civilized = yes
+				}
+			}
+		}
+		
+		effect = {
+			set_global_flag = the_dragon_wakes
+			prestige = 50
+			all_core = { add_core = CHI }
+			random_owned = { limit = { owner = { civilized = no } } owner = { civilized = yes } }
+			add_accepted_culture = beifaren
+			add_accepted_culture = nanfaren
+			random_owned = { limit = { owner = { NOT = { tag = CHI } } } owner = { change_tag = CHI } }
+			any_country = {
+				limit = {
+					OR = {
+						tag = GXI
+						tag = MCK
+						tag = XBI
+						tag = YNN
+						tag = SXI
+						tag = XIN
+						tag = MGL
+					}
+				}
+				all_core = {
+					remove_core = GXI
+					remove_core = MCK
+					remove_core = XBI
+					remove_core = YNN
+					remove_core = SXI
+					remove_core = XIN
+					remove_core = MGL
+				}
+			}
+			any_country = {
+				limit = {
+					OR = {
+						tag = GXI
+						tag = MCK
+						tag = XBI
+						tag = YNN
+						tag = SXI
+						tag = XIN
+						tag = MGL
+					}
+					exists = yes
+				}
+				country_event = { id = 90901 days = 0 }
+			}
+			random_owned = { limit = { owner = { is_our_vassal = TIB } } owner = { release_vassal = TIB } }
+			random_owned = {
+				limit = {
+					owner = { is_our_vassal = KOR }
+				}
+				owner = {
+					leave_alliance = KOR
+					release_vassal = KOR
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { is_our_vassal = TIB }
+				}
+				owner = {
+					leave_alliance = TIB
+					release_vassal = TIB
+				}
+			}
+			1469 = { add_core = MGL }
+			CHI_2608 = { add_core = MGL }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

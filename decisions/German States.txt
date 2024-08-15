@@ -1,0 +1,288 @@
+political_decisions = {
+	austrian_menace = {
+		potential = {
+			tag = PRU
+			is_greater_power = yes
+			AUS = {
+				is_greater_power = yes
+			}
+			NOT = {
+				exists = GER
+				exists = NGF
+			}
+			NOT = {
+				has_country_flag = austrian_menace_ok
+			}
+		}
+		
+		allow = {
+			state_n_government = 1
+			prestige = 40
+			NOT = {
+				AUS = {
+					in_sphere = PRU
+				}
+			}
+		}
+		
+		effect = {
+			casus_belli = {
+				target = AUS
+				type = take_from_sphere
+				months = 24
+			}
+			casus_belli = {
+				target = AUS
+				type = humiliate
+				months = 24
+			}
+			prestige = 10
+			diplomatic_influence = {
+				who = AUS
+				value = -200
+			}
+			relation = { who = AUS value = -100 }
+			set_country_flag = austrian_menace_ok
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	holstein_integration = {
+		potential = {
+			tag = PRU
+			is_greater_power = yes
+			exists = yes
+			NOT = {
+				has_country_flag = the_holstein_question
+				HOL = { in_sphere = THIS }
+			}
+			HOL = {
+				is_vassal = yes
+				any_owned_province = { is_core = SCH }
+				exists = yes
+			}
+		}
+		
+		allow = {
+			state_n_government = 1
+			NOT = {
+				HOL = {
+					in_sphere = AUS
+				}
+			}
+			SAX = {
+				in_sphere = THIS
+			}
+			relation = { who = HOL value = 0 }
+		}
+		
+		effect = {
+			relation = { who = AUS value = -60 }
+			relation = { who = DEN value = -50 }
+			prestige = 5
+			diplomatic_influence = {
+				who = HOL
+				value = 300
+			}
+			HOL = { country_event = 51705 }
+			set_country_flag = the_holstein_question
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	appoint_otto_von_bismark = {
+		picture = otto_von_bismark
+		potential = {
+			OR = {
+				tag = GER
+				tag = NGF
+			}
+			NOT = {
+				has_country_flag = otto_von_bismark_appointed
+			}
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			year = 1855
+			OR = {
+				exists = KUK
+				exists = AUS
+				owns = 619
+			}
+		}
+		
+		effect = {
+			set_country_flag = otto_von_bismark_appointed
+			add_country_modifier = {
+				name = otto_von_bismark_mod
+				duration = 6000
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	luxembourg_integration = {
+		picture = luxembourg_map
+		potential = {
+			tag = GER
+			NOT = { war_with = LUX }
+			exists = LUX
+			is_greater_power = yes
+		}
+		
+		allow = {
+			revolution_n_counterrevolution = 1
+			NOT = { truce_with = LUX }
+			LUX = {
+				in_sphere = THIS
+				OR = {
+					is_vassal = no
+					vassal_of = THIS
+				}
+				ai = yes
+			}
+		}
+		
+		effect = {
+			prestige = 5
+			inherit = LUX
+			relation = { who = NET value = -35 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	rebelion_against_the_austrians = {
+		picture = krakowian_rebelion
+		potential = {
+			tag = KRA
+			exists = AUS
+			NOT = {
+				has_global_flag = krakowian_uprising
+			}
+			OR = {
+				exists = NGF
+				exists = GER
+				exists = PRU
+			}
+			exists = RUS
+			year = 1846
+		}
+		
+		allow = {
+			NOT = { truce_with = AUS }
+		}
+		
+		effect = {
+			prestige = 5
+			set_global_flag = krakowian_uprising
+			casus_belli = {
+				target = AUS
+				type = acquire_state
+				months = 36
+			}
+			AUS = { country_event = 50405 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bosnian_integration = {
+		picture = balkan_map
+		potential = {
+			OR = {
+				tag = AUS
+				tag = KUK
+			}
+			exists = BOS
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			BOS = {
+				in_sphere = THIS
+				OR = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 8
+			TUR = { prestige = -8 }
+			BOS = { country_event = 11101 }
+			relation = { who = TUR value = -100 }
+			any_pop = {
+				limit = {
+					culture = bosniak
+				}
+				militancy = 8
+			}
+			any_pop = {
+				limit = {
+					culture = serb
+				}
+				militancy = 9
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_galitzia_lodomeria = {
+		picture = galitzia_lodomeria
+		potential = {
+			tag = KRA
+			NOT = {
+				exists = GLZ
+			}
+		}
+		
+		allow = {
+			all_core = { owned_by = THIS }
+			GLZ = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 8
+			add_accepted_culture = ukrainian
+			GLZ = {
+				all_core = {
+					secede_province = THIS
+				}
+			}
+			KRA = {
+				all_core = {
+					secede_province = THIS
+				}
+			}
+			change_tag = GLZ
+			KRA = {
+				all_core = {
+					add_core = GLZ
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

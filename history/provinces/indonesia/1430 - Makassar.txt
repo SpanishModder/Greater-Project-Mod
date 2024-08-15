@@ -1,0 +1,10 @@
+owner = GOW
+controller = GOW
+add_core = GOW
+trade_goods = timber
+life_rating = 30
+1890.1.1 = {
+	owner = NET
+	controller = NET
+	colonial = 2
+}

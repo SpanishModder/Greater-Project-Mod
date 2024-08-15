@@ -1,0 +1,2857 @@
+#Chugoku Region (2236000)
+#under the rule of Japan in 1836
+#Hiroshima (672000/168000 POPS)
+1638 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 3750
+	}
+
+	bureaucrats = {
+		culture = japanese
+		religion = mahayana
+		size = 1125
+	}
+
+	officers = {
+		culture = japanese
+		religion = mahayana
+		size = 862
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 2212
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 11325
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1912
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 169837
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 1200
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 600
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 3675
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 637
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 55387
+	}
+}
+#Okayama (504000/126000 POPS)
+1639 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 2775
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1425
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 7200
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1462
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 131137
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 825
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 487
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 2250
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 450
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 40987
+	}
+}
+#Yamaguchi (512000/128000 POPS)
+1640 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 3000
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1537
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 7650
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1537
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 139275
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 750
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 375
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 1950
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 412
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 35512
+	}
+}
+#Matsue (548000/137000 POPS)
+1641 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 3112
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1612
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 8025
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1612
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 146137
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 825
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 487
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 2250
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 450
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 40987
+	}
+}
+#Hokkaido Region (840000)
+#under the rule of Japan in 1836
+#Hakodate (240000/60000 POPS)
+1642 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 150
+	}
+
+	bureaucrats = {
+		culture = japanese
+		religion = mahayana
+		size = 37
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 150
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 750
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 150
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 13762
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 150
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 750
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 150
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 13950
+	}
+
+	aristocrats = {
+		culture = ainu
+		religion = animist
+		size = 1125
+	}
+
+	clergymen = {
+		culture = ainu
+		religion = animist
+		size = 637
+	}
+
+	artisans = {
+		culture = ainu
+		religion = animist
+		size = 2250
+	}
+
+	soldiers = {
+		culture = ainu
+		religion = animist
+		size = 375
+	}
+
+	farmers = {
+		culture = ainu
+		religion = animist
+		size = 55612
+	}
+}
+#Ishikara (240000/60000 POPS)
+1643 = {
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 75
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 375
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 75
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 6975
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 75
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 375
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 75
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 6975
+	}
+
+	aristocrats = {
+		culture = ainu
+		religion = animist
+		size = 1200
+	}
+
+	clergymen = {
+		culture = ainu
+		religion = animist
+		size = 862
+	}
+
+	artisans = {
+		culture = ainu
+		religion = animist
+		size = 3000
+	}
+
+	soldiers = {
+		culture = ainu
+		religion = animist
+		size = 525
+	}
+
+	farmers = {
+		culture = ainu
+		religion = animist
+		size = 69412
+	}
+}
+#Nemuru (360000/90000 POPS)
+1644 = {
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 112
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 600
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 112
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 11137
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 112
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 600
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 112
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 11137
+	}
+
+	aristocrats = {
+		culture = ainu
+		religion = animist
+		size = 1875
+	}
+
+	clergymen = {
+		culture = ainu
+		religion = animist
+		size = 1125
+	}
+
+	artisans = {
+		culture = ainu
+		religion = animist
+		size = 4500
+	}
+
+	soldiers = {
+		culture = ainu
+		religion = animist
+		size = 975
+	}
+
+	farmers = {
+		culture = ainu
+		religion = animist
+		size = 102525
+	}
+}
+#Hokuriku Region (1892000)
+#under the rule of Japan in 1836
+#Niigata (996000/249000 POPS)
+1645 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 5587
+	}
+
+	bureaucrats = {
+		culture = japanese
+		religion = mahayana
+		size = 637
+	}
+
+	officers = {
+		culture = japanese
+		religion = mahayana
+		size = 712
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 2812
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 14025
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 2812
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 253912
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 1837
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 937
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 4650
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 937
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 84637
+	}
+}
+#Kanazawa (384000/96000 POPS)
+1646 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 1950
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 975
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 4950
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1012
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 90112
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 825
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 487
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 2250
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 450
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 40987
+	}
+}
+#Fukui (160000/40000 POPS)
+1647 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 712
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 375
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 1875
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 375
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 34162
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 412
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 225
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 1125
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 225
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 20512
+	}
+}
+#Toyama (352000/88000 POPS)
+1648 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 1800
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 900
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 4575
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 937
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 83287
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 787
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 412
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 2025
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 412
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 36862
+	}
+}
+#Kanto Region (4604000)
+#under the rule of Japan in 1836
+#Edo (1504000/376000 POPS)
+1649 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 9750
+	}
+
+	bureaucrats = {
+		culture = japanese
+		religion = mahayana
+		size = 3300
+	}
+
+	officers = {
+		culture = japanese
+		religion = mahayana
+		size = 1912
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 5062
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 4500
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 4612
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 251362
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 2175
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 1125
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 10500
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 1050
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 58650
+	}
+}
+#Chiba (788000/197000 POPS)
+1650 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 4725
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 2400
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 11925
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 2400
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 217050
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 1087
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 562
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 2850
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 600
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 51900
+	}
+}
+#Yokohama (568000/142000 POPS)
+1651 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 3187
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1687
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 14775
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1687
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 148012
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 750
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 487
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 3975
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 450
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 39337
+	}
+}
+#Urawa (1156000/289000 POPS)
+1652 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 6975
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 3975
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 2550
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 3525
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 319875
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 1687
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 862
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 4125
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 825
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 75000
+	}
+}
+#Mito (588000/147000 POPS)
+1653 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 3450
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1762
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 8775
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1762
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 159600
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 862
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 450
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 2250
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 450
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 40987
+	}
+}
+#Kinki Region (6760000)
+#under the rule of Japan in 1836
+#Osaka (1540000/385000 POPS)
+1655 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 9000
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 5325
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 9000
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 5362
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 543000
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 750
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 450
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 6000
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 450
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 43950
+	}
+}
+#Wakayama (1064000/266000 POPS)
+1656 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 5550
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 2775
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 13950
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 2812
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 253912
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 2325
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 1237
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 6000
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 1200
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 109237
+	}
+}
+#Kyoto (1844000/461000 POPS)
+1657 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 11700
+	}
+
+	bureaucrats = {
+		culture = japanese
+		religion = mahayana
+		size = 3675
+	}
+
+	officers = {
+		culture = japanese
+		religion = mahayana
+		size = 2550
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 5850
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 10500
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 5850
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 498375
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 2175
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 1087
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 10500
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 1087
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 93000
+	}
+}
+#Nara (1192000/298000 POPS)
+1658 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 6187
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 3112
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 600
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 3150
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 283950
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 2625
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 1350
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 6750
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 1350
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 122925
+	}
+}
+#Kobe (1120000/280000 POPS)
+1659 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 5850
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 2925
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 14700
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 2962
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 267562
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 2475
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 1275
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 6300
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 1275
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 114675
+	}
+}
+#Kyushu Region (3600000)
+#under the rule of Japan in 1836
+#Fukuoka (784000/196000 POPS)
+1660 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 4762
+	}
+
+	bureaucrats = {
+		culture = japanese
+		religion = mahayana
+		size = 1162
+	}
+
+	officers = {
+		culture = japanese
+		religion = mahayana
+		size = 1350
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 2250
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 11325
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 2287
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 212887
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 1350
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 712
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 3375
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 675
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 61387
+	}
+}
+#Nagasaki (1012000/253000 POPS)
+1661 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 5400
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 2775
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 13725
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 2775
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 249825
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 1950
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 1125
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 5250
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 1050
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 95625
+	}
+}
+#Kagoshima (660000/165000 POPS)
+1662 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 3750
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1912
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 9525
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1912
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 173400
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 1125
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 562
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 2850
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 562
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 51900
+	}
+}
+#Miyazaki (380000/95000 POPS)
+1663 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 1875
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1012
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 4875
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 975
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 88762
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 825
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 487
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 2250
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 450
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 40987
+	}
+}
+#Kumamoto (764000/191000 POPS)
+1664 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 4350
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 2925
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 10950
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 2212
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 200062
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 1350
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 675
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 3375
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 675
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 61425
+	}
+}
+#Shikoku Region (1368000)
+#under the rule of Japan in 1836
+#Kochi (240000/60000 POPS)
+1665 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 1237
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 637
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 3150
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1650
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 56475
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 525
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 262
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 1350
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 262
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 24600
+	}
+}
+#Matsuyama (432000/108000 POPS)
+1666 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 2250
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1125
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 5700
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1650
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 103350
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 937
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 487
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 2400
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 487
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 43837
+	}
+}
+#Tokushima (696000/174000 POPS)
+1667 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 3637
+	}
+
+	bureaucrats = {
+		culture = japanese
+		religion = mahayana
+		size = 337
+	}
+
+	officers = {
+		culture = japanese
+		religion = mahayana
+		size = 487
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1837
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 9150
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1837
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 165787
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 1537
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 787
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 3900
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 787
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 70987
+	}
+}
+#Tohoku Region (3208000)
+#under the rule of Japan in 1836
+#Sendai (628000/157000 POPS)
+1668 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 3487
+	}
+
+	bureaucrats = {
+		culture = japanese
+		religion = mahayana
+		size = 862
+	}
+
+	officers = {
+		culture = japanese
+		religion = mahayana
+		size = 1237
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1762
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 8775
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1762
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 157612
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 1125
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 637
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 3000
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 600
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 54637
+	}
+}
+#Fukushima (576000/147000 POPS)
+1669 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 3037
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1537
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 7725
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1575
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 140625
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 1275
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 675
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 3300
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 675
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 60075
+	}
+}
+#Morioka (316000/79000 POPS)
+1670 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 1650
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 825
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 4200
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 862
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 76462
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 675
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 337
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 1725
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 337
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 31425
+	}
+}
+#Akita (392000/98000 POPS)
+1671 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 2025
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1050
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 5175
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1050
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 95700
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 825
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 450
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 2175
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 450
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 39600
+	}
+}
+#Aomori (372000/93000 POPS)
+1672 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 1875
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1125
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 4725
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 975
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 86100
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 825
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 487
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 2250
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 450
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 40987
+	}
+}
+#Yamagata (512000/128000 POPS)
+1673 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 2925
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1650
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 7350
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1650
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 133725
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 825
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 487
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 2250
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 450
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 40987
+	}
+}
+#Utsunomiya (412000/103000 POPS)
+1674 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 1912
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 975
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 4875
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 975
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 88762
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 1125
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 562
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 2850
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 562
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 51900
+	}
+}
+#Tokai Region (3208000)
+#under the rule of Japan in 1836
+#Nagoya (1476000/369000 POPS)
+1675 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 7762
+	}
+
+	bureaucrats = {
+		culture = japanese
+		religion = mahayana
+		size = 1087
+	}
+
+	officers = {
+		culture = japanese
+		religion = mahayana
+		size = 1125
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 3937
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 10500
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 3900
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 345187
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 3225
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 1687
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 10500
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 1650
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 147937
+	}
+}
+#Shizuoka (436000/109000 POPS)
+1676 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 2025
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 1050
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 5175
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 1050
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 94200
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 1162
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 600
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 3000
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 600
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 54637
+	}
+}
+#Nagano (1296000/324000 POPS)
+1677 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 6975
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 3562
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 15000
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 2625
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 3525
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 320812
+	}
+
+	aristocrats = {
+		culture = japanese
+		religion = shinto
+		size = 2625
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = shinto
+		size = 1350
+	}
+
+	artisans = {
+		culture = japanese
+		religion = shinto
+		size = 6675
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = shinto
+		size = 1350
+	}
+
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 121500
+	}
+}
+#Ryukyu Region (272000)
+#tributary state to Japan in 1836
+#Okinawa (192000/48000 POPS)  #ryukyuan represented by japanese 
+1678 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 1275
+	}
+
+	bureaucrats = {
+		culture = japanese
+		religion = mahayana
+		size = 67
+	}
+
+	officers = {
+		culture = japanese
+		religion = mahayana
+		size = 112
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 675
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 3300
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 675
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 59895
+	}
+
+	bureaucrats = {
+		culture = nanfaren
+		religion = mahayana
+		size = 7
+	}
+
+	clergymen = {
+		culture = nanfaren
+		religion = mahayana
+		size = 112
+	}
+
+	artisans = {
+		culture = nanfaren
+		religion = mahayana
+		size = 300
+	}
+
+	soldiers = {
+		culture = nanfaren
+		religion = mahayana
+		size = 75
+	}
+
+	farmers = {
+		culture = nanfaren
+		religion = mahayana
+		size = 5505
+	}
+}
+#Amari (80000/20000 POPS)
+1679 = {
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 562
+	}
+
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 300
+	}
+
+	artisans = {
+		culture = japanese
+		religion = mahayana
+		size = 1650
+	}
+
+	soldiers = {
+		culture = japanese
+		religion = mahayana
+		size = 300
+	}
+
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 27337
+	}
+
+}

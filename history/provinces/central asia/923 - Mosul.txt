@@ -1,0 +1,9 @@
+owner = BOK
+controller = BOK
+add_core = BOK
+add_core = TUR
+add_core = IRQ
+trade_goods = sulphur
+life_rating = 35
+1870.1.1 = { owner = TUR controller = TUR add_core = TUR remove_core = BOK } 
+1890.1.1 = { colonial = 0 } 

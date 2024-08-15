@@ -1,0 +1,728 @@
+#Western Kazakh Steppes Region (72000)
+#under the rule of Russia in 1836
+#Guryev (19000/4750 POPS)
+1182 = {
+	bureaucrats = {
+		culture = russian
+		religion = orthodox
+		size = 30
+	}
+
+	clergymen = {
+		culture = russian
+		religion = orthodox
+		size = 22
+	}
+
+	artisans = {
+		culture = russian
+		religion = orthodox
+		size = 52
+	}
+
+	soldiers = {
+		culture = russian
+		religion = orthodox
+		size = 22
+	}
+
+	farmers = {
+		culture = russian
+		religion = orthodox
+		size = 997
+	}
+
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 112
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 112
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 300
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 37
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 5437
+	}
+}
+#Aqtobe (20000/5000 POPS)
+1183 = {
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 112
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 75
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 375
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 75
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 6862
+	}
+}
+#Uralsk (13000/3250 POPS)
+2610 = {
+	clergymen = {
+		culture = russian
+		religion = orthodox
+		size = 45
+	}
+
+	artisans = {
+		culture = russian
+		religion = orthodox
+		size = 67
+	}
+
+	soldiers = {
+		culture = russian
+		religion = orthodox
+		size = 37
+	}
+
+	farmers = {
+		culture = russian
+		religion = orthodox
+		size = 1725
+	}
+
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 37
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 37
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 150
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 37
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 2737
+	}
+}
+#Turgay (20000/5000 POPS)
+2611 = {
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 112
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 75
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 375
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 75
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 6862
+	}
+}
+#Eastern Kazakh Steppes Region (376000)
+#under the rule of Russia in 1836
+#Qaraganda (56000/14000 POPS)
+1181 = {
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 337
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 187
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 975
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 187
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 19312
+	}
+}
+#Kokshetau (96000/24000 POPS)
+1184 = {
+	bureaucrats = {
+		culture = russian
+		religion = orthodox
+		size = 75
+	}
+
+	clergymen = {
+		culture = russian
+		religion = orthodox
+		size = 112
+	}
+
+	artisans = {
+		culture = russian
+		religion = orthodox
+		size = 225
+	}
+
+	soldiers = {
+		culture = russian
+		religion = orthodox
+		size = 37
+	}
+
+	farmers = {
+		culture = russian
+		religion = orthodox
+		size = 4050
+	}
+
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 637
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 300
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 1650
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 337
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 28575
+	}
+}
+#Yasi (80000/20000 POPS)
+1185 = {
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 525
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 300
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 1650
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 300
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 27375
+	}
+}
+#Zhambul (76000/19000 POPS)
+2606 = {
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 525
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 262
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 1425
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 300
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 25987
+	}
+}
+#Aktash (68000/17000 POPS)
+2612 = {
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 487
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 262
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 1275
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 262
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 23212
+	}
+}
+#Semireche Region (276000)   Kirghizstan.txt for balance of region 
+#under the "rule" of Russia in 1836
+#Semipalatinsk (80000/20000 POPS)
+1187 = {
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 525
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 300
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 1650
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 300
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 27375
+	}
+}
+#Qaratal (108000/27000 POPS)
+1188 = {
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 450
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 225
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 1200
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 262
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 21862
+	}
+
+	aristocrats = {
+		culture = uighur
+		religion = sunni
+		size = 300
+	}
+
+	clergymen = {
+		culture = uighur
+		religion = sunni
+		size = 150
+	}
+
+	artisans = {
+		culture = uighur
+		religion = sunni
+		size = 825
+	}
+
+	soldiers = {
+		culture = uighur
+		religion = sunni
+		size = 187
+	}
+
+	farmers = {
+		culture = uighur
+		religion = sunni
+		size = 15037
+	}
+}
+#under the "rule" of Kokand in 1836
+#Alma-Ata (88000/22000 POPS)
+1186 = {
+	aristocrats = {
+		culture = kirgiz
+		religion = sunni
+		size = 150
+	}
+
+	clergymen = {
+		culture = kirgiz
+		religion = sunni
+		size = 75
+	}
+
+	artisans = {
+		culture = kirgiz
+		religion = sunni
+		size = 450
+	}
+
+	soldiers = {
+		culture = kirgiz
+		religion = sunni
+		size = 112
+	}
+
+	farmers = {
+		culture = kirgiz
+		religion = sunni
+		size = 8212
+	}
+
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 450
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 225
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 1200
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 262
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 21862
+	}
+}
+#Khwarazm Region (168000)   Uzbekistan.txt and Turkmenistan.txt for balance of region 
+#under the rule of Khiva in 1836
+#Kyzylorda (108000/27000 POPS)
+1193 = {
+	aristocrats = {
+		culture = uzbek
+		religion = sunni
+		size = 375
+	}
+
+	clergymen = {
+		culture = uzbek
+		religion = sunni
+		size = 187
+	}
+
+	artisans = {
+		culture = uzbek
+		religion = sunni
+		size = 1050
+	}
+
+	soldiers = {
+		culture = uzbek
+		religion = sunni
+		size = 225
+	}
+
+	farmers = {
+		culture = uzbek
+		religion = sunni
+		size = 19162
+	}
+
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 375
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 187
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 900
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 187
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 17850
+	}
+}
+#Aqtau (32000/8000 POPS)
+1194 = {
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 225
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 112
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 525
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 112
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 11025
+	}
+}
+#Aralsk (28000/7000 POPS)
+2702 = {
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 150
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 75
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 525
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 112
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 9637
+	}
+}
+#Mawarannahr Region (180000)   Uzbekistan.txt, Tajikistan.txt, Kirghizstan.txt for balance of region 
+#under the rule of Bukhara in 1836
+#Shymkent (180000/45000 POPS)   part of Kazakhstan   
+1197 = {
+	aristocrats = {
+		culture = uzbek
+		religion = sunni
+		size = 375
+	}
+
+	clergymen = {
+		culture = uzbek
+		religion = sunni
+		size = 187
+	}
+
+	artisans = {
+		culture = uzbek
+		religion = sunni
+		size = 1125
+	}
+
+	soldiers = {
+		culture = uzbek
+		religion = sunni
+		size = 225
+	}
+
+	farmers = {
+		culture = uzbek
+		religion = sunni
+		size = 20587
+	}
+
+	aristocrats = {
+		culture = kazak
+		religion = sunni
+		size = 825
+	}
+
+	clergymen = {
+		culture = kazak
+		religion = sunni
+		size = 375
+	}
+
+	artisans = {
+		culture = kazak
+		religion = sunni
+		size = 2250
+	}
+
+	soldiers = {
+		culture = kazak
+		religion = sunni
+		size = 375
+	}
+
+	farmers = {
+		culture = kazak
+		religion = sunni
+		size = 41175
+	}
+
+}

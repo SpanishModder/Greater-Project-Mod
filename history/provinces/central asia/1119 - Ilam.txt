@@ -1,0 +1,10 @@
+owner = ARD
+controller = ARD
+add_core = ARD
+add_core = PER
+trade_goods = cotton
+life_rating = 35
+1870.1.1 = {
+	owner = PER
+	controller = PER
+}

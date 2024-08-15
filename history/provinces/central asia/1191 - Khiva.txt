@@ -1,0 +1,11 @@
+owner = KHI
+controller = KHI
+add_core = KHI
+add_core = KKH
+trade_goods = wool
+life_rating = 35
+1890.1.1 = {
+	owner = RUS
+	controller = RUS
+	colonial = 2
+}

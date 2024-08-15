@@ -1,0 +1,11 @@
+owner = KUW
+controller = KUW
+add_core = KUW
+trade_goods = fruit
+life_rating = 35
+
+1870.1.1 = {
+	owner = ENG
+	controller = ENG
+	add_core = TUR
+}

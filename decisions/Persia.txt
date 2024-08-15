@@ -1,0 +1,123 @@
+political_decisions = {
+	secure_qajar_dynasty = {
+		picture = qajar_dynasty
+		potential = {
+			tag = PER
+			NOT = {
+				has_country_flag = qajar_dynasty_secured
+			}
+		}
+		
+		allow = {
+			year = 1850
+			all_core = {
+				owned_by = THIS
+			}
+			civilized = yes
+			has_recently_lost_war = no
+		}
+		
+		effect = {
+			set_country_flag = qajar_dynasty_secured
+			prestige = 10
+			any_pop = {
+				limit = {
+					culture = persian
+				}
+				militancy = -4
+				consciousness = -4
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	end_autonomy_of_ardalan = {
+		picture = qajar_dynasty_autonomy
+		potential = {
+			tag = PER
+			NOT = { owns = 1117 }
+			exists = ARD
+		}
+		
+		allow = {
+			NOT = { exists = BTH }
+			ARD = { vassal_of = THIS }
+			year = 1860
+		}
+		
+		effect = {
+			prestige = 2.5
+			inherit = ARD
+			ARD = { all_core = { remove_core = ARD } }
+			any_pop = {
+				limit = {
+					culture = persian
+				}
+				consciousness = 1.5
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	end_autonomy_of_jelali = {
+		picture = qajar_dynasty_autonomy
+		potential = {
+			tag = PER
+			NOT = { owns = 1109 }
+			exists = JLL
+		}
+		
+		allow = {
+			NOT = { exists = BTH }
+			JLL = { vassal_of = THIS }
+			year = 1845
+		}
+		
+		effect = {
+			prestige = 2
+			inherit = JLL
+			JLL = { all_core = { remove_core = JLL } }
+			any_pop = {
+				limit = {
+					culture = persian
+				}
+				consciousness = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	end_autonomy_of_shakak = {
+		picture = qajar_dynasty_autonomy
+		potential = {
+			tag = PER
+			NOT = {
+				owns = 1110
+			}
+		}
+		
+		allow = {
+			NOT = { exists = BTH }
+			SHK = { vassal_of = THIS }
+			year = 1845
+		}
+		
+		effect = {
+			prestige = 1.25
+			inherit = SHK
+			SHK = { all_core = { remove_core = SHK } }
+			any_pop = {
+				limit = {
+					culture = persian
+				}
+				consciousness = 0.5
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

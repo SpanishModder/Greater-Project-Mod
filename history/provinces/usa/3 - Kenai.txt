@@ -1,0 +1,11 @@
+owner = RUS
+controller = RUS
+trade_goods = fish
+life_rating = 20
+colonial = 2
+1870.1.1 = { 
+    owner = USA
+    controller = USA
+    add_core = USA
+    colonial = 0
+}

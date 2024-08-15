@@ -1,0 +1,30 @@
+army = {
+	name = "I. Imperial Army"
+	location = 1657
+	regiment = {
+		name= "Imperial Infantry"
+		type = infantry
+		home = 1657
+	}
+	regiment = {
+		name= "Imperial Infantry"
+		type = infantry
+		home = 1657
+	}
+	regiment = {
+		name= "Imperial Irregular"
+		type = infantry
+		home = 1657
+	}
+	regiment = {
+		name= "Imperial Irregular"
+		type = infantry
+		home = 1659
+	}
+	regiment = {
+		name= "Imperial Irregular"
+		type = infantry
+		home = 1659
+	}
+}
+

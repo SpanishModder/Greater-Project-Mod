@@ -1,0 +1,11 @@
+owner = CLM
+controller = CLM
+add_core = CLM
+add_core = GCO
+trade_goods = timber
+life_rating = 25
+
+1870.1.1 = {
+	owner = PEU
+	controller = PEU
+}

@@ -1,0 +1,12 @@
+owner = SHJ
+controller = SHJ
+add_core = SHJ
+trade_goods = tobacco
+life_rating = 35
+1870.1.1 = { 
+    owner = JAP
+    controller = JAP
+    add_core = JAP
+    remove_core = SHJ
+    colonial = 0
+}

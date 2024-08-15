@@ -1,0 +1,12 @@
+owner = COR
+controller = COR
+add_core = COR
+add_core = ARC
+trade_goods = cattle
+life_rating = 30
+
+1870.1.1 = {
+	owner = PRG
+	controller = PRG
+}
+1900.1.1 = { owner = ARG controller = ARG }

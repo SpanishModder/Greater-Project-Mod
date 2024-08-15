@@ -1,0 +1,796 @@
+
+#Events 50300 - 50399#
+
+country_event = {
+	id = 50300
+	title = "EVTNAME50300" #The Berlin Conference
+	desc = "EVTDESC50300"
+	fire_only_once = yes
+	major = yes
+	picture = "Berlin Conference"
+	
+	allow_multiple_instances = no
+	
+	trigger = {
+		is_greater_power = yes
+		any_owned_province = { continent = africa }
+		capital_scope = { continent = europe }
+		NOT = {
+			OR = {
+				tag = TUR
+				tag = RUS
+			}
+		}
+		invention = prophylaxis_against_malaria
+		invention = mission_to_civilize
+		#invention = colonial_negotiations
+		NOT = { has_global_flag = berlin_conference }
+		year = 1880
+		NOT = { year = 1900 }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.8
+			capital = 549
+		}
+		modifier = {
+			factor = 0.6
+			rank = 1
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA50300"
+		set_global_flag = berlin_conference
+		prestige = 25
+		any_country = {
+			limit = {
+				exists = yes
+				capital_scope = { continent = europe }
+				OR = {
+					is_secondary_power = yes
+					is_greater_power = yes
+				}
+				NOT = {
+					tag = RUS
+					tag = TUR
+				}
+			}
+			country_event = 50306
+			relation = { who = THIS value = 25 }
+		}
+		any_country = {
+			limit = {
+				capital_scope = { continent = africa }
+				in_sphere = THIS
+				NOT = {
+					tag = EGY
+					tag = ETH
+					tag = MOR
+				}
+			}
+			country_event = 11101
+		}
+	}
+}
+
+country_event = {
+	id = 50302
+	title = "EVTNAME50302" #$FROMCOUNTRY$'s Treaty
+	desc = "EVTDESC50302"
+	picture = "Treaty"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50302"
+		random_owned = {
+			limit = {
+				port = yes
+				OR = {
+					NOT = { is_capital = yes }
+					owner = {
+						num_of_cities = 2
+					}
+				}
+			}
+			secede_province = FROM
+		}
+	}
+}
+
+country_event = {
+	id = 50303
+	title = "EVTNAME50303" #Lagos Slave Trade
+	desc = "EVTDESC50303"
+	picture = "colonial_uprising"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		slavery = no_slavery
+		is_greater_power = yes
+		nationalism_n_imperialism = 1
+		colonial_nation = yes
+		year = 1861
+		NOT = { year = 1880 }
+		1923 = {
+			owner = {
+				civilized = no
+				ai = yes
+				OR = {
+					part_of_sphere = no
+					in_sphere = THIS
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "EVTOPTA50303"
+		prestige = 3.5
+		1923 = {
+			owner = {
+				relation = { who = THIS value = -200 }
+				country_event = 50309
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50303"
+		prestige = -5
+		1923 = {
+			owner = {
+				relation = { who = THIS value = 40 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 50306
+	title = "EVTNAME50306" #Calling greater and secondary powers after the congress
+	desc = "EVTDESC50306"
+	picture = "Treaty"
+	#major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50306"
+		prestige = 6.5
+		any_country = {
+			limit = {
+				capital_scope = { continent = africa }
+				civilized = no
+				in_sphere = THIS
+				OR = {
+					is_vassal = no
+					vassal_of = THIS
+				}
+				NOT = {
+					tag = EGY
+					tag = ETH
+					tag = MOR
+				}
+			}
+			country_event = 50310 # Changed from 11101 for more flavor
+		}
+		ai_chance = {
+			factor = 95
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50306"
+		prestige = -5
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = 50305
+	title = "EVTNAME50305" #Anexation of Egypt by a Greater Power
+	desc = "EVTDESC50305"
+	picture = "Egypt Independence"
+	
+	trigger = {
+		is_greater_power = yes
+		any_owned_province = { continent = africa }
+		capital_scope = { continent = europe }
+		NOT = {
+			year = 1905
+			tag = TUR
+			tag = RUS
+			EGY = { vassal_of = TUR }
+			EGY = { vassal_of = RUS }
+		}
+		invention = prophylaxis_against_malaria
+		invention = mission_to_civilize
+		invention = colonial_negotiations
+		has_global_flag = berlin_conference
+		year = 1880
+		OR = {
+			EGY = { in_sphere = THIS }
+			any_owned_province = { is_core = EGY }
+		}
+		EGY = {
+			exists = yes
+			civilized = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 9
+		modifier = {
+			factor = 0.4
+			capital = 300
+		}
+		modifier = {
+			factor = 0.75
+			owns = 1755
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA50305"
+		prestige = 11.5
+		EGY = { country_event = 50318 }
+		ai_chance = {
+			factor = 95
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50305"
+		prestige = -8
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = 50318
+	title = "EVTNAME50318" # $FROMCOUNTRY$ Demands our anexation!
+	desc = "EVTDESC50318"
+	picture = "greatpowers"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50318"
+		neutrality = yes
+		annex_to = FROM
+		ai_chance = {
+			factor = 25
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50318"
+		prestige = 8
+		FROM = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = african_protectorate_casus_belli_annex }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = no
+			}
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+}
+
+country_event = {
+	id = 50307
+	title = "EVTNAME50307" #Anexation of Ethiopia by a Greater Power
+	desc = "EVTDESC50307"
+	picture = "Treaty"
+	fire_only_once = yes
+	
+	allow_multiple_instances = no
+	
+	trigger = {
+		is_greater_power = yes
+		any_owned_province = { continent = africa }
+		capital_scope = { continent = europe }
+		NOT = {
+			tag = TUR
+			tag = RUS
+		}
+		invention = prophylaxis_against_malaria
+		invention = mission_to_civilize
+		invention = colonial_negotiations
+		has_global_flag = berlin_conference
+		year = 1880
+		OR = {
+			ETH = { in_sphere = THIS }
+			any_owned_province = { is_core = ETH }
+		}
+		ETH	= {
+			exists = yes
+			civilized = no
+		}
+		NOT = { year = 1905 }
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+		modifier = {
+			factor = 0.4
+			capital = 300
+		}
+		modifier = {
+			factor = 0.75
+			owns = 1755
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA50307"
+		prestige = 11.5
+		EGY = { country_event = 50318 }
+		ai_chance = {
+			factor = 95
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50305" #Same as 50305 because its the same option text
+		prestige = -8
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = 50308
+	title = "EVTNAME50308" #When an african country civilizes
+	desc = "EVTDESC50308"
+	picture = "Treaty"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		capital_scope = { continent = africa }
+		NOT = {
+			tag = MOR
+			tag = ALD
+			tag = TRI
+			tag = EGY
+			tag = TUN
+			tag = ETH
+			tag = MAD
+			tag = LOA
+			tag = KON
+			tag = ORA
+			tag = TRN
+			tag = ZUL
+			tag = RHO
+			tag = GON
+			tag = HAR
+			tag = SHW
+			tag = MAJ
+			tag = GEL
+			tag = WRS
+			tag = LUN
+			tag = ZAN
+			tag = TUE
+			tag = LIB # Added for v1.2 to avoid the change when civilizes 
+			#More countries here (Only for west african countries)
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA50308"
+		prestige = 50
+		all_core = { add_core = SNG }
+		change_tag = SNG #Songhai
+		civilized = yes
+		government = empire
+		any_pop = {
+			militancy = -3
+			consciousness = -3
+		}
+		1803 = { add_core = THIS }
+		1805 = { add_core = THIS }
+		FRA_1798 = { add_core = THIS }
+		FRA_1801 = { add_core = THIS }
+		FRA_1901 = { add_core = THIS }
+		FRA_1808 = { add_core = THIS }
+		FRA_1927 = { add_core = THIS }
+		FRA_1939 = { add_core = THIS }
+		1942 = { add_core = THIS }
+		1943 = { add_core = THIS }
+		1944 = { add_core = THIS }
+	}
+}
+
+country_event = {
+	id = 50309
+	title = "EVTNAME50309" #Lagos Slave Trade - Info for owner of Lagos (1923)
+	desc = "EVTDESC50309"
+	picture = "Slavepower"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50309"
+		prestige = -1.5
+		1923 = { secede_province = FROM }
+		slavery = no_slavery
+		FROM = {
+			diplomatic_influence = {
+				who = THIS
+				value = 400
+			}
+		}
+		ai_chance = {
+			factor = 95
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50309"
+		FROM = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = african_protectorate_casus_belli_state state_province_id = 1923 }
+				call_ally = no
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = 50310
+	title = "EVTNAME50310" # $FROMCOUNTRY$ demands our anexation! - For african uncivilized countries
+	desc = "EVTDESC50310"
+	picture = "Colonial Acquisition"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50310"
+		neutrality = yes
+		FROM = { inherit = THIS }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50310"
+		FROM = {
+			casus_belli = {
+				target = THIS
+				type = establish_protectorate_casus_belli
+				months = 12
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = 50311
+	title = "EVTNAME50311" # The Gold Coast Purchase
+	desc = "EVTDESC50311"
+	picture = "Colonial Acquisition"
+	
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA50311"
+		treasury = 80000
+		FROM = {
+			treasury = -80000
+			prestige = 2.5
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 1907
+					province_id = 1908
+					province_id = 1909
+				}
+			}
+			secede_province = FROM
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50311"
+		FROM = {
+			casus_belli = {
+				target = THIS
+				type = place_in_the_sun
+				months = 18
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = 50312
+	title = "EVTNAME50312" # Congo Conference info for Greater Powers (Vote event)
+	desc = "CONGOCONFERENCEDESC"
+	picture = "Slavepower"
+	
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA50312" #We vote for it!
+		relation = { who = BEL value = 25 }
+		FROM = {
+			change_variable = {
+				which = congo_congress
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.25
+				any_owned_province = {
+					region = BEL_1977
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50312" #We vote against it!
+		relation = { who = BEL value = -25 }
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 4
+				any_owned_province = {
+					region = BEL_1977
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 50313
+	title = "EVTNAME50313" # Congo Conference - Belgium wins!
+	desc = "CONGOCONFERENCEDESC"
+	major = yes
+	
+	immediate = { set_global_flag = congo_conference_finished }
+	
+	trigger = {
+		NOT = { has_global_flag = congo_conference_finished }
+		has_global_flag = congo_conference_held
+		tag = BEL
+		any_greater_power = {
+			check_variable = {
+				which = congo_congress
+				value = 4
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 3 }
+	
+	option = {
+		name = "EVTOPTA50313"
+		prestige = 8
+		BEL_1977 = {
+			limit = {
+				OR = {
+					empty = yes
+					owner = { civilized = no }
+				}
+			}
+			secede_province = THIS
+		}
+		POR_1999 = {
+			limit = {
+				OR = {
+					empty = yes
+					owner = { civilized = no }
+				}
+				NOT = { province_id = 1999 }
+			}
+			secede_province = THIS
+		}
+	}
+}
+
+country_event = {
+	id = 50314
+	title = "EVTNAME50314" # Congo Conference - Belgium lose or draws!
+	desc = "CONGOCONFERENCEDESC"
+	major = yes
+	
+	immediate = { set_global_flag = congo_conference_finished }
+	
+	trigger = {
+		NOT = { has_global_flag = congo_conference_finished }
+		any_greater_power = {
+			NOT = {
+				check_variable = {
+					which = congo_congress
+					value = 3
+				}
+			}
+		}
+		tag = BEL
+		has_global_flag = congo_conference_held
+	}
+	
+	mean_time_to_happen = { days = 3 }
+	
+	option = {
+		name = "EVTOPTA50314"
+		random_country = {
+			limit = {
+				capital_scope = {
+					OR = {
+						region = BEL_1977
+						region = POR_1999
+					}
+				}
+			}
+			add_casus_belli = {
+				target = THIS
+				type = establish_protectorate_casus_belli
+				months = 18
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 50315
+	title = "EVTNAME50315" # $SPHERE_OWNER$ sends negotiators!
+	desc = "EVTDESC50315"
+	picture = "Slavepower"
+	
+	trigger = {
+		capital_scope = { continent = africa }
+		civilized = no
+		any_greater_power = {
+			is_sphere_leader_of = THIS
+			revolution_n_counterrevolution = 1
+			has_recently_lost_war = no
+			war = no
+		}
+		NOT = {
+			tag = ETH
+			tag = EGY
+			tag = MOR
+		}
+		OR = {
+			is_vassal = no
+			sphere_owner = {
+				is_our_vassal = THIS
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA50315"
+		neutrality = yes
+		sphere_owner = { country_event = 50316 } # The $FROMCOUNTRY$ Protectorate
+		ai_chance = {
+			factor = 90
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50315"
+		prestige = 10
+		sphere_owner = { country_event = 50317 } # Rebellion in $FROMCOUNTRY$
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+	id = 50316
+	title = "EVTNAME50316" # The Protectorate of $FROMCOUNTRY$ 
+	desc = "EVTDESC50316"
+	picture = "Slavepower"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50316" # Annex it!
+		badboy = 1
+		FROM = {
+			neutrality = yes
+			annex_to = THIS
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				badboy = 24
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50316" # We've other concerns
+		badboy = -2.5
+		prestige = -5
+		diplomatic_influence = {
+			who = FROM
+			value = -400
+		}
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 100
+				badboy = 24
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 50317
+	title = "EVTNAME50317" # Rebellion in $FROMCOUNTRY$
+	desc = "EVTDESC50317"
+	picture = "Slavepower"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA50317" # This is a war declaration!
+		war = {
+			target = FROM
+			attacker_goal = { casus_belli = african_protectorate_casus_belli_annex }
+			call_ally = no
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50317" # We've other concerns
+		prestige = -15
+		diplomatic_influence = {
+			who = FROM
+			value = -400
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

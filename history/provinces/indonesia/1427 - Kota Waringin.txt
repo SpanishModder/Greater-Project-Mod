@@ -1,0 +1,10 @@
+owner = KTW
+controller = KTW
+add_core = KTW
+trade_goods = grain
+life_rating = 30
+1890.1.1 = {
+	owner = NET
+	controller = NET
+	colonial = 2
+}

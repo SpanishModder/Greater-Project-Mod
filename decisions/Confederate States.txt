@@ -1,0 +1,132 @@
+political_decisions = {	
+	# Confederate States - Moved from "American Civil War.txt" #
+	king_cotton = {
+		potential = {
+			tag = CSA
+			war_with = USA
+			NOT = { has_country_flag = haskingcotton }
+		}
+		
+		allow = {
+			cotton = 500
+		}
+		
+		effect = {
+			set_country_flag = haskingcotton
+			prestige = 5
+			cotton = -500
+			any_greater_power = {
+				limit = {
+					NOT = { tag = USA }
+				}
+				casus_belli = {
+					target = USA
+					type = cut_down_to_size
+					months = 24
+				}
+			}
+		}
+	}
+	form_kellys_irish_brigade = {
+		potential = {
+			tag = CSA
+			war_with = USA
+			NOT = {
+				has_country_flag = kellys_irish_brigade
+			}
+		}
+		allow = {
+			war_exhaustion = 4
+		}
+		effect = {
+			random_pop = {
+				limit = {
+					pop_type = farmers
+					has_pop_culture = dixie
+				}
+				pop_type = soldiers
+			}
+			war_exhaustion = -1
+			set_country_flag = kellys_irish_brigade
+		}
+	}
+	raise_the_bonnie_blue_flag = {
+		potential = {
+			tag = CSA
+			NOT = {
+				OR = {
+					has_country_flag = bonnie_blue_flag
+					has_country_flag = 1861CSAstart
+					}
+			}
+		}
+		allow = {
+			war_with = USA
+		}
+		effect = {
+			set_country_flag = bonnie_blue_flag
+			define_general = {
+				name = "Robert E.Lee"
+				personality = audacious
+				background = war_college
+			}
+			define_general = {
+				name = "Thomas Jackson"
+				personality = coolminded
+				background = school_of_defense
+			}
+			add_country_modifier = {
+				name = the_bonnie_blue_flag
+				duration = 365
+			}
+		}
+	}
+	# Confederate States new GPM decisions #
+	knigths_golden_circle = {
+		picture = golden_circle
+		potential = {
+			tag = CSA
+			NOT = {
+				government = empire
+				has_country_flag = bikley_in_power
+			}
+		}
+		allow = {
+			all_core = {
+				OR = {
+					owned_by = THIS
+					owner = { in_sphere = THIS }
+				}
+			}
+			owns = 2209
+			USA = {
+				OR = {
+					is_greater_power = no
+					has_recently_lost_war = yes
+				}
+			}
+		}
+		effect = {
+			set_country_flag = bikley_in_power
+			prestige = 35
+			badboy = 10
+			define_general = {
+				name = "George W. l. Bikley"
+				personality = audacious
+				background = war_college
+			}
+			MEX = {
+				all_core = { add_core = THIS }
+				relation = { who = THIS value = -200 }
+			}
+			UCA = {
+				all_core = { add_core = THIS }
+				relation = { who = THIS value = -200 }
+			}
+			CUB = {
+				all_core = { add_core = THIS }
+				relation = { who = THIS value = -200 }
+			}
+		}
+	}
+}
