@@ -479,14 +479,6 @@ political_decisions = {
 				has_country_flag = second_mexican_empire_exists
 				has_global_flag = WW1_campaign
 			}
-		}
-		
-		allow = {
-			empiricism = 1
-			is_greater_power = yes
-			MEX = {
-				is_greater_power = no
-			}
 			MEX_85 = { owned_by = USA }
 			MEX_94 = { owned_by = USA }
 			MEX_100 = { owned_by = USA }
@@ -494,8 +486,15 @@ political_decisions = {
 			TEX_132 = { owned_by = USA }
 		}
 		
+		allow = {
+			empiricism = 1
+			is_greater_power = yes
+			MEX = { is_greater_power = no }
+		}
+		
 		effect = {
-			set_country_flag = second_mexican_empire_exists
+			MEX = { set_country_flag = second_mexican_empire_exists }
+			set_country_flag = mexican_empire_restored
 			casus_belli = {
 				target = MEX
 				type = make_puppet

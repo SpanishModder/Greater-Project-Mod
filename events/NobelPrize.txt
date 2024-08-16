@@ -74,7 +74,17 @@ country_event = {
 		is_greater_power = yes
 	}
  
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			rank = 1
+			factor = 2
+		}
+		modifier = {
+			prestige = 400
+			factor = 1.5
+		}
+	}
 
 	option = {
 		name = "EVTOPTA23451"
@@ -108,7 +118,17 @@ country_event = {
 		is_greater_power = yes
 	}
  
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			rank = 1
+			factor = 2
+		}
+		modifier = {
+			prestige = 400
+			factor = 1.5
+		}
+	}
 
 	option = {
 		name = "EVTOPTA23491"
@@ -142,7 +162,17 @@ country_event = {
 		is_greater_power = yes
 	}
  
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			rank = 1
+			factor = 2
+		}
+		modifier = {
+			prestige = 400
+			factor = 1.5
+		}
+	}
 
 	option = {
 		name = "EVTOPTA23491"
@@ -176,7 +206,17 @@ country_event = {
 		is_greater_power = yes
 	}
  
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			rank = 1
+			factor = 2
+		}
+		modifier = {
+			prestige = 400
+			factor = 1.5
+		}
+	}
 
 	option = {
 		name = "EVTOPTA23571"
@@ -210,7 +250,17 @@ country_event = {
 		is_greater_power = yes
 	}
  
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			rank = 1
+			factor = 2
+		}
+		modifier = {
+			prestige = 400
+			factor = 1.5
+		}
+	}
 
 	option = {
 		name = "EVTOPTA23611"

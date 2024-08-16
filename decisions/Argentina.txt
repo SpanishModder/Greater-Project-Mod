@@ -71,18 +71,21 @@ political_decisions = {
 			state_n_government = 1
 			OR = {
 				AND = {
+					ARC = {
+						all_core = {
+							OR = {
+								owned_by = THIS
+								owner = { in_sphere = THIS }
+								owner = { vassal_of = THIS }
+							}
+						}
+					}
 					COR = {
 						all_core = {
 							OR = {
 								owned_by = THIS
-								province_id = 2554
-								owner = {
-									OR = {
-										in_sphere = THIS
-										vassal_of = THIS
-										substate_of = THIS
-									}
-								}
+								owner = { in_sphere = THIS }
+								owner = { vassal_of = THIS }
 							}
 						}
 					}
@@ -90,28 +93,8 @@ political_decisions = {
 						all_core = {
 							OR = {
 								owned_by = THIS
-								owner = {
-									OR = {
-										in_sphere = THIS
-										vassal_of = THIS
-										substate_of = THIS
-									}
-								}
-							}
-						}
-					}
-					ARC = {
-						all_core = {
-							OR = {
-								owned_by = THIS
-								owner = {
-									OR = {
-										in_sphere = THIS
-										vassal_of = THIS
-										substate_of = THIS
-									}
-								}
-								empty = yes
+								owner = { in_sphere = THIS }
+								owner = { vassal_of = THIS }
 							}
 						}
 					}
@@ -168,13 +151,14 @@ political_decisions = {
 						in_sphere = THIS
 					}
 				}
-				all_core = {
-					remove_core = ARC
-					add_core = THIS
-				}
 				annex_to = THIS
 			}
 			change_tag = ARG
+			any_owned = {
+				limit = { is_core = ARC }
+				remove_core = ARC
+				add_core = THIS
+			}
 			relation = { who = CHL value = 50 }
 		}
 		ai_will_do = {

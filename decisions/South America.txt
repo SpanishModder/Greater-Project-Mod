@@ -89,14 +89,15 @@ political_decisions = {
 	conquest_chaco_region = {
 		picture = chaco_map
 		potential = {
-			OR = {
-				owns = 2318 # Bolivia
-				owns = 2339 # Paraguay
-				owns = 2365 # Argentina
-				
-			}
+			#OR = {
+			#	owns = 2318 # Bolivia
+			#	owns = 2339 # Paraguay
+			#	owns = 2365 # Argentina
+			#}
 			year = 1860
-			exists = yes
+			NOT = {
+				has_country_flag = chaco_conquered
+			}
 			OR = {
 				# Bolivia
 				AND = {
