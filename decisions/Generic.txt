@@ -5,6 +5,7 @@ political_decisions = {
 		potential = {
 			NOT = {
 				has_country_flag = showing_country_options
+				has_global_flag = options_decisions_disabled
 			}
 		}
 		
@@ -74,6 +75,45 @@ political_decisions = {
 		
 		effect = {
 			badboy = -1000
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	increase_jingoism_option = {
+		picture = generic_option_GPM
+		potential = {
+			has_country_flag = showing_country_options
+		}
+		
+		allow = {
+			
+		}
+		
+		effect = {
+			move_issue_percentage = { 
+				from = pro_military 
+				to = jingoism
+				value = 0.5
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	disable_options_decisions_GPM = {
+		picture = options_decisions
+		alert = yes
+		potential = {
+			has_country_flag = showing_country_options
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			set_global_flag = options_decisions_disabled
+			clr_country_flag = showing_country_options
 		}
 		ai_will_do = {
 			factor = 0

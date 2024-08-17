@@ -190,18 +190,9 @@ country_event = {
 			limit = {
 				exists = no
 				any_core = { owned_by = THIS }
-				capital_scope = {
-					is_colonial = yes
-					OR = {
-						continent = asia
-						continent = africa
-					}
-				}
+				capital_scope = { is_colonial = yes }
 			}
-			random = {
-				chance = 70 #Increase this for more chance to get colonies
-				set_country_flag = can_be_colony
-			}
+			set_country_flag = can_be_colony
 		}
 		
 		### Releasing non-existent countries - independant nations ###
@@ -222,12 +213,7 @@ country_event = {
 				#}
 				OR = {
 					NOT = { is_primary_culture = THIS }
-					capital_scope = {
-						OR = {
-							is_colonial = yes
-							continent = africa
-						}
-					}
+					capital_scope = { is_colonial = yes }
 				}
 			}
 			all_core = {
@@ -274,7 +260,7 @@ country_event = {
 				}
 				remove_core = THIS
 			}
-			country_event = 50516 # choosing a candidate for annexation
+			country_event = 50507 # setup for choosing a candidate for annexation
 		}
 		
 		### Neighbour countries demand territories ###
@@ -287,6 +273,21 @@ country_event = {
 				#NOT = { this_culture_union = THIS }
 			}
 			country_event = 50506
+		}
+		
+		### The Truced nations divide the colonies ###
+		
+		any_country = {
+			limit = {
+				truce_with = THIS
+				is_vassal = no
+				civilized = yes
+				OR = {
+					num_of_cities = 10
+					is_greater_power = yes
+				}
+			}
+			country_event = { id = 50520 days = 1 }
 		}
     }
 }
@@ -448,15 +449,73 @@ country_event = {
 			}
 		}
 		FROM = { prestige_factor = -0.01 }
-		
-		### Cleaning up flags ###
-		
-		any_country = {
+	}
+}
+
+### The $FROMCOUNTRY_ADJ$ Colonies ###
+
+country_event = {
+	id = 50520
+	title = "EVTNAME50520"
+	desc = "EVTDESC50520"
+	picture = "treaty"
+	
+	allow_multiple_instances = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned = {
 			limit = {
-				has_country_flag = can_be_colony
-				exists = no
+				owner = {
+					has_country_flag = want_colonies
+					has_country_flag = not_want_colonies
+				}
 			}
-			clr_country_flag = can_be_colony
+			owner = {
+				clr_country_flag = want_colonies
+				clr_country_flag = not_want_colonies
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA50520" # We are interested in $FROMCOUNTRY_ADJ$ colonies
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_country_flag = want_colonies } }
+			}
+			owner = {
+				set_country_flag = want_colonies
+				prestige = 5
+				badboy = 3
+			}
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				badboy = 22
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB50520" # We are not interested in $FROMCOUNTRY_ADJ$ colonies
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_country_flag = not_want_colonies } }
+			}
+			owner = {
+				set_country_flag = not_want_colonies
+				badboy = -2
+			}
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 100
+				badboy = 23.5
+			}
 		}
 	}
 }
@@ -467,58 +526,45 @@ country_event = {
 	desc = "EVTDESC50516"
 	picture = "Empire Dismantled"
 	
-	allow_multiple_instances = yes #multiple events at once
-	is_triggered_only = yes
+	#allow_multiple_instances = yes #multiple events at once
+	
+	trigger = {
+		has_country_flag = can_be_colony
+	}
+	
+	mean_time_to_happen = { days = 15 }
 	
 	option = {
 		name = "EVTOPTA50516"
-		FROM = {
-			any_owned = {
-				limit = {
-					is_core = THIS
-					is_capital = no
-				}
-				secede_province = THIS
-			}
-		}
-		FROM = {
-			prestige_factor = -0.01
-			#create_vassal = THIS
-		}
-		
-		### Cleaning up flags ###
-		
-		any_country = {
-			limit = {
-				has_country_flag = can_be_colony
-				exists = no
-			}
-			clr_country_flag = can_be_colony
-		}
+		#FROM = {
+		#	any_owned = {
+		#		limit = {
+		#			is_core = THIS
+		#			is_capital = no
+		#		}
+		#		secede_province = THIS
+		#	}
+		#}
+		#FROM = {
+		#	prestige_factor = -0.01
+		#	#create_vassal = THIS
+		#}
 		
 		### Searching for a candidate for annexation ###
 		
 		random_country = {
 			limit = {
-				OR = {
-					neighbour = THIS #To avoid bordergore
-					any_owned_province = {
-						continent = africa
-						is_colonial = yes
-					}
-				}
-				is_vassal = no
-				civilized = yes
-				truce_with = FROM
-				OR = {
-					any_owned_province = { is_core = THIS }
-					neighbour = THIS
-					colonial_nation = yes
-				}
-				OR = {
-					is_greater_power = yes
-					is_secondary_power = yes
-				}
+				has_country_flag = want_colonies
+				#OR = {
+				#	neighbour = THIS #To avoid bordergore
+				#	colonial_nation = yes
+				#	is_greater_power = yes
+				#}
+				#OR = {
+				#	any_owned_province = { is_core = THIS }
+				#	neighbour = THIS
+				#	colonial_nation = yes
+				#}
 			}
 			country_event = 50515
 		}
@@ -536,8 +582,20 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA50515"
+		name = "EVTOPTA50515" # We accept the control of the colony
+		
 		inherit = FROM
+		
+		### Cleaning up flags ###
+		
+		any_country = {
+			limit = {
+				has_country_flag = can_be_colony
+				exists = no
+			}
+			clr_country_flag = can_be_colony
+		}
+		
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -549,6 +607,11 @@ country_event = {
 				NOT = { any_owned_province = { port = yes } }
 			}
 			modifier = {
+				factor = 0
+				colonial_nation = no
+				is_greater_power = no
+			}
+			modifier = {
 				factor = 1.75
 				any_owned_province = { is_core = FROM }
 			}
@@ -556,23 +619,72 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB50515"
+		name = "EVTOPTB50515" # Create a dependent state
+		
+		create_vassal = FROM
+		create_alliance = FROM
+		diplomatic_influence = {
+			who = FROM
+			value = 200
+		}
+		
+		### Cleaning up flags ###
+		
+		any_country = {
+			limit = {
+				has_country_flag = can_be_colony
+				exists = no
+			}
+			clr_country_flag = can_be_colony
+		}
+		
+		ai_chance = {
+			factor = 20
+			modifier = {
+				FROM = { is_culture_group = THIS }
+				factor = 0
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC50515" # Only exert influence
+		
+		create_alliance = FROM
+		diplomatic_influence = {
+			who = FROM
+			value = 200
+		}
+		
+		### Cleaning up flags ###
+		
+		any_country = {
+			limit = {
+				has_country_flag = can_be_colony
+				exists = no
+			}
+			clr_country_flag = can_be_colony
+		}
+		
+		ai_chance = {
+			factor = 20
+			modifier = {
+				FROM = { is_culture_group = THIS }
+				factor = 0
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTD50515"
 		
 		FROM = { country_event = 50517 } #Searching another candidate for annexation
 		
 		ai_chance = {
-			factor = 50
+			factor = 10
 			modifier = {
-				factor = 1.75
-				NOT = { any_owned_province = { is_overseas = yes } }
-			}
-			modifier = {
-				factor = 2
-				NOT = { any_owned_province = { port = yes } }
-			}
-			modifier = {
-				factor = 0.25
-				any_owned_province = { is_core = FROM }
+				NOT = { badboy = 24 }
+				factor = 0
 			}
 		}
 	}
