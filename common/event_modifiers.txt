@@ -793,12 +793,6 @@ the_opium_problem = {
 	icon = 10
 }
 
-industrialization_progress = {
-	prestige = 0.002
-	tax_efficiency = 0.0025
-	icon = 13
-}
-
 national_schools = {
 	global_assimilation_rate = 2
 	icon = 17
@@ -841,6 +835,15 @@ inestable_monarchy = {
 systematic_extermination = {
 	#No effects
 	icon = 18
+}
+
+economic_sanctions = {
+	tax_efficiency = -0.2
+	mobilization_economy_impact = 0.25
+	org_regain = -0.1
+	prestige = -0.15
+	war_exhaustion = 0.5
+	icon = 12
 }
 
 #Nobel Prizes

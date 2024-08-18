@@ -1,0 +1,194 @@
+#Events 51800 - 51899#
+
+country_event = {
+	id = 51800
+	title = "EVTNAME51800" # Badboy limit exceeded - International Sanctions
+	desc = "EVTDESC51800"
+	picture = "International Pressure"
+	
+	trigger = {
+		ai = no
+		civilized = yes
+		badboy = 1
+		NOT = {
+			has_country_flag = international_sanctions
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+		modifier = {
+			factor = 0.5
+			badboy = 1.1
+		}
+	}
+	
+	option = {
+        name = "EVTOPTA51800"
+		set_country_flag = international_sanctions
+		set_global_flag = international_pressure
+		prestige = -20
+		add_country_modifier = {
+			name = economic_sanctions
+			duration = 3650
+		}
+		any_country = {
+			limit = {
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+				}
+			}
+			relation = { who = THIS value = -50 }
+		}
+    }
+}
+
+country_event = {
+	id = 51801
+	title = "EVTNAME51801" # Random Greater Power declares interest over the limitation of power
+	desc = "EVTDESC51801"
+	picture = "International Pressure"
+	
+	trigger = {
+		has_global_flag = international_pressure
+		civilized = yes
+		is_greater_power = yes
+		is_disarmed = no
+		war = no
+		NOT = {
+			has_country_flag = international_sanctions
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	option = {
+        name = "EVTOPTA51801"
+		set_country_flag = coalition_leader
+		prestige = -5
+		random_country = {
+			limit = {
+				has_country_flag = international_sanctions
+			}
+			any_neighbor_country = {
+				limit = {
+					relation = { who = THIS value = 0 }
+					is_vassal = no
+					NOT = {
+						has_country_flag = coalition_member
+						has_country_flag = coalition_leader
+					}
+				}
+				set_country_flag = coalition_member
+				create_alliance = THIS
+			}
+		}
+    }
+}
+
+country_event = {
+	id = 51802
+	title = "EVTNAME51802" # The Coalitions Fail
+	desc = "EVTDESC51802"
+	picture = "International Pressure"
+	
+	trigger = {
+		has_global_flag = international_pressure
+		has_country_flag = international_sanctions
+		war = no
+		is_disarmed = no
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+        name = "EVTOPTA51802"
+		prestige = 50
+		badboy = -1000
+		badboy = 24.99
+		remove_country_modifier = economic_sanctions
+		clr_country_flag = international_sanctions
+		clr_global_flag = international_pressure
+		# "Normalize" relations with coalition_member and coalition_leader
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = coalition_leader
+					has_country_flag = coalition_member
+				}
+			}
+			relation = { who = THIS value = 100 }
+		}
+		any_country = {
+			limit = { has_country_flag = coalition_leader }
+			country_event = 51803
+		}
+    }
+}
+
+country_event = {
+	id = 51803
+	title = "EVTNAME51803" # The Downfall of the Coalition
+	desc = "EVTDESC51803"
+	picture = "International Pressure"
+	
+	is_triggered_only = yes # By 51802
+	
+	option = {
+        name = "EVTOPTA51803"
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = coalition_leader
+					has_country_flag = coalition_member
+				}
+			}
+			leave_alliance = THIS
+		}
+    }
+}
+
+country_event = {
+	id = 51804
+	title = "EVTNAME51804" # The Coalition Triumphs!
+	desc = "EVTDESC51804"
+	picture = "International Pressure"
+	
+	trigger = {
+		war = no
+		OR = {
+			has_country_flag = coalition_leader
+			has_country_flag = coalition_member
+		}
+		any_neighbor_country = {
+			is_disarmed = yes
+			has_country_flag = international_sanctions
+			truce_with = THIS
+			war = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+        name = "EVTOPTA51804"
+		prestige = 20
+		badboy = -2
+		random_country = {
+			limit = {
+				has_country_flag = international_sanctions
+				truce_with = THIS
+			}
+			clr_country_flag = international_sanctions
+			badboy = -1000
+			country_event = { id = 50503 days = 10 }
+		}
+    }
+}

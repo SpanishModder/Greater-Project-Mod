@@ -175,7 +175,6 @@ conquest = {
 		NOT = { is_our_vassal = THIS }
 		# only one state or unciv
 		NOT = { number_of_states = 5 }
-		num_of_cities = 5
 		OR = {
 			AND = {
 				civilized = yes
@@ -2561,6 +2560,7 @@ rude_boy = {
 
 	can_use = {
 		NOT = { is_our_vassal = THIS }
+		has_country_flag = international_sanctions
 		badboy = 1
 	}
 	
