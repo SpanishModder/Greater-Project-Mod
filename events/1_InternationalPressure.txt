@@ -141,6 +141,8 @@ country_event = {
 	
 	option = {
         name = "EVTOPTA51803"
+		clr_country_flag = coalition_leader
+		clr_country_flag = coalition_member
 		any_country = {
 			limit = {
 				OR = {
@@ -148,6 +150,8 @@ country_event = {
 					has_country_flag = coalition_member
 				}
 			}
+			clr_country_flag = coalition_leader
+			clr_country_flag = coalition_member
 			leave_alliance = THIS
 		}
     }
@@ -179,6 +183,7 @@ country_event = {
 	
 	option = {
         name = "EVTOPTA51804"
+		clr_global_flag = international_pressure
 		prestige = 20
 		badboy = -2
 		random_country = {
@@ -189,6 +194,10 @@ country_event = {
 			clr_country_flag = international_sanctions
 			badboy = -1000
 			country_event = { id = 50503 days = 10 }
+		}
+		any_country = {
+			limit = { has_country_flag = coalition_leader }
+			country_event = 51803
 		}
     }
 }
