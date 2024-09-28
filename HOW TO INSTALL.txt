@@ -1,4 +1,4 @@
 If you downloaded the mod from GitHub you will need to do this:
 1. Once you finish unziping the .zip file in mod folder rename the folder called "Greater-Project-Mod-vx.x.x" to "GPM"
 2. Move the .mod file called "GPM.mod" inside the "GPM" folder into your game/mod folder
-3. delete this file and enjoy the mod!
+3. clean up deleting this file and the .zip one and enjoy the mod!

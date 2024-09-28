@@ -205,6 +205,9 @@ country_event = {
 	desc = "EVTDESC50305"
 	picture = "Egypt Independence"
 	
+	fire_only_once = yes
+	allow_multiple_instances = no
+	
 	trigger = {
 		is_greater_power = yes
 		any_owned_province = { continent = africa }
@@ -300,8 +303,8 @@ country_event = {
 	title = "EVTNAME50307" #Anexation of Ethiopia by a Greater Power
 	desc = "EVTDESC50307"
 	picture = "Treaty"
-	fire_only_once = yes
 	
+	fire_only_once = yes
 	allow_multiple_instances = no
 	
 	trigger = {
