@@ -498,6 +498,24 @@ political_decisions = {
 			set_global_flag = SouthPoleDiscovered
 			set_global_flag = the_balkan_war
 			set_global_flag = WW1_campaign #For Interventions
+			any_country	= {
+				limit = {
+					OR = {
+						tag = GER
+						tag = KUK
+						tag = TUR
+						tag = BUL
+						tag = FRA
+						tag = ENG
+						tag = RUS
+						tag = SER
+						tag = MON
+						tag = LUX
+						tag = BEL
+					}
+				}
+				set_country_flag = in_great_war
+			}
 		}
 	}
 	enable_1914_modifiers = {

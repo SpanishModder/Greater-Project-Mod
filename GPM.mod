@@ -1,4 +1,4 @@
-name = "Greater Project Mod v1.2"
+name = "Greater Project Mod v1.3"
 path = "mod/GPM"
 user_dir = "GPM"
 

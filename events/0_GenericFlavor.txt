@@ -150,7 +150,11 @@ country_event = {
 	option = {
 		name = "EVTOPTA50503"
         clr_country_flag = in_dismatle_treaty
+		clr_country_flag = dismantlement_demanded
 		prestige_factor = -0.5
+		FROM = {
+			clr_country_flag = great_war_actor
+		}
 		any_owned = {
 			limit = {
 				is_overseas = yes

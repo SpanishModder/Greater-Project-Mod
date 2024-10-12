@@ -1003,3 +1003,42 @@ country_event = {
 		}
 	}
 }
+
+### Great War Events ###
+
+country_event = {
+	id = 19359
+	title = "EVTNAME19359"
+	desc = "EVTDESC19359"
+	picture = "Empire Dismantled"
+
+	trigger = {
+		war = yes
+		OR = {
+			has_country_flag = dismantlement_demanded
+			is_greater_power = yes
+			any_greater_power = {
+				has_country_flag = in_great_war
+				alliance_with = THIS
+			}
+			any_greater_power = {
+				has_country_flag = in_great_war
+				war_with = THIS
+			}
+		}
+		NOT = {
+			has_country_flag = in_great_war
+		}
+		any_greater_power = {
+            war_with = THIS
+            has_country_flag = in_great_war
+        }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "EVTOPTA19359"
+		set_country_flag = in_great_war
+	}
+}

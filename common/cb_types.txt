@@ -56,6 +56,7 @@ gunboat
 conquest 
 small_conquest
 civil_war 
+dismantle_empire_gw
 dismantle_empire_normal
 acquire_core_state 
 acquire_all_core
@@ -1639,7 +1640,7 @@ demand_african_treaty_port_cb = {
 	}
 }
 
-#Dismantle Empire Normal
+#Dismantle Empire - Normal
 dismantle_empire_normal = {
 	sprite_index = 14
 	constructing_cb = yes
@@ -1667,18 +1668,99 @@ dismantle_empire_normal = {
 	war_name = WAR_DISMANTLE_EMPIRE
 
 	can_use = {
-		is_greater_power = yes
+		NOT = { has_country_flag = dismantlement_demanded }
 		OR = {
-			capital_scope = { continent = europe }
-			capital_scope = { continent = north_america }
+			is_greater_power = yes
+			can_create_vassals = yes
 		}
-		THIS = { mass_politics = 1 }
+		any_owned_province = {
+			OR = {
+				is_colonial = yes
+				is_overseas = yes
+				AND = {
+					NOT = { is_core = THIS }
+					owner = { rank = 16 }
+				}
+			}
+		}
+		THIS = {
+			mass_politics = 1
+		}
 	}
 	on_add = {
 		move_issue_percentage = { 
 			from = jingoism 
 			to = pro_military
 			value = 0.1
+		}
+	}
+	on_po_accepted = {
+		set_country_flag = in_dismatle_treaty
+		country_event = { id = 50503 days = 15 }
+    }
+}
+
+#Dismantle Empire - Great Wars
+dismantle_empire_gw = {
+
+	sprite_index = 14
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+	
+	construction_speed = 2.5
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 65
+	penalty_factor = 1
+	
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+	
+	always = yes
+	
+	po_remove_prestige = yes
+	tws_battle_factor = 1.5
+	
+	war_name = WAR_DISMANTLE_EMPIRE
+
+	can_use = {
+		has_country_flag = in_great_war #GW needed
+		OR = {
+			is_greater_power = yes
+			can_create_vassals = yes
+		}
+		any_owned_province = {
+			OR = {
+				is_colonial = yes
+				is_overseas = yes
+				AND = {
+					NOT = { is_core = THIS }
+					owner = { rank = 16 }
+				}
+			}
+		}
+		THIS = {
+			mass_politics = 1
+			has_country_flag = in_great_war
+			NOT = { has_country_flag = great_war_actor }
+		}
+	}
+	on_add = {
+		set_country_flag = great_war_actor #The agressor can't use this cb again til the war ends
+		FROM = { set_country_flag = dismantlement_demanded }
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_country_flag = in_great_war } }
+			}
+			country_event = 19359
 		}
 	}
 	on_po_accepted = {
