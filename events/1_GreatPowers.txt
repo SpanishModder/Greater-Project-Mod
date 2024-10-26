@@ -1013,26 +1013,28 @@ country_event = {
 	picture = "Empire Dismantled"
 
 	trigger = {
+		great_wars_enabled = yes
 		war = yes
 		OR = {
 			has_country_flag = dismantlement_demanded
-			is_greater_power = yes
-			any_greater_power = {
-				has_country_flag = in_great_war
-				alliance_with = THIS
-			}
-			any_greater_power = {
-				has_country_flag = in_great_war
-				war_with = THIS
+			AND = {
+				any_greater_power = { 			# Any greater power
+					war = yes 					# In war
+					alliance_with = THIS 		# Allied with THIS (us)
+					war_countries = { 			# Any country in war with THEM
+						is_greater_power = yes 	# One at least is greater power
+						war_with = THIS 		# And is in war with THIS (us)
+					}
+				}
+				any_greater_power = {
+					war = yes
+					war_with = THIS
+				}
 			}
 		}
 		NOT = {
 			has_country_flag = in_great_war
 		}
-		any_greater_power = {
-            war_with = THIS
-            has_country_flag = in_great_war
-        }
 	}
 	
 	mean_time_to_happen = { days = 1 }
@@ -1040,5 +1042,17 @@ country_event = {
 	option = {
 		name = "EVTOPTA19359"
 		set_country_flag = in_great_war
+		any_greater_power = {
+			limit = {
+				OR = {
+					war_with = THIS
+					AND = {
+						alliance_with = THIS
+						war = yes
+					}
+				}
+			}
+			set_country_flag = in_great_war
+		}
 	}
 }

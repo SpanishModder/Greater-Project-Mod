@@ -1,33 +1,25 @@
 capital = 1236
 primary_culture = panjabi
-culture = telegu
-culture = marathi
-culture = rajput
-culture = gujarati
-religion = sunni
+culture = avadhi
 government = absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_order
-literacy = 0.03
+literacy = 0.04
 
 ruling_party = MUG_conservative
 upper_house = {
 	fascist = 0
-	liberal = 11
-	conservative = 73
-	reactionary = 16
+	liberal = 10
+	conservative = 70
+	reactionary = 20
 	anarcho_liberal = 0
 	socialist = 0
 	communist = 0
 }
 
 # Starting Consciousness
-consciousness = 0
+consciousness = 1
 nonstate_consciousness = 0
-
-1861.1.1 = {
-	oob = "/1861/MUG_oob.txt"
-}
 
 slavery = no_slavery
 upper_house_composition = appointed

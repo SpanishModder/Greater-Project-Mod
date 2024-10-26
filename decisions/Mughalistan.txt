@@ -1,0 +1,43 @@
+political_decisions = {
+	create_anti_colonial_league = {
+		picture = sepoy_rebellion
+		potential = {
+			tag = MUG
+			exists = ENG
+			civilized = no
+			ENG = {
+				any_owned_province = {
+					is_core = HND
+				}
+			}
+			NOT = {
+				exists = HND
+				has_global_flag = sepoy_rebelion
+			}
+		}
+		allow = {
+			war = no
+			OR = {
+				year = 1856
+				ENG = { average_militancy = 2 }
+				is_vassal = no
+			}
+			NOT = {
+				relation = {
+					who = ENG
+					value = 25
+				}
+			}
+		}
+		effect = {
+			set_global_flag = sepoy_rebelion
+			prestige = 8
+			badboy = -1
+			ENG = {
+				relation = { who = THIS value = -100 }
+				country_event = 90040
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

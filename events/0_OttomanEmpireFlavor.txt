@@ -382,12 +382,12 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB50211"
-		EGY = { prestige = -15 }
 		clr_global_flag = the_oriental_crisis
 		clr_country_flag = ottomans_demand_entire_egypt
 		clr_country_flag = annexing_egypt
 		EGY = {
-			any_owned_province = {
+			prestige = -15
+			any_owned = {
 				limit = {
 					is_core = THIS
 				}

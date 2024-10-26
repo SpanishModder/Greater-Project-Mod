@@ -762,6 +762,12 @@ hungarian_revolt = {
 	icon = 8
 }
 
+sepoy_mutiny = {
+	non_accepted_pop_militancy_modifier = 0.025
+	non_accepted_pop_consciousness_modifier = 0.01
+	icon = 6
+}
+
 carlism_won = {
 	global_pop_militancy_modifier = 0.01
 	prestige = 0.02
