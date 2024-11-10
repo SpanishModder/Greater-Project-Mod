@@ -610,6 +610,23 @@ country_event = {
 	option = {
 		name = "EVTOPTA50313"
 		prestige = 8
+		1994 = { add_core = CNG life_rating = 20 }
+		BEL_1984 = {
+			add_core = CNG
+			life_rating = -30
+		}
+		BEL_1987 = {
+			add_core = CNG
+			life_rating = -10
+		}
+		BEL_1990 = {
+			add_core = CNG
+			life_rating = -10
+		}
+		BEL_1992 = {
+			add_core = CNG
+			life_rating = -10
+		}
 		BEL_1977 = {
 			limit = {
 				OR = {

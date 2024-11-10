@@ -95,11 +95,11 @@ political_decisions = {
 			#	owns = 2365 # Argentina
 			#}
 			year = 1860
-			NOT = {
-				has_country_flag = chaco_conquered
-			}
+			#NOT = {
+			#	has_country_flag = chaco_conquered
+			#}
 			OR = {
-				# Bolivia
+				# Bolivia or PBC
 				AND = {
 					owns = 2318
 					2338 = {
@@ -107,11 +107,23 @@ political_decisions = {
 							empty = yes
 							is_core = PRG
 						}
+						NOT = {
+							OR = {
+								is_core = PBC
+								is_core = BOL
+							}
+						}
 					}
 					2337 = {
 						OR = {
 							empty = yes
 							is_core = PRG
+						}
+						NOT = {
+							OR = {
+								is_core = PBC
+								is_core = BOL
+							}
 						}
 					}
 				}
@@ -124,12 +136,18 @@ political_decisions = {
 							is_core = BOL
 							is_core = PBC
 						}
+						NOT = {
+							is_core = PRG
+						}
 					}
 					2337 = {
 						OR = {
 							empty = yes
 							is_core = BOL
 							is_core = PBC
+						}
+						NOT = {
+							is_core = PRG
 						}
 					}
 				}

@@ -106,27 +106,6 @@ political_decisions = {
 		effect = {
 			prestige = 25
 			set_global_flag = congo_conference_held
-			BEL_1977 = {
-				add_core = CNG
-				life_rating = -30
-			}
-			1994 = { add_core = CNG life_rating = 20 }
-			BEL_1984 = {
-				add_core = CNG
-				life_rating = -30
-			}
-			BEL_1987 = {
-				add_core = CNG
-				life_rating = -10
-			}
-			BEL_1990 = {
-				add_core = CNG
-				life_rating = -10
-			}
-			BEL_1992 = {
-				add_core = CNG
-				life_rating = -10
-			}
 			any_greater_power = {
 				limit = { capital_scope = { continent = europe } }
 				country_event = { id = 50312 days = 3 }
