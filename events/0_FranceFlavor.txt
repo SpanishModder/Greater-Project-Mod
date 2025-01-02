@@ -1295,7 +1295,7 @@ country_event = {
 	
 	option = {
         name = "EVTOPTA50905"
-		prestige = -6
+		prestige = -4
 		government = democracy
 		political_reform = state_equal_weight
 		political_reform = non_secret_ballots
@@ -1320,6 +1320,13 @@ country_event = {
 			}
 			militancy = 9
 			consciousness = 9
+		}
+		any_pop = {
+			limit = {
+				pop_majority_ideology = reactionary
+			}
+			militancy = -5
+			consciousness = -5
 		}
 		ai_chance = {
 			factor = 0
@@ -1352,14 +1359,28 @@ country_event = {
 		prestige = 10
 		government = empire
 		political_reform = none_voting
+		any_pop = {
+			limit = {
+				pop_majority_ideology = liberal
+			}
+			militancy = 6
+			consciousness = 3
+		}
+		any_pop = {
+			limit = {
+				pop_majority_ideology = reactionary
+			}
+			militancy = -4
+			consciousness = -3
+		}
 		any_greater_power = {
 			relation = {
 				who = THIS
-				value = -50
+				value = -10
 			}
 		}
 		ai_chance = {
-			factor = 0
+			factor = 100
 		}
     }
 	option = {
@@ -1376,7 +1397,7 @@ country_event = {
 			consciousness = 8
 		}
 		ai_chance = {
-			factor = 100
+			factor = 0
 		}
     }
 }
