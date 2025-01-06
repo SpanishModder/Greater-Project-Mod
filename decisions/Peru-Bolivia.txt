@@ -38,6 +38,7 @@ political_decisions = {
 			war = {
 				target = PBC
 				attacker_goal = { casus_belli = release_puppet country = SPE }
+				attacker_goal = { casus_belli = status_quo }
 				defender_goal = { casus_belli = make_puppet }
 				call_ally = no
 			}

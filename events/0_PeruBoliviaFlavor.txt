@@ -15,7 +15,7 @@ country_event = {
 		OR = {
 			AND = {
 				war_with = PBC
-				2304 = { controlled_by = THIS }
+				controls = 2297
 				SPE = {
 					war_exhaustion = 20
 				}
@@ -44,7 +44,6 @@ country_event = {
 	id = 50801
 	title = "EVTNAME50801" 
 	desc = "EVTDESC50800"
-	fire_only_once = yes
 	picture = "Chaotic Confederation"
 	
 	is_triggered_only = yes
@@ -55,6 +54,148 @@ country_event = {
 		PBC = { 
 			all_core = {
 				remove_core = PBC
+			}
+		}
+    }
+}
+
+country_event = {
+	id = 50802
+	title = "EVTNAME50802" # A Northern Menace - Chile joins Tarija-War
+	desc = "EVTDESC50802"
+	picture = "Chaotic Confederation"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHL
+		exists = PBC
+		exists = ARC
+		year = 1836
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+		modifier = {
+			factor = 0.9
+			year = 1837
+		}
+		modifier = {
+			factor = 0.98
+			year = 1838
+		}
+	}
+	
+	immediate = { set_global_flag = war_of_the_confederation_org }
+	
+	option = {
+        name = "EVTOPTA50802" # Accept the intervention
+		relation = { who = ARC value = 100 }
+		create_alliance = ARC
+		relation = { who = PBC value = -100 }
+		ai_chance = { factor = 100 }
+    }
+	option = {
+        name = "EVTOPTB50802" # Refuse the offer
+		relation = { who = PBC value = 25 }
+		leave_alliance = ARC
+		relation = { who = ARC value = -50 }
+		ai_chance = { factor = 0 }
+    }
+}
+
+country_event = {
+	id = 50803
+	title = "EVTNAME50803" # Tarija Claims - Tarija-War Starts
+	desc = "EVTDESC50803"
+	picture = "Chaotic Confederation"
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = war_of_the_confederation_org
+		tag = ARC
+		exists = PBC
+		year = 1838
+		war = no
+	}
+	
+	mean_time_to_happen = { days = 10 }
+	
+	immediate = {
+		clr_global_flag = war_of_the_confederation_org
+		set_global_flag = war_of_the_confederation
+	}
+	
+	option = {
+        name = "EVTOPTA50803" # Help the chileans
+		CHL = {
+			war = {
+				target = PBC
+				attacker_goal = { casus_belli = acquire_all_core country = CHL }
+				defender_goal = { casus_belli = humiliate }
+				call_ally = yes
+			}
+		}
+		ai_chance = { factor = 80 }
+    }
+	option = {
+        name = "EVTOPTB50803" # Refuse intervention
+		random_owned = {
+			limit = { owner = { alliance_with = CHL } }
+			leave_alliance = CHL
+			relation = { who = CHL value = -125 }
+		}
+		CHL = {
+			war = {
+				target = PBC
+				attacker_goal = { casus_belli = acquire_all_core country = CHL }
+				defender_goal = { casus_belli = humiliate }
+				call_ally = yes
+			}
+		}
+		ai_chance = { factor = 20 }
+    }
+}
+
+country_event = {
+	id = 50804
+	title = "EVTNAME50804" # End of the war - PBC loses
+	desc = "EVTDESC50804"
+	picture = "Chaotic Confederation"
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = war_of_the_confederation
+		tag = ARC
+		NOT = {
+			war_with = PBC
+		}
+		truce_with = PBC
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		clr_global_flag = war_of_the_confederation
+	}
+	
+	option = {
+        name = "EVTOPTA50804" # Return to the Status Quo
+		random_owned = {
+			limit = { owner = { has_recently_lost_war = no } }
+			owner = {
+				prestige = 3
+				leave_alliance = CHL
+				CHL = { prestige = 2 }
+				PBC = {
+					prestige = -5
+					any_owned = {
+						limit = {
+							is_core = THIS
+						}
+						secede_province = THIS
+					}
+				}
 			}
 		}
     }
