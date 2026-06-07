@@ -16,16 +16,13 @@ political_decisions = {
 		
 		allow = {
 			OR = {
-				AND = {
-					has_country_modifier = industrialization_progress
-					truce_with = ENG
-				}
+				truce_with = ENG
+				year = 1842
 				AND = {
 					war_with = ENG
 					militancy = 1
 					consciousness = 2
 				}
-				year = 1842
 			}
 		}
 		
